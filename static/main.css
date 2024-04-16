@@ -22,6 +22,14 @@
 
 }
 
+.map-header{
+    font-size: 40px; 
+    /* font-weight: bold; */
+    padding: 35px;
+    margin: 4rem 0 0.5rem;
+
+}
+
 .short-desc{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
@@ -67,6 +75,18 @@ table th, table td {
 
 table tbody tr:nth-child(odd) {
     background-color: #f9f9f9;
+}
+
+.loc-box{
+    background-color: #f9f9f9;
+    border-color: black;
+    border-style: solid;
+    /* border-style: dashed;  */
+    /* border-width: thick; */
+    font-size: 25px; 
+    /* font-weight: bold; */
+    padding: 10px;
+    margin: 2rem 4rem 2rem;
 }
 
 #homepage {
