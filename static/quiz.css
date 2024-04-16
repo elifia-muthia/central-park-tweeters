@@ -1,0 +1,19 @@
+
+#set-difficulty-text{
+    align-self: center;
+    margin-right: 10px;
+}
+
+.selected-difficulty {
+    background-color: navy; /* Bootstrap's warning color for contrast */
+    color: white;
+}
+
+.quiz-text{
+    font-size: larger;
+    margin-right: 15px;
+}
+
+.quiz-start{
+    margin-top: 30px;
+}
