@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
+
+
+<div id="quiz">
+    <div class="main">
+        <div class="title">Quiz</div>
+
+        <div class="quiz-text">Let's test your knowledge!</div>
+        
+        <div class="btn-group" id="difficulty-level" role="group" aria-label="Difficulty">
+            <div class="quiz-text">Set the level of difficulty:</div>
+            <button type="button" id="easy-btn" onclick="setDifficulty('easy')">Easy</button>
+            <button type="button" id="hard-btn" onclick="setDifficulty('hard')">Hard</button>
+        </div>
+
+        <button class="quiz-start">Start</button>
+        
+    </div> 
+
+</div>
+
+{% endblock %}
