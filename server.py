@@ -13,3 +13,6 @@ def load_quiz():
    return render_template('quiz.html')
 
 # AJAX FUNCTIONS
+
+if __name__ == '__main__':
+   app.run(debug = True)
