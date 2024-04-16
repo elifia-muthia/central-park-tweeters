@@ -13,9 +13,89 @@
     background-color: lightgray;
 }
 
+
+.welcome-header{
+    font-size: 70px; 
+    font-weight: bold;
+    padding: 35px;
+    margin: 4rem 0 0.5rem;
+
+}
+
+.map-header{
+    font-size: 40px; 
+    /* font-weight: bold; */
+    padding: 35px;
+    margin: 4rem 0 0.5rem;
+
+}
+
+.short-desc{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 22px;
+    color: gray;
+    margin: 0rem 0 2rem;
+}
+
+.list-header{
+    font-size: 35px; 
+    font-weight: bold;
+    padding: 35px;
+    margin: 2rem 0 0.5rem;
+}
+
+
+.table-container {
+
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 2rem 0 0.5rem;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead th {
+    background-color: #000;
+    color: #fff;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.loc-box{
+    background-color: #f9f9f9;
+    border-color: black;
+    border-style: solid;
+    /* border-style: dashed;  */
+    /* border-width: thick; */
+    font-size: 25px; 
+    /* font-weight: bold; */
+    padding: 10px;
+    margin: 2rem 4rem 2rem;
+}
+
 #homepage {
     position: relative; 
+    background-image: url('/static/images/homepage-splash.webp');
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding-top: 150px;
     padding-bottom: 150px;
     display: flex;

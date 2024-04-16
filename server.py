@@ -20,6 +20,10 @@ def load_birds():
 def load_map():
    return render_template('map_birds.html')
 
+@app.route('/centralpark')
+def load_centralpark(): 
+   return render_template('centralpark_map.html')
+
 @app.route('/quiz')
 def load_quiz():
    return render_template('quiz.html')
