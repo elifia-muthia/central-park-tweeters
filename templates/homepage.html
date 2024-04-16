@@ -2,12 +2,61 @@
 
 {% block content %}
 
-<div id="homepage">
-    <div class="main">
-        <div class="title">Welcome!</div>
-        <button class="home-start">Get Started</button>
+<body> 
+    <div class="col-md-12">
+        <div class = "row justify-content-center welcome-header">
+            <center><strong>Welcome to <br> Central Park Tweeters!</strong></center>
+        </div>
+
+        <div class="row justify-content-center short-desc">
+            <p>Learn how to identify diverse bird species dwelling at Central Park, through bird sounds, visuals, and locations</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <a href="/sound"><button class="btn btn-outline-secondary btn-lg">Prepare by familiarizing the <br> different type of bird sounds</button></a>
+            </div>
+            <div class="col-md-4 justify-content-center">
+                <a href="/sound"><button class="btn btn-outline-secondary btn-lg">List of different species <br> of Birds</button></a>
+            </div>
+            <div class="col-md-4">
+                <a href="/sound"><button class="btn btn-outline-secondary btn-lg">Central Park Map with Bird sightings</button></a>
+            </div>
+        </div>
     </div>
 
-</div>
+</body>
+<!-- <div id="homepage">
+    <div class="homepage-main">  
+        <div class="col-md-12 homepage-card">
+            
+            <center><div class="homepage-title">Welcome to Central Park Tweeters !</div></center>
+            <p>Learn how to identify diverse bird species dwelling at Central Park, through bird sounds, visuals, and locations </p>
+
+            <a href="/sound"><button class="start">Prepare by familiarizing the <br> different type of bird sounds</button></a>
+        </div>
+        
+    </div>
+
+</div> -->
+
+<!-- <body class="main-background">
+    <div class ="col-md-12">
+        <div class="row justify-content-center welcome-header">
+            <strong><center> Welcome to BluePawAlumni! </center></strong>
+            <p class="txt-light short-desc"> This is a webpage to search notable alumni from Columbia College and Barnard College, highlighting their achievements. </p>
+        </div>
+        <div class ="row justify-content-center note-header"> 
+            <center><h2><strong>Alumni of the Week</strong></h2></center>
+            <div class="row justify-content-center" id="alumniContainer"></div>
+        </div>
+    
+    </div>
+       
+    
+    </div>
+    
+
+</body> -->
 
 {% endblock %}
