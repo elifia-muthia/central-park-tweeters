@@ -263,7 +263,7 @@ def load_homepage():
 
 @app.route('/sound')
 def load_sound():
-   return render_template('bird_sounds.html')
+   return render_template('bird_sounds.html', results=bird_terminology)
 
 @app.route('/birds')
 @app.route('/birds/<location>')
