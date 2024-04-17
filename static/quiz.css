@@ -14,6 +14,31 @@
     margin-right: 15px;
 }
 
-.quiz-start{
+#quiz-start{
     margin-top: 30px;
+}
+
+#quiz-section{
+    display: none;
+}
+
+#difficulty-warning{
+    display: none;
+}
+
+#prev-q-button{
+    display: none;
+}
+
+#question-img{
+    max-width:100%;
+    height:auto;
+}
+
+#quiz-results{
+    display: none;
+}
+
+#answer-warning{
+    display: none;
 }

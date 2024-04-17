@@ -1,3 +1,5 @@
+import random
+
 from flask import Flask
 from flask import render_template
 from flask import Response, request, jsonify
@@ -90,7 +92,7 @@ species_data = [
 easy_quiz = [
     {
         "id": "1",
-        "question:": "Which of the follow birds can be found in freshwater?",
+        "question": "Which of the follow birds can be found in freshwater?",
         "media_type": "img",
         "media": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/locations/_2475x1151_crop_center-center_none/turtle-pond.JPG",
         "choice1": "American Crow",
@@ -101,13 +103,35 @@ easy_quiz = [
     },
     {
         "id": "2",
-        "question:": "Which sound term best matches the following audio?",
+        "question": "Which sound term best matches the following audio?",
         "media_type": "audio",
-        "media": "/media/audio/mallard.mp3",
+        "media": "/static/media/audio/mallard.mp3",
         "choice1": "Chirp",
         "choice2": "Quack",
         "choice3": "Trill",
         "choice4": "Warble",
+        "answer": "choice2"
+    },
+    {
+        "id": "3",
+        "question": "Which of the follow birds can be found in the turtle pond?",
+        "media_type": "img",
+        "media": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/locations/_2475x1151_crop_center-center_none/turtle-pond.JPG",
+        "choice1": "American Crow",
+        "choice2": "Northern Cardinal",
+        "choice3": "Mourning Dove",
+        "choice4": "Mallard",
+        "answer": "choice4"
+    },
+    {
+        "id": "4",
+        "question": "This unidentified sound best matches which bird call term?",
+        "media_type": "audio",
+        "media": "/static/media/audio/pine_warbler.mp3",
+        "choice1": "Buzz",
+        "choice2": "Trill",
+        "choice3": "Quack",
+        "choice4": "Chirp",
         "answer": "choice2"
     }
 ]
@@ -115,7 +139,7 @@ easy_quiz = [
 hard_quiz = [
     {
         "id": "1",
-        "question:": "Which of the follow birds can be found in the turtle pond?",
+        "question": "Which of the follow birds can be found in the turtle pond?",
         "media_type": "img",
         "media": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/locations/_2475x1151_crop_center-center_none/turtle-pond.JPG",
         "choice1": "American Crow",
@@ -126,13 +150,35 @@ hard_quiz = [
     },
     {
         "id": "2",
-        "question:": "This unidentified sound best matches which bird call term?",
+        "question": "This unidentified sound best matches which bird call term?",
         "media_type": "audio",
-        "media": "media/audio/pine_warbler.mp3",
+        "media": "/static/media/audio/pine_warbler.mp3",
         "choice1": "Buzz",
         "choice2": "Trill",
         "choice3": "Quack",
         "choice4": "Chirp",
+        "answer": "choice2"
+    },
+    {
+        "id": "3",
+        "question": "Which of the follow birds can be found in freshwater?",
+        "media_type": "img",
+        "media": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/locations/_2475x1151_crop_center-center_none/turtle-pond.JPG",
+        "choice1": "American Crow",
+        "choice2": "Northern Cardinal",
+        "choice3": "Mourning Dove",
+        "choice4": "Mallard",
+        "answer": "choice4"
+    },
+    {
+        "id": "4",
+        "question": "Which sound term best matches the following audio?",
+        "media_type": "audio",
+        "media": "/static/media/audio/mallard.mp3",
+        "choice1": "Chirp",
+        "choice2": "Quack",
+        "choice3": "Trill",
+        "choice4": "Warble",
         "answer": "choice2"
     }
 ]
@@ -192,7 +238,32 @@ def load_centralpark():
 def load_quiz():
    return render_template('quiz.html')
 
+@app.route('/view/<id>')
+def view_bird(id=None):
+    return render_template('view_bird.html', id=id)
 # AJAX FUNCTIONS
+# @app.route('/get_view_bird', methods=['POST'])
+# def get_view_bird():
+#     json_data = request.get_json()
+#     id = json_data["id"]
+
+#     result = next((bar for bar in bars if bar["id"] == id), None)
+
+#     return jsonify(data=result)
+
+@app.route('/get_quiz_questions', methods=['POST'])
+def get_quiz_questions():
+    json_data = request.get_json()
+    level = json_data["level"]
+
+    if level == 'easy':
+        result = random.sample(easy_quiz, 2)
+    else:
+        result = random.sample(hard_quiz, 2)
+
+    print(result)
+
+    return jsonify(data=result)
 
 if __name__ == '__main__':
    app.run(debug = True)

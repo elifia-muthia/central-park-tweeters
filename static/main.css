@@ -122,3 +122,6 @@ table tbody tr:nth-child(odd) {
     margin-bottom: 30px;
 }
 
+.warning{
+    color: red;
+}
