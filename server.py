@@ -270,7 +270,7 @@ def load_homepage():
 
 @app.route('/sound')
 def load_sound():
-   return render_template('bird_sounds.html')
+   return render_template('bird_sounds.html', results=bird_terminology)
 
 @app.route('/birds')
 @app.route('/birds/<location>')
@@ -278,7 +278,7 @@ def load_birds(location=None):
     if location is None:
         return render_template('list_birds.html', results=species_data)
     
-    results = [bird for bird in species_data if bird["habitat"] == "freshwater"]
+    results = [bird for bird in species_data if bird["habitat"] == location]
     return render_template('list_birds.html', results=results)
 
 @app.route('/map')

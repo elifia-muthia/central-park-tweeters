@@ -1,3 +1,8 @@
+$(document).ready(function() {
+  initMap();
+});
+
+
 function initMap() {
 
     var openIcon = new L.Icon({
@@ -103,6 +108,6 @@ function initMap() {
   
 }
 
-initMap();
+
 
 
