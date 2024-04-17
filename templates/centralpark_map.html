@@ -2,4 +2,25 @@
 
 {% block content %}
 
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+
+<body>
+
+<h3>Central Park Interactive Map</h3>
+<div id="map"></div>
+<script type="text/javascript">
+    var freshwaterIconUrl = "{{ url_for('static', filename='assets/water.png') }}";
+    var openareaIconUrl = "{{ url_for('static', filename='assets/openarea.png') }}";
+</script>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'map.js') }}"></script>
+
+
+</body>
+</html>
+
+
 {% endblock %}
