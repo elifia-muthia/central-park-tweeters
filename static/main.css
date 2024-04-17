@@ -125,3 +125,8 @@ table tbody tr:nth-child(odd) {
 .warning{
     color: red;
 }
+
+#map {
+    height: 800px;
+    width: 79%;
+}

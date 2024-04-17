@@ -9,10 +9,25 @@
 <body>
 
 <h3>Central Park Interactive Map</h3>
-<div id="map"></div>
+
+<div class ="row">
+    <div class="col-md-6">
+        <div class="row" id="map"></div>
+    </div>
+    <div class="col-md-6">
+        <div class="row"> 
+            
+        </div>
+    </div>
+
+</div>
+
+
+
 <script type="text/javascript">
     var freshwaterIconUrl = "{{ url_for('static', filename='assets/water.png') }}";
     var openareaIconUrl = "{{ url_for('static', filename='assets/openarea.png') }}";
+    var woodlandIconUrl = "{{ url_for('static', filename='assets/woodlands.png') }}";
 </script>
 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
