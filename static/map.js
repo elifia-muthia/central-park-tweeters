@@ -63,46 +63,46 @@ function initMap() {
 
     // Freshwater 
     var turtlePondMarker = L.marker(turtlePond, {icon: waterIcon}).addTo(map);
-    turtlePondMarker.bindPopup('<b>Turtle Pond</b> <br> Freshwater');
+    turtlePondMarker.bindPopup('<b>Turtle Pond</b> <br> <a href = "/birds/freshwater">Freshwater</a>');
 
     var harlemMeerMarker = L.marker(harlemMeer, {icon: waterIcon}).addTo(map);
-    harlemMeerMarker.bindPopup('<b>Harlem Meer</b> <br> Freshwater');
+    harlemMeerMarker.bindPopup('<b>Harlem Meer</b> <br> <a href = "/birds/freshwater">Freshwater</a>');
 
     var reservoirMarker = L.marker(reservoir, {icon: waterIcon}).addTo(map);
-    reservoirMarker.bindPopup('<b>Reservoir</b> <br> Freshwater');
+    reservoirMarker.bindPopup('<b>Reservoir</b> <br> <a href = "/birds/freshwater">Freshwater</a>');
 
     var lakeMarker = L.marker(lake, {icon: waterIcon}).addTo(map);
-    lakeMarker.bindPopup('<b>The Lake</b> <br> Freshwater');
+    lakeMarker.bindPopup('<b>The Lake</b> <br> <a href = "/birds/freshwater">Freshwater</a>');
 
     var lochMarker = L.marker(loch, {icon: waterIcon}).addTo(map);
-    lochMarker.bindPopup('<b>The Loch r</b> <br> Freshwater');
+    lochMarker.bindPopup('<b>The Loch r</b> <br> <a href = "/birds/freshwater">Freshwater</a>');
 
     var gillMarker = L.marker(gill, {icon: waterIcon}).addTo(map);
-    gillMarker.bindPopup('<b>The Gill</b> <br> Freshwater');
+    gillMarker.bindPopup('<b>The Gill</b> <br> <a href = "/birds/freshwater">Freshwater</a>');
 
 
     // Woodland 
     var rambleMarker = L.marker(ramble, {icon: woodlandIcon}).addTo(map);
-    rambleMarker.bindPopup('<b>Ramble</b> <br> Woodland');
+    rambleMarker.bindPopup('<b>Ramble</b> <br> <a href = "/birds/Woodlands">Woodlands</a>');
 
     var northWoodsMarker = L.marker(northWoods, {icon: woodlandIcon}).addTo(map);
-    northWoodsMarker.bindPopup('<b>North Woods</b> <br> Woodland');
+    northWoodsMarker.bindPopup('<b>North Woods</b> <br> <a href = "/birds/Woodlands">Woodlands</a>');
 
     var halletNatureMarker = L.marker(halletNature, {icon: woodlandIcon}).addTo(map);
-    halletNatureMarker.bindPopup('<b>Hallet Nature Sanctuary</b> <br> Woodland');
+    halletNatureMarker.bindPopup('<b>Hallet Nature Sanctuary</b> <br> <a href = "/birds/Woodlands">Woodlands</a>');
 
     // Opean Areas
     var wildflowerMeadowMarker = L.marker(wildflowerMeadow, {icon: openIcon}).addTo(map);
-    wildflowerMeadowMarker.bindPopup('<b>Wildflower Meadow</b> <br> Open Areas');
+    wildflowerMeadowMarker.bindPopup('<b>Wildflower Meadow</b> <br> <a href = "/birds/open-areas">Open Areas</a>');
 
     var conservatoryGardenMarker = L.marker(conservatoryGarden, {icon: openIcon}).addTo(map);
-    conservatoryGardenMarker.bindPopup('<b>Conservatory Garden</b> <br> Open Areas');
+    conservatoryGardenMarker.bindPopup('<b>Conservatory Garden</b> <br> <a href = "/birds/open-areas">Open Areas</a>');
 
     var shakespearGardenMarker = L.marker(shakespearGarden, {icon: openIcon}).addTo(map);
-    shakespearGardenMarker.bindPopup('<b>Shakespeare Garden</b> <br> Open Areas');
+    shakespearGardenMarker.bindPopup('<b>Shakespeare Garden</b> <br> <a href = "/birds/open-areas">Open Areas</a>');
 
     var greatLawnMarker = L.marker(greatLawn, {icon: openIcon}).addTo(map);
-    greatLawnMarker.bindPopup('<b>Great Lawn</b> <br> Open Areas');
+    greatLawnMarker.bindPopup('<b>Great Lawn</b> <br> <a href = "/birds/open-areas">Open Areas</a>');
 
 
   
