@@ -7,13 +7,15 @@
 
 <script>
     let results = {{results|tojson}}
+    let loc = {{location|tojson}}
     console.log(results)
+    console.log(loc)
 </script>
 
 
 <body>
     <div class="table-container">
-        <h1>List of Birds:</h1>
+        <div id="list-title"></div>
         <table>
             <thead>
                 <tr>

@@ -276,10 +276,10 @@ def load_sound():
 @app.route('/birds/<location>')
 def load_birds(location=None):
     if location is None:
-        return render_template('list_birds.html', results=species_data)
+        return render_template('list_birds.html', results=species_data, location=location)
     
     results = [bird for bird in species_data if bird["habitat"] == location]
-    return render_template('list_birds.html', results=results)
+    return render_template('list_birds.html', results=results, location=location)
 
 @app.route('/map')
 def load_map():
