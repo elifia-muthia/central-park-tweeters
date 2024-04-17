@@ -1,3 +1,5 @@
+import random
+
 from flask import Flask
 from flask import render_template
 from flask import Response, request, jsonify
@@ -11,10 +13,10 @@ species_data = [
         "habitat": "freshwater",
         "scientific_name": "Anas platyrhynchos",
         "image": "https://dariuszzdziebk.wpenginepowered.com/wp-content/uploads/2021/07/BOTW-Homepage-Thumbnail_Mallard_Robert-Adami-Shutterstock-768x498.jpg",
-        "sound": "/media/audio/mallard.mp3",
+        "sound": "/static/media/audio/mallard.mp3",
         "tone": "Nasal",
         "tone_description": "The quintessential duck’s quack is the sound of the female mallard. Females often give this call in a series of 2–10 quacks that begin loudly and get softer. When courting, she may give a paired form of this quack. The male does not quack; instead he gives a quieter, rasping, one- or two-noted call. ",
-        "video": "https://youtu.be/FqDXIjDuFhw?si=DZ3HVARFghfitr6X",
+        "video": "https://www.youtube.com/embed/FqDXIjDuFhw?si=gkh-BfliaL18fvea",
         "description": "Mallards are large ducks with hefty bodies, rounded heads, and wide, flat bills. The basic loud quack associated with ducks, is the call of the female mallard. The male on the other hand, utters soft raspy notes or short whistles.",
         "fun_fact": "Mallards have regional accents, and they are said to have better vision than humans!",
         "season": "All year long"
@@ -25,10 +27,10 @@ species_data = [
         "habitat": "freshwater",
         "scientific_name": "Agelaius phoeniceus",
         "image": "https://indianaaudubon.org/wp-content/uploads/2016/04/RedWingedBlackbird2.jpg",
-        "sound": "/media/audio/red_winged_blackbird.mp3",
+        "sound": "/static/media/audio/red_winged_blackbird.mp3",
         "tone": "Chrip",
         "tone_description": "The typical call of a Red-winged Blackbird is a distinctive, matter-of-fact check that’s fairly easy to recognize. Males and females make these calls all year round, in flight and while feeding, when confronting rivals and to raise an alarm. They also give a more intense alarm call, a fast, scolding chak chak chak.",
-        "video": "https://youtu.be/q3QicOAiBXk?si=q4oAqUGJGQv3EKyL",
+        "video": "https://www.youtube.com/embed/q3QicOAiBXk?si=xrzbbmC0OFjP9-c-",
         "description": "Glossy-black males have scarlet-and-yellow shoulder patches they can puff up or hide depending on how confident they feel. Females are a subdued, streaky brown, almost like a large, dark sparrow. Their early and tumbling song are happy indications of the return of spring.",
         "fun_fact": "Red-winged Blackbirds are one of the most polygamous of all bird species. They have been observed to have as many as 15 females nesting in the territory of a single male.",
         "season": "Spring"
@@ -39,7 +41,7 @@ species_data = [
         "habitat": "Woodlands",
         "scientific_name": "Cardinalis cardinalis",
         "image": "https://media.audubon.org/nas_birdapi/a1_4524_2_northern-cardinal_diane_wurzer_kk_adult-male.jpg?height=944&auto=webp&quality=90&fit=bounds&disable=upscale",
-        "sound": "/media/audio/northern_cardinal.mp3",
+        "sound": "/static/media/audio/northern_cardinal.mp3",
         "tone": "Whistle",
         "tone_description": "The song is a loud string of clear down-slurred or two-parted whistles, often speeding up and ending in a slow trill. The songs typically last 2 to 3 seconds. Syllables can sound like the bird is singing cheer, cheer, cheer or birdie, birdie, birdie. Males in particular may sing throughout the year, though the peak of singing is in spring and early summer.",
         "video": "https://youtu.be/J-hOualMPl0?si=oJRqyF4jKkk2vh9q",
@@ -53,7 +55,7 @@ species_data = [
         "habitat": "Woodlands",
         "scientific_name": "Setophaga magnolia",
         "image": "https://dariuszzdziebk.wpenginepowered.com/wp-content/uploads/2022/05/BOTW-Homepage-Thumbnail_Magnolia-Warbler-1024x663.jpg",
-        "sound": "/media/audio/magnolia_warbler.mp3",
+        "sound": "/static/media/audio/magnolia_warbler.mp3",
         "tone": "Nasal/Buzz",
         "tone_description": "Males and females call with a nasal zic or zeep. During nocturnal migration they give a buzzy zeet.",
         "video": "https://youtu.be/2Vth2XSAAxM?si=dBKiJnTGFmBxJhXR",
@@ -67,7 +69,7 @@ species_data = [
         "habitat": "open-areas",
         "scientific_name": "Zenaida macroura",
         "image": "https://cdn.shopify.com/s/files/1/0156/3796/files/mourning-dove-3591135_1920.jpg?v=1580151321",
-        "sound": "/media/audio/mourning_dove.mp3",
+        "sound": "/static/media/audio/mourning_dove.mp3",
         "tone": "Coo",
         "tone_description": "You can often hear paired males give the three-parted “nest call” while nest-building: a coo-OO-oo, highest in the middle. Females sometimes call ohr ohr while sitting on the nest.",
         "video": "https://youtu.be/7oNljd7R1f8?si=clIUbn510qkBAtob",
@@ -81,7 +83,7 @@ species_data = [
         "habitat" :"open-areas",
         "scientific_name": "Corvus brachyrhynchos",
         "image": "https://bloximages.newyork1.vip.townnews.com/estesparknews.com/content/tncms/assets/v3/editorial/4/31/4319f150-13d9-11eb-b5c8-1bffaa79a22f/5f909584240d3.image.jpg?resize=1476%2C982",
-        "sound": "/media/audio/american_crow.mp3",
+        "sound": "/static/media/audio/american_crow.mp3",
         "tone": "Harsh",
         "tone_description": "Crows have more than 20 calls. The most common, a harsh caw, has several qualities and lengths that may serve different purposes. Immature begging young American Crows give a higher-pitched, nasal call that can sound like a Fish Crow. You may also hear a variety of calls and alert calls given to rally others to mob predators.",
         "video": "https://youtu.be/JnDRHDoOsEw?si=joH2lFmRBTacjrmw",
@@ -94,7 +96,7 @@ species_data = [
 easy_quiz = [
     {
         "id": "1",
-        "question:": "Which of the follow birds can be found in freshwater?",
+        "question": "Which of the follow birds can be found in freshwater?",
         "media_type": "img",
         "media": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/locations/_2475x1151_crop_center-center_none/turtle-pond.JPG",
         "choice1": "American Crow",
@@ -105,11 +107,11 @@ easy_quiz = [
     },
     {
         "id": "2",
-        "question:": "Which sound term best matches the following audio?",
+        "question": "Which sound term best matches the following audio?",
         "media_type": "audio",
-        "media": "/media/audio/mallard.mp3",
-        "choice1": "Liquid",
-        "choice2": "Harsh",
+        "media": "/static/media/audio/mallard.mp3",
+        "choice1": "Chirp",
+        "choice2": "Quack",
         "choice3": "Trill",
         "choice4": "Warble",
         "answer": "choice2"
@@ -138,13 +140,13 @@ easy_quiz = [
     },
     {
         "id": "5",
-        "question:": "Scenerio: You are next to the Northwoods, and you hear the following sound. Which bird do you hear?",
+        "question": "This unidentified sound best matches which bird call term?",
         "media_type": "audio",
-        "media": "/media/audio/magnolia_warbler.mp3",
-        "choice1": "Red-Winged Blackbird",
-        "choice2": "Magnolia Warbler",
-        "choice3": "Mallard",
-        "choice4": "Mourning Dove",
+        "media": "/static/media/audio/pine_warbler.mp3",
+        "choice1": "Buzz",
+        "choice2": "Trill",
+        "choice3": "Quack",
+        "choice4": "Chirp",
         "answer": "choice2"
     }
 ]
@@ -152,7 +154,7 @@ easy_quiz = [
 hard_quiz = [
     {
         "id": "1",
-        "question:": "Which of the follow birds can be found in the turtle pond?",
+        "question": "Which of the follow birds can be found in the turtle pond?",
         "media_type": "img",
         "media": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/locations/_2475x1151_crop_center-center_none/turtle-pond.JPG",
         "choice1": "American Crow",
@@ -163,13 +165,35 @@ hard_quiz = [
     },
     {
         "id": "2",
-        "question:": "This unidentified sound best matches which bird call term?",
+        "question": "This unidentified sound best matches which bird call term?",
         "media_type": "audio",
-        "media": "media/audio/pine_warbler.mp3",
+        "media": "/static/media/audio/pine_warbler.mp3",
         "choice1": "Buzz",
         "choice2": "Trill",
         "choice3": "Quack",
         "choice4": "Chirp",
+        "answer": "choice2"
+    },
+    {
+        "id": "3",
+        "question": "Which of the follow birds can be found in freshwater?",
+        "media_type": "img",
+        "media": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/locations/_2475x1151_crop_center-center_none/turtle-pond.JPG",
+        "choice1": "American Crow",
+        "choice2": "Northern Cardinal",
+        "choice3": "Mourning Dove",
+        "choice4": "Mallard",
+        "answer": "choice4"
+    },
+    {
+        "id": "4",
+        "question": "Which sound term best matches the following audio?",
+        "media_type": "audio",
+        "media": "/static/media/audio/mallard.mp3",
+        "choice1": "Chirp",
+        "choice2": "Quack",
+        "choice3": "Trill",
+        "choice4": "Warble",
         "answer": "choice2"
     }
 ]
@@ -257,7 +281,32 @@ def load_centralpark():
 def load_quiz():
    return render_template('quiz.html')
 
+@app.route('/view/<id>')
+def view_bird(id=None):
+    return render_template('view_bird.html', id=id)
 # AJAX FUNCTIONS
+@app.route('/get_view_bird', methods=['POST'])
+def get_view_bird():
+    json_data = request.get_json()
+    id = json_data["id"]
+
+    result = next((bird for bird in species_data if bird["id"] == id), None)
+
+    return jsonify(data=result)
+
+@app.route('/get_quiz_questions', methods=['POST'])
+def get_quiz_questions():
+    json_data = request.get_json()
+    level = json_data["level"]
+
+    if level == 'easy':
+        result = random.sample(easy_quiz, 2)
+    else:
+        result = random.sample(hard_quiz, 2)
+
+    print(result)
+
+    return jsonify(data=result)
 
 if __name__ == '__main__':
    app.run(debug = True)

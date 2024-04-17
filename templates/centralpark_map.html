@@ -2,4 +2,65 @@
 
 {% block content %}
 
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+
+<body>
+
+<h3>Central Park Interactive Map</h3>
+
+<div class ="row">
+    <div class="col-md-6">
+        <div class="row" id="map"></div>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <ul id="location">
+                <li> <strong>Types of Location/Habitats:</strong> </li>
+                <li id="freshwater">Freshwater</li>
+                    <ul>
+                        <li>Harlem Meer</li>
+                        <li>Reservoir</li>
+                        <li>Turtle Pond</li>
+                        <li>The Lake</li>
+                        <li>along streams in the wooded areas such as the Gill and the Loch</li>
+                    </ul>
+                <li id="openarea">Open Areas</li>
+                    <ul>
+                        <li>Wildflower Meadow </li>
+                        <li>Conservatory Garden</li>
+                        <li>Shakespeare Garden</li>
+                        <li>Great Lawns, open grassy areas throughout the Park</li>
+                    </ul>
+                <li id="woodlands"> Woodlands</li>
+                    <ul>
+                        <li>Ramble</li>
+                        <li>North Woods</li>
+                        <li>Hallett Nature Sanctuary</li>
+                    </ul>
+            </ul> 
+
+            
+        </div>
+    </div>
+
+</div>
+
+
+
+<script type="text/javascript">
+    var freshwaterIconUrl = "{{ url_for('static', filename='assets/water.png') }}";
+    var openareaIconUrl = "{{ url_for('static', filename='assets/openarea.png') }}";
+    var woodlandIconUrl = "{{ url_for('static', filename='assets/woodlands.png') }}";
+</script>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'map.js') }}"></script>
+
+
+</body>
+</html>
+
+
 {% endblock %}

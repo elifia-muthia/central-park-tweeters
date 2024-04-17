@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'view-bird.js') }}"></script>
+<link rel="stylesheet" href="{{url_for('static', filename='view-bird.css')}}">
+
+<script>
+    let id = {{id|tojson}}
+    console.log(id)
+</script>
+
+<div id="view-bird">
+    <div id="bird-name"></div>
+    <div id="bird-scientific-name"></div>
+    <div id="bird-habitat"></div>
+    <div id="bird-img"></div>
+    <div id="bird-sound"></div>
+    <div id="bird-tone"></div>
+    <div id="bird-video"></div>
+    <div id="bird-description"></div>
+    <div id="bird-fun-fact"></div>
+    <div id="bird-season"></div>
+</div>
+
+{% endblock %}

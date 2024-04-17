@@ -3,23 +3,49 @@
 {% block content %}
 
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
+<link rel="stylesheet" href="{{url_for('static', filename='quiz.css')}}">
 
 
 <div id="quiz">
-    <div class="main">
+    <div class="main" id="quiz-landing">
         <div class="title">Quiz</div>
 
         <div class="quiz-text">Let's test your knowledge!</div>
         
         <div class="btn-group" id="difficulty-level" role="group" aria-label="Difficulty">
             <div class="quiz-text">Set the level of difficulty:</div>
-            <button type="button" id="easy-btn" onclick="setDifficulty('easy')">Easy</button>
-            <button type="button" id="hard-btn" onclick="setDifficulty('hard')">Hard</button>
+            <button type="button" id="easy-btn">Easy</button>
+            <button type="button" id="hard-btn">Hard</button>
         </div>
 
-        <button class="quiz-start">Start</button>
+        <div class="warning" id="difficulty-warning">Please select a level of difficulty.</div>
+
+        <button id="quiz-start">Start</button>
         
     </div> 
+
+    <div id="quiz-section">
+        <div class="title" id="question-num"></div>
+        <div class="text" id="question"></div>
+        <div id="question-media"></div>
+        <div class="multiple-choice" id="answers"></div>
+        <div class="warning" id="answer-warning">Please choose an answer.</div>
+        <div class="quiz-nav-buttons">
+            <button type="button" id="prev-q-btn">Back</button>
+            <button type="button" id="next-q-btn">Next</button>
+            <button type="button" id="submit-quiz-btn">Submit Quiz</button>
+        </div>
+    </div>
+
+    <div id="quiz-results">
+        <div class="title">Yay you tested your knowledge!</div>
+        <div class="text">Your score:</div>
+        <div id="quiz-score"></div>
+        <div class="quiz-nav-buttons">
+            <button type="button" id="redo-quiz">Quiz Me Again!</button>
+            <button type="button" id="go-home">Continue Learning</button>
+        </div>
+    </div>
 
 </div>
 

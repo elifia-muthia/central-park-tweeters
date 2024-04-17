@@ -1,0 +1,44 @@
+
+#set-difficulty-text{
+    align-self: center;
+    margin-right: 10px;
+}
+
+.selected-difficulty {
+    background-color: navy; /* Bootstrap's warning color for contrast */
+    color: white;
+}
+
+.quiz-text{
+    font-size: larger;
+    margin-right: 15px;
+}
+
+#quiz-start{
+    margin-top: 30px;
+}
+
+#quiz-section{
+    display: none;
+}
+
+#difficulty-warning{
+    display: none;
+}
+
+#prev-q-button{
+    display: none;
+}
+
+#question-img{
+    max-width:100%;
+    height:auto;
+}
+
+#quiz-results{
+    display: none;
+}
+
+#answer-warning{
+    display: none;
+}
