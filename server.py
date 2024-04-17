@@ -131,7 +131,7 @@ easy_quiz = [
         "id": "4",
         "question:": "Match the bird to the audio?",
         "media_type": "audio",
-        "media": "/media/audio/american_crow.mp3",
+        "media": "/static/media/audio/american_crow.mp3",
         "choice1": "Mallard",
         "choice2": "Mourning Dove",
         "choice3": "American Crow",
@@ -204,42 +204,49 @@ bird_terminology = [
       "id": "1",
       "type" : "Tone",
       "title" : "Harsh",
-      "sound" : "/media/audio/american_crow.mp3",
+      "sound" : "/static/media/audio/american_crow.mp3",
       "info" : "Harsh bird calls are typically described as grating, raucous, or jarring sounds that can be quite loud and unpleasant to the ear. These calls often consist of rough, discordant noises that may sound like cawing, screeching, or squawking. They tend to carry over long distances and are typically used by birds to assert territory, scare off predators, or communicate distress. The tone is usually sharp and can be repetitive, making it very noticeable and sometimes even disruptive in a natural environment. Examples of birds known for their harsh calls include crows, ravens, and some species of gulls and jays."
    },
    {
       "id": "2",
       "type" : "Tone",
       "title" : "Trill",
-      "sound" : "/media/audio/trill.mp3",
+      "sound" : "/static/media/audio/trill.mp3",
       "info" : "Harsh bird calls are typically described as grating, raucous, or jarring sounds that can be quite loud and unpleasant to the ear. These calls often consist of rough, discordant noises that may sound like cawing, screeching, or squawking. They tend to carry over long distances and are typically used by birds to assert territory, scare off predators, or communicate distress. The tone is usually sharp and can be repetitive, making it very noticeable and sometimes even disruptive in a natural environment. Examples of birds known for their harsh calls include crows, ravens, and some species of gulls and jays."
    },
    {
       "id": "3",
       "type" : "Tone",
       "title" : "Warble",
-      "sound" : "/media/audio/warble.mp3",
+      "sound" : "/static/media/audio/pine_warbler.mp3",
       "info" : "Harsh bird calls are typically described as grating, raucous, or jarring sounds that can be quite loud and unpleasant to the ear. These calls often consist of rough, discordant noises that may sound like cawing, screeching, or squawking. They tend to carry over long distances and are typically used by birds to assert territory, scare off predators, or communicate distress. The tone is usually sharp and can be repetitive, making it very noticeable and sometimes even disruptive in a natural environment. Examples of birds known for their harsh calls include crows, ravens, and some species of gulls and jays."
    },
    {
       "id": "4",
       "type" : "Tone",
       "title" : "Whistle",
-      "sound" : "/media/audio/whistle.mp3",
+      "sound" : "/static/media/audio/northern_cardinal.mp3",
       "info" : "Harsh bird calls are typically described as grating, raucous, or jarring sounds that can be quite loud and unpleasant to the ear. These calls often consist of rough, discordant noises that may sound like cawing, screeching, or squawking. They tend to carry over long distances and are typically used by birds to assert territory, scare off predators, or communicate distress. The tone is usually sharp and can be repetitive, making it very noticeable and sometimes even disruptive in a natural environment. Examples of birds known for their harsh calls include crows, ravens, and some species of gulls and jays."
    },
    {
       "id": "5",
       "type" : "Tone",
       "title" : "Nasal",
-      "sound" : "/media/audio/nasal.mp3",
+      "sound" : "/static/media/audio/mallard.mp3",
       "info" : "Harsh bird calls are typically described as grating, raucous, or jarring sounds that can be quite loud and unpleasant to the ear. These calls often consist of rough, discordant noises that may sound like cawing, screeching, or squawking. They tend to carry over long distances and are typically used by birds to assert territory, scare off predators, or communicate distress. The tone is usually sharp and can be repetitive, making it very noticeable and sometimes even disruptive in a natural environment. Examples of birds known for their harsh calls include crows, ravens, and some species of gulls and jays."
    },
    {
       "id": "6",
       "type" : "Tone",
       "title" : "Mneumonics",
-      "sound" : "/media/audio/mneumonics.mp3",
+      "sound" : "/static/media/audio/mneumonic.mp3",
+      "info" : "Harsh bird calls are typically described as grating, raucous, or jarring sounds that can be quite loud and unpleasant to the ear. These calls often consist of rough, discordant noises that may sound like cawing, screeching, or squawking. They tend to carry over long distances and are typically used by birds to assert territory, scare off predators, or communicate distress. The tone is usually sharp and can be repetitive, making it very noticeable and sometimes even disruptive in a natural environment. Examples of birds known for their harsh calls include crows, ravens, and some species of gulls and jays."
+   },
+   {
+      "id": "7",
+      "type" : "Tone",
+      "title" : "Liquid/Flute-like",
+      "sound" : "/static/media/audio/liquid_flute-like.mp3",
       "info" : "Harsh bird calls are typically described as grating, raucous, or jarring sounds that can be quite loud and unpleasant to the ear. These calls often consist of rough, discordant noises that may sound like cawing, screeching, or squawking. They tend to carry over long distances and are typically used by birds to assert territory, scare off predators, or communicate distress. The tone is usually sharp and can be repetitive, making it very noticeable and sometimes even disruptive in a natural environment. Examples of birds known for their harsh calls include crows, ravens, and some species of gulls and jays."
    }
 ]
