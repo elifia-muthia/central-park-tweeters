@@ -37,7 +37,7 @@ species_data = [
     },
     {
         "id": "3",
-        "title": "Northern Cardinal",
+        "name": "Northern Cardinal",
         "habitat": "Woodlands",
         "scientific_name": "Cardinalis cardinalis",
         "image": "https://media.audubon.org/nas_birdapi/a1_4524_2_northern-cardinal_diane_wurzer_kk_adult-male.jpg?height=944&auto=webp&quality=90&fit=bounds&disable=upscale",
@@ -51,7 +51,7 @@ species_data = [
     },
     {
         "id": "4",
-        "title": "Magnolia Warbler",
+        "name": "Magnolia Warbler",
         "habitat": "Woodlands",
         "scientific_name": "Setophaga magnolia",
         "image": "https://dariuszzdziebk.wpenginepowered.com/wp-content/uploads/2022/05/BOTW-Homepage-Thumbnail_Magnolia-Warbler-1024x663.jpg",
@@ -65,7 +65,7 @@ species_data = [
     },
     {
         "id": "5",
-        "title": "Mourning Dove",
+        "name": "Mourning Dove",
         "habitat": "open-areas",
         "scientific_name": "Zenaida macroura",
         "image": "https://cdn.shopify.com/s/files/1/0156/3796/files/mourning-dove-3591135_1920.jpg?v=1580151321",
@@ -79,7 +79,7 @@ species_data = [
     },
     {
         "id": "6",
-        "title": "American Crow",
+        "name": "American Crow",
         "habitat" :"open-areas",
         "scientific_name": "Corvus brachyrhynchos",
         "image": "https://bloximages.newyork1.vip.townnews.com/estesparknews.com/content/tncms/assets/v3/editorial/4/31/4319f150-13d9-11eb-b5c8-1bffaa79a22f/5f909584240d3.image.jpg?resize=1476%2C982",
@@ -271,7 +271,7 @@ def load_birds(location=None):
     if location is None:
         return render_template('list_birds.html', results=species_data)
     
-    results = [bird for bird in species_data if bird["habitat"] == "freshwater"]
+    results = [bird for bird in species_data if bird["habitat"] == location]
     return render_template('list_birds.html', results=results)
 
 @app.route('/map')
