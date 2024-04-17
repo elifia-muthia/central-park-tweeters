@@ -130,3 +130,40 @@ table tbody tr:nth-child(odd) {
     height: 800px;
     width: 79%;
 }
+
+#location li {
+    list-style: none;  /* This ensures no default list markers are used */
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#location li#freshwater {
+    background: url('assets/water.png') no-repeat left top;
+    background-size: contain; 
+    height: 34px;
+    padding-top: 3px;
+    padding-left: 44px;
+    line-height: 34px;  /* Ensuring text is aligned with your image */
+    margin: 4rem 0 2rem;
+}
+
+#location li#openarea {
+    background: url('assets/openarea.png') no-repeat left top;
+    background-size: contain; 
+    height: 34px;
+    padding-top: 3px;
+    padding-left: 44px;
+    line-height: 34px;
+    margin: 4rem 0 2rem;
+}
+
+#location li#woodlands {
+    background: url('assets/woodlands.png') no-repeat left top;
+    background-size: contain; 
+    height: 34px;
+    padding-top: 3px;
+    padding-left: 44px;
+    line-height: 34px;
+    margin: 4rem 0 2rem;
+}
