@@ -2,6 +2,15 @@
 
 {% block content %}
 
+<script type="text/javascript" src="{{ url_for('static', filename = 'list_birds.js') }}"></script>
+<link rel="stylesheet" href="{{url_for('static', filename='list_birds.css')}}">
+
+<script>
+    let results = {{results|tojson}}
+    console.log(results)
+</script>
+
+
 <body>
     <div class="table-container">
         <h1>List of Birds:</h1>
@@ -13,19 +22,9 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>American Crow</td>
-                    <td>All Year</td>
-                </tr>
-                <tr>
-                    <td>Blue Jay</td>
-                    <td>All Year</td>
-                </tr>
-               
             </tbody>
         </table>
     </div>
-
 
 </body>
 
