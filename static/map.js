@@ -48,73 +48,58 @@ function initMap() {
     var shakespearGarden = [40.7794, -73.9673]
     var greatLawn = [40.7790, -73.9665]
 
-    var bethesdaTerrace = [40.7740, -73.9708];
-
 
     var map = L.map('map').setView(centralPark, 14);
 
-    console.log(map)
     // Set up the OpenStreetMap tile layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    // Add a marker for Central Park at the approximate center
-    // var marker = L.marker(centralPark).addTo(map);
-    // marker.bindPopup('<b>Central Park</b><br>New York City').openPopup();
-
     // Freshwater 
     var turtlePondMarker = L.marker(turtlePond, {icon: waterIcon}).addTo(map);
-    turtlePondMarker.bindPopup('<b>Turtle Pond</b>');
+    turtlePondMarker.bindPopup('<b>Turtle Pond</b> <br> Freshwater');
 
     var harlemMeerMarker = L.marker(harlemMeer, {icon: waterIcon}).addTo(map);
-    harlemMeerMarker.bindPopup('<b>Harlem Meer</b>');
+    harlemMeerMarker.bindPopup('<b>Harlem Meer</b> <br> Freshwater');
 
     var reservoirMarker = L.marker(reservoir, {icon: waterIcon}).addTo(map);
-    reservoirMarker.bindPopup('<b>Reservoir</b>');
+    reservoirMarker.bindPopup('<b>Reservoir</b> <br> Freshwater');
 
     var lakeMarker = L.marker(lake, {icon: waterIcon}).addTo(map);
-    lakeMarker.bindPopup('<b>The Lake</b>');
+    lakeMarker.bindPopup('<b>The Lake</b> <br> Freshwater');
 
     var lochMarker = L.marker(loch, {icon: waterIcon}).addTo(map);
-    lochMarker.bindPopup('<b>The Loch r</b>');
+    lochMarker.bindPopup('<b>The Loch r</b> <br> Freshwater');
 
     var gillMarker = L.marker(gill, {icon: waterIcon}).addTo(map);
-    gillMarker.bindPopup('<b>The Gill</b>');
+    gillMarker.bindPopup('<b>The Gill</b> <br> Freshwater');
 
 
     // Woodland 
     var rambleMarker = L.marker(ramble, {icon: woodlandIcon}).addTo(map);
-    rambleMarker.bindPopup('<b>Ramble</b>');
+    rambleMarker.bindPopup('<b>Ramble</b> <br> Woodland');
 
     var northWoodsMarker = L.marker(northWoods, {icon: woodlandIcon}).addTo(map);
-    northWoodsMarker.bindPopup('<b>North Woods</b>');
+    northWoodsMarker.bindPopup('<b>North Woods</b> <br> Woodland');
 
     var halletNatureMarker = L.marker(halletNature, {icon: woodlandIcon}).addTo(map);
-    halletNatureMarker.bindPopup('<b>Hallet Nature Sanctuary</b>');
+    halletNatureMarker.bindPopup('<b>Hallet Nature Sanctuary</b> <br> Woodland');
 
     // Opean Areas
     var wildflowerMeadowMarker = L.marker(wildflowerMeadow, {icon: openIcon}).addTo(map);
-    wildflowerMeadowMarker.bindPopup('<b>Wildflower Meadow</b>');
+    wildflowerMeadowMarker.bindPopup('<b>Wildflower Meadow</b> <br> Open Areas');
 
     var conservatoryGardenMarker = L.marker(conservatoryGarden, {icon: openIcon}).addTo(map);
-    conservatoryGardenMarker.bindPopup('<b>Conservatory Garden</b>');
+    conservatoryGardenMarker.bindPopup('<b>Conservatory Garden</b> <br> Open Areas');
 
     var shakespearGardenMarker = L.marker(shakespearGarden, {icon: openIcon}).addTo(map);
-    shakespearGardenMarker.bindPopup('<b>Shakespeare Garden</b>');
+    shakespearGardenMarker.bindPopup('<b>Shakespeare Garden</b> <br> Open Areas');
 
     var greatLawnMarker = L.marker(greatLawn, {icon: openIcon}).addTo(map);
-    greatLawnMarker.bindPopup('<b>Great Lawn</b>');
+    greatLawnMarker.bindPopup('<b>Great Lawn</b> <br> Open Areas');
 
 
-    // Bethesda Terrace Marker
-    // var bethesdaTerraceMarker = L.marker(bethesdaTerrace, {icon: openIcon}).addTo(map);
-    // bethesdaTerraceMarker.bindPopup('<b>Bethesda Terrace</b>').openPopup();
-
-    // marker.on('click', function(e) {
-    //     // Custom behavior code
-    //     console.log('Marker clicked at ' + e.latlng.toString());
-    // });
   
 }
 
