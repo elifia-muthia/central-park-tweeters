@@ -140,3 +140,9 @@ table tbody tr:nth-child(odd) {
 .quiz-start{
     margin-top: 30px;
 }
+
+#map {
+    height: 800px;
+    width: 30%;
+}
+
