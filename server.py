@@ -13,9 +13,9 @@ species_data = [
         "habitat": "freshwater",
         "scientific_name": "Anas platyrhynchos",
         "image": "https://dariuszzdziebk.wpenginepowered.com/wp-content/uploads/2021/07/BOTW-Homepage-Thumbnail_Mallard_Robert-Adami-Shutterstock-768x498.jpg",
-        "sound": "/media/audio/mallard.mp3",
+        "sound": "/static/media/audio/mallard.mp3",
         "tone": "Nasal",
-        "video": "https://youtu.be/FqDXIjDuFhw?si=DZ3HVARFghfitr6X",
+        "video": "https://www.youtube.com/embed/FqDXIjDuFhw?si=gkh-BfliaL18fvea",
         "description": "Mallards are large ducks with hefty bodies, rounded heads, and wide, flat bills. The basic loud quack associated with ducks, is the call of the female mallard. The male on the other hand, utters soft raspy notes or short whistles.",
         "fun_fact": "Mallards have regional accents, and they are said to have better vision than humans!",
         "season": "All year long"
@@ -26,9 +26,9 @@ species_data = [
         "habitat": "freshwater",
         "scientific_name": "Agelaius phoeniceus",
         "image": "https://indianaaudubon.org/wp-content/uploads/2016/04/RedWingedBlackbird2.jpg",
-        "sound": "/media/audio/red_winged_blackbird.mp3",
+        "sound": "/static/media/audio/red_winged_blackbird.mp3",
         "tone": "Chrip",
-        "video": "https://youtu.be/q3QicOAiBXk?si=q4oAqUGJGQv3EKyL",
+        "video": "https://www.youtube.com/embed/q3QicOAiBXk?si=xrzbbmC0OFjP9-c-",
         "description": "Glossy-black males have scarlet-and-yellow shoulder patches they can puff up or hide depending on how confident they feel. Females are a subdued, streaky brown, almost like a large, dark sparrow. Their early and tumbling song are happy indications of the return of spring.",
         "fun_fact": "Red-winged Blackbirds are one of the most polygamous of all bird species. They have been observed to have as many as 15 females nesting in the territory of a single male.",
         "season": "Spring"
@@ -242,14 +242,14 @@ def load_quiz():
 def view_bird(id=None):
     return render_template('view_bird.html', id=id)
 # AJAX FUNCTIONS
-# @app.route('/get_view_bird', methods=['POST'])
-# def get_view_bird():
-#     json_data = request.get_json()
-#     id = json_data["id"]
+@app.route('/get_view_bird', methods=['POST'])
+def get_view_bird():
+    json_data = request.get_json()
+    id = json_data["id"]
 
-#     result = next((bar for bar in bars if bar["id"] == id), None)
+    result = next((bird for bird in species_data if bird["id"] == id), None)
 
-#     return jsonify(data=result)
+    return jsonify(data=result)
 
 @app.route('/get_quiz_questions', methods=['POST'])
 def get_quiz_questions():
