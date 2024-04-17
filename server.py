@@ -23,7 +23,7 @@ species_data = [
     },
     {
         "id": "2",
-        "title": "Red-Winged Blackbird",
+        "name": "Red-Winged Blackbird",
         "habitat": "freshwater",
         "scientific_name": "Agelaius phoeniceus",
         "image": "https://indianaaudubon.org/wp-content/uploads/2016/04/RedWingedBlackbird2.jpg",
@@ -266,8 +266,13 @@ def load_sound():
    return render_template('bird_sounds.html')
 
 @app.route('/birds')
-def load_birds():
-   return render_template('list_birds.html')
+@app.route('/birds/<location>')
+def load_birds(location=None):
+    if location is None:
+        return render_template('list_birds.html', results=species_data)
+    
+    results = [bird for bird in species_data if bird["habitat"] == "freshwater"]
+    return render_template('list_birds.html', results=results)
 
 @app.route('/map')
 def load_map():
@@ -284,6 +289,7 @@ def load_quiz():
 @app.route('/view/<id>')
 def view_bird(id=None):
     return render_template('view_bird.html', id=id)
+
 # AJAX FUNCTIONS
 @app.route('/get_view_bird', methods=['POST'])
 def get_view_bird():
