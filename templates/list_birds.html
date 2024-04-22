@@ -8,8 +8,10 @@
 <script>
     let results = {{results|tojson}}
     let loc = {{location|tojson}}
+    let studied = {{studied|tojson}}
     console.log(results)
     console.log(loc)
+    console.log(studied)
 </script>
 
 
@@ -21,6 +23,7 @@
                 <tr>
                     <th>Bird Name</th>
                     <th>Season</th>
+                    <th>Studied?</th>
                 </tr>
             </thead>
             <tbody>

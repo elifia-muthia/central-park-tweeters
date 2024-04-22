@@ -251,51 +251,58 @@ bird_terminology = [
    }
 ]
 
-user_data = {
-  "current_page": "home",
-  "quiz_selection": "easy_quiz",
-  "quiz_results": [
-    {"question_id": 1, "selected_option": "choice4", "correct": True},
-    {"question_id": 2, "selected_option": "choice3", "correct": False}
-  ]
-}
+quiz_history = []
+ 
+navigated_pages = []
 
-
-
+current_quiz_id = len(quiz_history)
 
 # ROUTES
 @app.route('/')
 def load_homepage():
-   return render_template('homepage.html')
+    navigated_pages.append('/')
+    return render_template('homepage.html')
 
 @app.route('/sound')
 def load_sound():
-   return render_template('bird_sounds.html', results=bird_terminology)
+    navigated_pages.append('/sound')
+    return render_template('bird_sounds.html', results=bird_terminology)
 
 @app.route('/birds')
 @app.route('/birds/<location>')
 def load_birds(location=None):
     if location is None:
-        return render_template('list_birds.html', results=species_data, location=location)
+        navigated_pages.append('/birds')
+        return render_template('list_birds.html', results=species_data, location=location, studied=navigated_pages)
     
+    navigated_pages.append('/birds/' + location)
     results = [bird for bird in species_data if bird["habitat"] == location]
-    return render_template('list_birds.html', results=results, location=location)
+    return render_template('list_birds.html', results=results, location=location, studied=navigated_pages)
 
 @app.route('/map')
 def load_map():
-   return render_template('map_birds.html')
+    navigated_pages.append('/map')
+    return render_template('map_birds.html')
 
 @app.route('/centralpark')
 def load_centralpark(): 
-   return render_template('centralpark_map.html')
+    navigated_pages.append('/centralpark')
+    return render_template('centralpark_map.html')
 
 @app.route('/quiz')
 def load_quiz():
-   return render_template('quiz.html')
+    navigated_pages.append('/quiz')
+    return render_template('quiz.html')
 
 @app.route('/view/<id>')
 def view_bird(id=None):
+    navigated_pages.append('/view/' + id)
     return render_template('view_bird.html', id=id)
+
+@app.route('/past_quiz/<id>')
+def get_past_quiz(id=None):
+    navigated_pages.append('/past_quiz/' + id)
+    return render_template('past_quiz.html', id=id)
 
 # AJAX FUNCTIONS
 @app.route('/get_view_bird', methods=['POST'])
@@ -320,6 +327,24 @@ def get_quiz_questions():
     print(result)
 
     return jsonify(data=result)
+
+@app.route('/submit_quiz', methods=['POST'])
+def submit_quiz():
+    global current_quiz_id
+
+    json_data = request.get_json()
+    quiz = json_data["quiz"]
+    quiz['id'] = str(current_quiz_id)
+
+    quiz_history.append(quiz)
+
+    return jsonify(data=quiz_history)
+
+@app.route('/get_back', methods=['POST'])
+def get_back():
+    back = navigated_pages[-1]
+    return jsonify(data=back)
+
 
 if __name__ == '__main__':
    app.run(debug = True)
