@@ -5,6 +5,11 @@
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
 <link rel="stylesheet" href="{{url_for('static', filename='quiz.css')}}">
 
+<script>
+    let navigated = {{navigated|tojson}}
+    console.log(navigated)
+</script>
+
 
 <div id="quiz">
     <div class="main" id="quiz-landing">

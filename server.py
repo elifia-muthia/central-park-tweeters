@@ -292,7 +292,7 @@ def load_centralpark():
 @app.route('/quiz')
 def load_quiz():
     navigated_pages.append('/quiz')
-    return render_template('quiz.html')
+    return render_template('quiz.html', navigated=navigated_pages)
 
 @app.route('/view/<id>')
 def view_bird(id=None):
@@ -334,6 +334,7 @@ def submit_quiz():
 
     json_data = request.get_json()
     quiz = json_data["quiz"]
+    current_quiz_id += 1
     quiz['id'] = str(current_quiz_id)
 
     quiz_history.append(quiz)

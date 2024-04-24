@@ -13,6 +13,16 @@
     background-color: lightgray;
 }
 
+.base-font {
+    font-family: 'Raleway', sans-serif;
+}
+
+#homepage {
+    background-color: #faf0e6;
+    height: 790px;
+    margin: 0px;
+    padding: 0px;
+}
 
 .welcome-header{
     font-size: 70px; 
@@ -22,12 +32,20 @@
 
 }
 
+.accent-color {
+    background-color: #023020;
+}
+
 .map-header{
     font-size: 40px; 
     /* font-weight: bold; */
     padding: 35px;
     margin: 4rem 0 0.5rem;
 
+}
+
+.white-text {
+    color: white;
 }
 
 .short-desc{
