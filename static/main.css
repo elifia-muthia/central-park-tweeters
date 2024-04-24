@@ -17,8 +17,12 @@
     font-family: 'Raleway', sans-serif;
 }
 
+.main-color{ 
+    background-color:#faf0e6; 
+}
+
 #homepage {
-    background-color: #faf0e6;
+    /* background-color: #faf0e6; */
     height: 790px;
     margin: 0px;
     padding: 0px;
