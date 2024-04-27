@@ -198,6 +198,66 @@ function showQuizResults() {
     var score = gradeQuiz();
 
     $('#quiz-score').text(score + ' out of ' + questions.length);
+
+    
+    const combinedOptions = {
+        year: 'numeric', month: 'long', day: 'numeric',
+        hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true
+    };
+    const now = new Date();
+    let time_now = now.toLocaleString('en-US', combinedOptions);
+
+    quiz = {"questions": questions, 
+            "answers": answers, 
+            "score": score, 
+            "datetime": time_now}
+
+    getQuizHistory(quiz, function(quiz_history) {
+        console.log(quiz_history);
+        questions = quiz_history
+        showQuizHistory(quiz_history);
+    });
+
+}
+
+function showQuizHistory(quiz_history) {
+    $.each(quiz_history, function(index, quiz) {
+        if (index !== quiz_history.length - 1) {
+            var row = $('<tr>').attr('data-id', quiz.id);
+            
+            row.append(
+                $('<td>').text(quiz.datetime),
+                $('<td>').text(quiz.score + " out of " + quiz.questions.length)
+            );
+            
+            row.click(function() {
+                window.location.href = '/past_quiz/' + $(this).data('id');
+            });
+            
+            $('table tbody').append(row);
+        }
+    })
+}
+
+function getQuizHistory(quiz, handleQuizHistory) {
+    request_data = {'quiz': quiz}
+
+    $.ajax({
+        type: "POST",
+        url: "submit_quiz",
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(request_data),
+        success: function(result) {
+            handleQuizHistory(result.data);
+        },
+        error: function(request, status, error) {
+            console.log("Error");
+            console.log(request);
+            console.log(status);
+            console.log(error);
+        }
+    });
 }
 
 function gradeQuiz() {

@@ -7,18 +7,23 @@
 
 <script>
     let results = {{results|tojson}}
+    let loc = {{location|tojson}}
+    let studied = {{studied|tojson}}
     console.log(results)
+    console.log(loc)
+    console.log(studied)
 </script>
 
 
 <body>
     <div class="table-container">
-        <h1>List of Birds:</h1>
+        <div id="list-title"></div>
         <table>
             <thead>
                 <tr>
                     <th>Bird Name</th>
                     <th>Season</th>
+                    <th>Studied?</th>
                 </tr>
             </thead>
             <tbody>

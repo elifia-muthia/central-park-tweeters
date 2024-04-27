@@ -42,3 +42,8 @@
 #answer-warning{
     display: none;
 }
+
+table tbody tr:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}

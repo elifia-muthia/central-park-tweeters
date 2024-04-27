@@ -5,6 +5,11 @@
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
 <link rel="stylesheet" href="{{url_for('static', filename='quiz.css')}}">
 
+<script>
+    let navigated = {{navigated|tojson}}
+    console.log(navigated)
+</script>
+
 
 <div id="quiz">
     <div class="main" id="quiz-landing">
@@ -44,6 +49,21 @@
         <div class="quiz-nav-buttons">
             <button type="button" id="redo-quiz">Quiz Me Again!</button>
             <button type="button" id="go-home">Continue Learning</button>
+        </div>
+
+        <div class="title">Past Quizzes</div>
+        <div class="table-container">
+            <div id="past-quizzes"></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date/Time</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
     </div>
 
