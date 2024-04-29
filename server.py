@@ -96,6 +96,7 @@ species_data = [
 easy_quiz = [
     {
         "id": "1",
+        "type": "multiple-choice",
         "question": "Which of the follow birds can be found in freshwater?",
         "media_type": "img",
         "media": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/locations/_2475x1151_crop_center-center_none/turtle-pond.JPG",
@@ -107,6 +108,7 @@ easy_quiz = [
     },
     {
         "id": "2",
+        "type": "multiple-choice",
         "question": "Which sound term best matches the following audio?",
         "media_type": "audio",
         "media": "/static/media/audio/mallard.mp3",
@@ -118,6 +120,7 @@ easy_quiz = [
     },
     {
         "id": "3",
+        "type": "multiple-choice",
         "question:": "Which audio is NOT a bird tone term?",
         "media_type": "img",
         "media": "https://media.cntraveler.com/photos/611fc78d9282cc5de31e9d87/16:9/w_2240,c_limit/Central%20Park,%20Manhattan,%20New%20York_GettyImages-528180834.jpg",
@@ -129,6 +132,7 @@ easy_quiz = [
     },
     {
         "id": "4",
+        "type": "multiple-choice",
         "question:": "Match the bird to the audio?",
         "media_type": "audio",
         "media": "/static/media/audio/american_crow.mp3",
@@ -140,6 +144,7 @@ easy_quiz = [
     },
     {
         "id": "5",
+        "type": "multiple-choice",
         "question": "This unidentified sound best matches which bird call term?",
         "media_type": "audio",
         "media": "/static/media/audio/pine_warbler.mp3",
@@ -148,6 +153,71 @@ easy_quiz = [
         "choice3": "Quack",
         "choice4": "Chirp",
         "answer": "choice2"
+    },
+    {
+        "id": "6",
+        "type": "drag_and_drop",
+        "question": "Drag the bird onto the location on the map",
+        "drag_bird": "https://nestwatch.org/wp-content/uploads/2012/04/MODO_Debbie-McKenzie-728x494.jpg",
+        "bird_sound": "audio",
+        "media": "/static/media/audio/mourning_dove.mp3",
+        "choice1": "Shakespere Garden",
+        "choice2": "Turtle Pond",
+        "choice3": "Reservoir",
+        "choice4": "North Woods",
+        "answer": "choice1"
+    },
+    {
+        "id": "7",
+        "type": "drag_and_drop",
+        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "drag_bird": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg/1200px-Anas_platyrhynchos_male_female_quadrat.jpg",
+        "bird_sound": "audio",
+        "media": "/static/media/audio/mallard.mp3",
+        "choice1": "Shakespere Garden",
+        "choice2": "Convervatory",
+        "choice3": "Reservoir",
+        "choice4": "North Woods",
+        "answer": "choice3"
+    },
+    {
+        "id": "8",
+        "type": "drag_and_drop",
+        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "drag_bird": "https://www.allaboutbirds.org/guide/assets/photo/64798651-480px.jpg",
+        "bird_sound": "audio",
+        "media": "/static/media/audio/magnolia_warbler.mp3",
+        "choice1": "Ramble",
+        "choice2": "Convervatory Garden",
+        "choice3": "Harlem Meer",
+        "choice4": "Great Lawns",
+        "answer": "choice1"
+    },
+    {
+        "id": "9",
+        "type": "drag_and_drop",
+        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "drag_bird": "https://www.allaboutbirds.org/guide/assets/photo/297087301-480px.jpg",
+        "bird_sound": "audio",
+        "media": "/static/media/audio/northern_cardinal.mp3",
+        "choice1": "Shakespere Garden",
+        "choice2": "North Woods",
+        "choice3": "Reservoir",
+        "choice4": "Wildflower Meadow",
+        "answer": "choice2"
+    },
+    {
+        "id": "10",
+        "type": "drag_and_drop",
+        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "drag_bird": "https://indianaaudubon.org/wp-content/uploads/2016/04/RedWingedBlackbird2-1200x1005.jpg",
+        "bird_sound": "audio",
+        "media": "/static/media/audio/red_winged_blackbird.mp3",
+        "choice1": "Shakespere Garden",
+        "choice2": "North Woods",
+        "choice3": "Harlem Meer",
+        "choice4": "Wildflower Meadow",
+        "answer": "choice3"
     }
 ]
 
@@ -195,6 +265,82 @@ hard_quiz = [
         "choice3": "Trill",
         "choice4": "Warble",
         "answer": "choice2"
+    },
+    {
+        "id": "5",
+        "question": "Which sound term best matches the following audio?",
+        "media_type": "audio",
+        "media": "/static/media/audio/northern_cardinal.mp3",
+        "choice1": "Whistle",
+        "choice2": "Mneumonics",
+        "choice3": "Flute",
+        "choice4": "Honk",
+        "answer": "choice1"
+    },
+    {
+        "id": "6",
+        "type": "drag_and_drop",
+        "question": "Drag the bird onto the location on the map",
+        "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",
+        "bird_sound": "audio",
+        "media": "/static/media/audio/mourning_dove.mp3",
+        "choice1": "Shakespere Garden",
+        "choice2": "Turtle Pond",
+        "choice3": "Reservoir",
+        "choice4": "North Woods",
+        "answer": "choice1"
+    },
+    {
+        "id": "7",
+        "type": "drag_and_drop",
+        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",
+        "bird_sound": "audio",
+        "media": "/static/media/audio/mallard.mp3",
+        "choice1": "Shakespere Garden",
+        "choice2": "Convervatory",
+        "choice3": "Reservoir",
+        "choice4": "North Woods",
+        "answer": "choice3"
+    },
+    {
+        "id": "8",
+        "type": "drag_and_drop",
+        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",
+        "bird_sound": "audio",
+        "media": "/static/media/audio/magnolia_warbler.mp3",
+        "choice1": "Ramble",
+        "choice2": "Convervatory Garden",
+        "choice3": "Harlem Meer",
+        "choice4": "Great Lawns",
+        "answer": "choice1"
+    },
+    {
+        "id": "9",
+        "type": "drag_and_drop",
+        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",
+        "bird_sound": "audio",
+        "media": "/static/media/audio/northern_cardinal.mp3",
+        "choice1": "Shakespere Garden",
+        "choice2": "North Woods",
+        "choice3": "Reservoir",
+        "choice4": "Wildflower Meadow",
+        "answer": "choice2"
+    },
+    {
+        "id": "10",
+        "type": "drag_and_drop",
+        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",
+        "bird_sound": "audio",
+        "media": "/static/media/audio/red_winged_blackbird.mp3",
+        "choice1": "Shakespere Garden",
+        "choice2": "North Woods",
+        "choice3": "Harlem Meer",
+        "choice4": "Wildflower Meadow",
+        "answer": "choice3"
     }
 ]
 
@@ -212,42 +358,42 @@ bird_terminology = [
       "type" : "Tone",
       "title" : "Trill",
       "sound" : "/static/media/audio/trill.mp3",
-      "info" : "Harsh bird calls are typically described as grating, raucous, or jarring sounds that can be quite loud and unpleasant to the ear. These calls often consist of rough, discordant noises that may sound like cawing, screeching, or squawking. They tend to carry over long distances and are typically used by birds to assert territory, scare off predators, or communicate distress. The tone is usually sharp and can be repetitive, making it very noticeable and sometimes even disruptive in a natural environment. Examples of birds known for their harsh calls include crows, ravens, and some species of gulls and jays."
+      "info" :  "Trills are composed of quick, consecutive notes that seamlessly connect to create a continuous, vibrating sound. These calls are often sustained and can vary greatly in pitch and speed, typically reflecting the emotional or territorial state of the bird. Trills are mostly utilized during mating rituals or when establishing territory boundaries. The rapid sequence of sounds can sometimes blur into a near mechanical noise, especially in species like the Chipping Sparrow."
    },
    {
       "id": "3",
       "type" : "Tone",
       "title" : "Warble",
       "sound" : "/static/media/audio/pine_warbler.mp3",
-      "info" : "Harsh bird calls are typically described as grating, raucous, or jarring sounds that can be quite loud and unpleasant to the ear. These calls often consist of rough, discordant noises that may sound like cawing, screeching, or squawking. They tend to carry over long distances and are typically used by birds to assert territory, scare off predators, or communicate distress. The tone is usually sharp and can be repetitive, making it very noticeable and sometimes even disruptive in a natural environment. Examples of birds known for their harsh calls include crows, ravens, and some species of gulls and jays."
+      "info" :  "Warbles consist of a melodious sequence of notes that modulate in pitch and length, creating a complex and harmonious sound. This type of birdsong is particularly expressive, used frequently during the breeding season as a display of vocal prowess to attract mates and deter rivals. Warbles can incorporate elements of other calls, blending trills, and whistles into elaborate songs that vary from moment to moment. Birds like the Song Thrush are renowned for their rich, warbling vocalizations."
    },
    {
       "id": "4",
       "type" : "Tone",
       "title" : "Whistle",
       "sound" : "/static/media/audio/northern_cardinal.mp3",
-      "info" : "Harsh bird calls are typically described as grating, raucous, or jarring sounds that can be quite loud and unpleasant to the ear. These calls often consist of rough, discordant noises that may sound like cawing, screeching, or squawking. They tend to carry over long distances and are typically used by birds to assert territory, scare off predators, or communicate distress. The tone is usually sharp and can be repetitive, making it very noticeable and sometimes even disruptive in a natural environment. Examples of birds known for their harsh calls include crows, ravens, and some species of gulls and jays."
+      "info" :  "Whistles are characterized by their simplicity and clarity, producing single or repeated pure-toned notes. These sounds are often loud and penetrating, designed to carry over long distances and through dense habitats, making them common among forest and grassland birds. Whistles are typically used for basic communication, such as signaling danger or maintaining flock cohesion. Species such as the Black-capped Chickadee emit distinctive, clear whistles that serve as effective identifiers."
    },
    {
       "id": "5",
       "type" : "Tone",
       "title" : "Nasal",
       "sound" : "/static/media/audio/mallard.mp3",
-      "info" : "Harsh bird calls are typically described as grating, raucous, or jarring sounds that can be quite loud and unpleasant to the ear. These calls often consist of rough, discordant noises that may sound like cawing, screeching, or squawking. They tend to carry over long distances and are typically used by birds to assert territory, scare off predators, or communicate distress. The tone is usually sharp and can be repetitive, making it very noticeable and sometimes even disruptive in a natural environment. Examples of birds known for their harsh calls include crows, ravens, and some species of gulls and jays."
-   },
+      "info" :  "Nasal calls emit a resonant, often less melodious sound, as if produced through the nose, with a buzzy or reedy quality. These sounds can serve various purposes, including alerting other birds to potential threats or facilitating group movements among flocks. Nasal tones are less musical but very distinctive, making them important for species recognition in dense vegetation where visibility is low. Birds like the Common Grackle are known for their nasal calls."   
+      },
    {
       "id": "6",
       "type" : "Tone",
       "title" : "Mneumonics",
       "sound" : "/static/media/audio/mneumonic.mp3",
-      "info" : "Harsh bird calls are typically described as grating, raucous, or jarring sounds that can be quite loud and unpleasant to the ear. These calls often consist of rough, discordant noises that may sound like cawing, screeching, or squawking. They tend to carry over long distances and are typically used by birds to assert territory, scare off predators, or communicate distress. The tone is usually sharp and can be repetitive, making it very noticeable and sometimes even disruptive in a natural environment. Examples of birds known for their harsh calls include crows, ravens, and some species of gulls and jays."
+      "info" :  "Mnemonics in birdsong are memorable sequences that resemble short phrases or rhythmic patterns, aiding in the identification of specific species. These calls are often designed to mimic human words or sounds, making them particularly useful for bird watchers. Mnemonic calls can vary significantly between species, reflecting unique adaptations to their environments. The Eastern Towhee, for instance, is famous for its drink-your-tea song that serves as a mnemonic."   
    },
    {
       "id": "7",
       "type" : "Tone",
       "title" : "Liquid/Flute-like",
       "sound" : "/static/media/audio/liquid_flute-like.mp3",
-      "info" : "Harsh bird calls are typically described as grating, raucous, or jarring sounds that can be quite loud and unpleasant to the ear. These calls often consist of rough, discordant noises that may sound like cawing, screeching, or squawking. They tend to carry over long distances and are typically used by birds to assert territory, scare off predators, or communicate distress. The tone is usually sharp and can be repetitive, making it very noticeable and sometimes even disruptive in a natural environment. Examples of birds known for their harsh calls include crows, ravens, and some species of gulls and jays."
+      "info" :  "Liquid or flutelike tones are smooth, flowing, and exceptionally melodious, similar to the sound of a flute. These calls are continuous, with a clear, musical quality that is both soothing and alluring. They are often used in calm, serene environments where their melodious nature helps in attracting mates or soothing young. The Wood Thrush, known for its beautiful flute-like songs, utilizes this tone to enchant listeners during the early summer evenings."   
    }
 ]
 
