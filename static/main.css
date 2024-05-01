@@ -189,3 +189,52 @@ table tbody tr:nth-child(odd) {
     line-height: 34px;
     margin: 4rem 0 2rem;
 }
+
+
+.accordion {
+    background-color: #eee;
+    /* color: #444; */
+    color: #000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 30px;
+    transition: 0.4s;
+    margin: 0 0 0; 
+    /* margin: 0rem 0 2rem; */
+  }
+
+
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .panel {
+    padding: 0 18px;
+    font-size: 20px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-bottom: 2rem; 
+    /* margin: 0rem 0 2rem; */
+  }
+
+  .panel-spacing{
+    margin: 1rem 0 1rem;
+  }
