@@ -1,5 +1,17 @@
 $(document).ready(function() {
   initMap();
+
+  $(".accordion-loc").click(function(){
+      $(this).toggleClass("active");
+
+      var panel = $(this).next();
+
+      if (panel.css("maxHeight") !== "0px" && panel.css("maxHeight")) {
+          panel.css("maxHeight", "0px");
+      } else {
+          panel.css("maxHeight", panel.prop("scrollHeight") + "px");
+      }
+  });
 });
 
 

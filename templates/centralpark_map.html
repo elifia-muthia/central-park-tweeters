@@ -6,46 +6,94 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 
-<body>
+<body class="main-color">
 
-<h3>Central Park Interactive Map</h3>
+    <div class="col-md-12">
+        <div class = "row content-title"> 
+            <strong>Interactive Central Park Map </strong> 
+        </div>
+        <div class="row slight-margin">
+            <p class="content-desc">Discover the diverse birdlife of Central Park with our interactive map. Click on different habitats—Freshwater, Open Areas, and Woodlands—to learn about the bird species that thrive in each and listen to their unique calls. This tool helps you visualize where different bird sounds can be heard, enhancing your birdwatching experience.</p>
+        </div>
+        <div class ="row">
+            <div class="col-md-6">
+                <div class="row" id="map"></div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <strong>Types of Location/Habitats:</strong>
+                    <button class = "accordion-loc"><img src ="../static/assets/water.png" class="image-marker">Freshwater</button>
+                    <div class="panel-loc">
+                        <p>Lakes, small streams, ponds, and the Reservoir</p>
+                        <ul>
+                            <li>Harlem Meer</li>
+                            <li>Reservoir</li>
+                            <li>Turtle Pond</li>
+                            <li>The Lake</li>
+                            <li>along streams in the wooded areas such as the Gill and the Loch</li>
+                        </ul>
+                        <a href = "/birds/freshwater">List of Freshwater birds </a>
+                        
+                    </div>
+                    <button class = "accordion-loc"><img src ="../static/assets/openarea.png" class="image-marker">Open Areas</button>
+                    <div class="panel-loc">
+                        <p>Gardens, lawns, small meadows, and field edges</p>
+                        <ul>
+                            <li>Wildflower Meadow </li>
+                            <li>Conservatory Garden</li>
+                            <li>Shakespeare Garden</li>
+                            <li>Great Lawns, open grassy areas throughout the Park</li>
+                        </ul>
 
-<div class ="row">
-    <div class="col-md-6">
-        <div class="row" id="map"></div>
-    </div>
-    <div class="col-md-6">
-        <div class="row">
-            <ul id="location">
-                <li> <strong>Types of Location/Habitats:</strong> </li>
-                <li id="freshwater"><a href = "/birds/freshwater">Freshwater</a></li>
-                    <ul>
-                        <li>Harlem Meer</li>
-                        <li>Reservoir</li>
-                        <li>Turtle Pond</li>
-                        <li>The Lake</li>
-                        <li>along streams in the wooded areas such as the Gill and the Loch</li>
-                    </ul>
-                <li id="openarea"><a href = "/birds/open-areas">Open Areas</a></li>
-                    <ul>
-                        <li>Wildflower Meadow </li>
-                        <li>Conservatory Garden</li>
-                        <li>Shakespeare Garden</li>
-                        <li>Great Lawns, open grassy areas throughout the Park</li>
-                    </ul>
-                <li id="woodlands"> <a href = "/birds/Woodlands">Woodlands</a></li>
-                    <ul>
-                        <li>Ramble</li>
-                        <li>North Woods</li>
-                        <li>Hallett Nature Sanctuary</li>
-                    </ul>
-            </ul> 
+                        <a href = "/birds/open-areas">List of Open Areas birds</a>
+                        
+                    </div>
+                    <button class = "accordion-loc"><img src ="../static/assets/woodlands.png" class="image-marker">Woodlands</button>
+                    <div class="panel-loc">
+                        <p>Places where many trees grow close together</p>
+                        <ul>
+                            <li>Ramble</li>
+                            <li>North Woods</li>
+                            <li>Hallett Nature Sanctuary</li>
+                        </ul>
+                        <a href = "/birds/Woodlands">List of Woodlands birds</a>
+                        
+                    </div>
 
-            
+
+
+                    <!-- <ul id="location">
+                        <li> <strong>Types of Location/Habitats:</strong> </li>
+                        <button class = "accordion-loc"><li id="freshwater"><a href = "/birds/freshwater">Freshwater</a></li></button> -->
+                        <!-- <button class = "accordion-loc"><img src ="../static/assets/water.png" class="image-marker"><a href = "/birds/freshwater">Freshwater</a></button>
+                            <ul>
+                                <li>Harlem Meer</li>
+                                <li>Reservoir</li>
+                                <li>Turtle Pond</li>
+                                <li>The Lake</li>
+                                <li>along streams in the wooded areas such as the Gill and the Loch</li>
+                            </ul>
+                        <li id="openarea"><a href = "/birds/open-areas">Open Areas</a></li>
+                            <ul>
+                                <li>Wildflower Meadow </li>
+                                <li>Conservatory Garden</li>
+                                <li>Shakespeare Garden</li>
+                                <li>Great Lawns, open grassy areas throughout the Park</li>
+                            </ul>
+                        <li id="woodlands"> <a href = "/birds/Woodlands">Woodlands</a></li>
+                            <ul>
+                                <li>Ramble</li>
+                                <li>North Woods</li>
+                                <li>Hallett Nature Sanctuary</li>
+                            </ul>
+                    </ul>  -->
+
+                    
+                </div>
+            </div>
+
         </div>
     </div>
-
-</div>
 
 
 
