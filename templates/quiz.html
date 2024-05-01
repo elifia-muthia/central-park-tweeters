@@ -12,24 +12,22 @@
 
 
 <div id="quiz">
-    <div class="main" id="quiz-landing">
+    <div class="quiz-container" id="quiz-landing">
         <div class="title">Quiz</div>
-
-        <div class="quiz-text">Let's test your knowledge!</div>
         
         <div class="btn-group" id="difficulty-level" role="group" aria-label="Difficulty">
             <div class="quiz-text">Set the level of difficulty:</div>
-            <button type="button" id="easy-btn">Easy</button>
-            <button type="button" id="hard-btn">Hard</button>
+            <button class="diff-button" type="button" id="easy-btn">Easy</button>
+            <button class="diff-button" type="button" id="hard-btn">Hard</button>
         </div>
 
         <div class="warning" id="difficulty-warning">Please select a level of difficulty.</div>
 
-        <button id="quiz-start">Start</button>
+        <button class="accent-color" id="quiz-start">Start</button>
         
     </div> 
 
-    <div id="quiz-section">
+    <div class="quiz-container" id="quiz-section">
         <div class="title" id="question-num"></div>
         <div class="text" id="question"></div>
         <div id="question-media"></div>
@@ -42,7 +40,7 @@
         </div>
     </div>
 
-    <div id="quiz-results">
+    <div class="quiz-container" id="quiz-results">
         <div class="title">Yay you tested your knowledge!</div>
         <div class="text">Your score:</div>
         <div id="quiz-score"></div>
@@ -58,6 +56,7 @@
                 <thead>
                     <tr>
                         <th>Date/Time</th>
+                        <th>Difficulty Level</th>
                         <th>Score</th>
                     </tr>
                 </thead>

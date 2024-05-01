@@ -17,7 +17,7 @@
     font-family: 'Raleway', sans-serif;
 }
 
-.main-color{ 
+body { 
     background-color:#faf0e6; 
 }
 
@@ -33,7 +33,6 @@
     font-weight: bold;
     padding: 35px;
     margin: 4rem 0 0.5rem;
-
 }
 
 .accent-color {

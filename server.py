@@ -462,15 +462,15 @@ def get_view_bird():
 
 @app.route('/get_quiz_questions', methods=['POST'])
 def get_quiz_questions():
-    json_data = request.get_json()
+    json_data = request.get_json() 
     level = json_data["level"]
 
     if level == 'easy':
-        result = random.sample(easy_quiz, 2)
+        result = random.sample(easy_quiz, 5)
     else:
-        result = random.sample(hard_quiz, 2)
+        result = random.sample(hard_quiz, 5)
 
-    print(result)
+    print(result) 
 
     return jsonify(data=result)
 
