@@ -275,3 +275,11 @@ table tbody tr:nth-child(odd) {
     margin-bottom: 2rem; 
     /* margin: 0rem 0 2rem; */
   }
+
+  .img-sound{
+    /* width: 300px;   Desired width */
+    width: 400px;
+    height: 400px; 
+    object-fit: cover;
+    margin: 1.25rem 0 1.5rem;
+  }
