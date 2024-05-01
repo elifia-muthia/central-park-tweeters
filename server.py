@@ -44,7 +44,7 @@ species_data = [
         "sound": "/static/media/audio/northern_cardinal.mp3",
         "tone": "Whistle",
         "tone_description": "The song is a loud string of clear down-slurred or two-parted whistles, often speeding up and ending in a slow trill. The songs typically last 2 to 3 seconds. Syllables can sound like the bird is singing cheer, cheer, cheer or birdie, birdie, birdie. Males in particular may sing throughout the year, though the peak of singing is in spring and early summer.",
-        "video": "https://youtu.be/J-hOualMPl0?si=oJRqyF4jKkk2vh9q",
+        "video": "https://www.youtube.com/embed/J-hOualMPl0?si=9SJ2_x_XfQCgjU3t",
         "description": "The male Northern Cardinal is perhaps responsible for getting more people to open up a field guide than any other bird. They’re a perfect combination of familiarity, conspicuousness, and style: a shade of red you can’t take your eyes off. Even the brown females sport a sharp crest and warm red accents.",
         "fun_fact": "A perennial favorite among people, the Northern Cardinal is the state bird of seven states.",
         "season": "All year round"
@@ -58,7 +58,7 @@ species_data = [
         "sound": "/static/media/audio/magnolia_warbler.mp3",
         "tone": "Nasal/Buzz",
         "tone_description": "Males and females call with a nasal zic or zeep. During nocturnal migration they give a buzzy zeet.",
-        "video": "https://youtu.be/2Vth2XSAAxM?si=dBKiJnTGFmBxJhXR",
+        "video": "https://www.youtube.com/embed/2Vth2XSAAxM?si=-RV_vy3ah5ui3Mmo",
         "description": "Many male warblers are black and yellow, but Magnolia Warblers take it up a notch, sporting a bold black necklace complete with long tassels, a black mask, and a standout white wing patch. The female lacks the male's bold accoutrements, instead wearing an elegant white eyering on her gray head, 2 thin white wingbars, and yellow underparts with moderate streaking. ",
         "fun_fact": " They frequently join foraging flocks of chickadees during their migration. The “chickadee-dee-dee” call is a possible marker for the presence of the magnolia warbler.",
         "season": "Spring and Fall"
@@ -72,7 +72,7 @@ species_data = [
         "sound": "/static/media/audio/mourning_dove.mp3",
         "tone": "Coo",
         "tone_description": "You can often hear paired males give the three-parted “nest call” while nest-building: a coo-OO-oo, highest in the middle. Females sometimes call ohr ohr while sitting on the nest.",
-        "video": "https://youtu.be/7oNljd7R1f8?si=clIUbn510qkBAtob",
+        "video": "https://www.youtube.com/embed/7oNljd7R1f8?si=XNdl-iQb_zUgN6_T",
         "description": "A graceful, slender-tailed, small-headed dove that’s common across the continent. Mourning Doves perch on telephone wires and forage for seeds on the ground; their flight is fast and bullet straight. Their soft, drawn-out calls sound like laments. When taking off, their wings make a sharp whistling or whinnying. Mourning Doves are the most frequently hunted species in North America.",
         "fun_fact": "Mourning Doves eat roughly 12 to 20 percent of their body weight per day, or 71 calories on average.",
         "season": "All year round"
@@ -86,7 +86,7 @@ species_data = [
         "sound": "/static/media/audio/american_crow.mp3",
         "tone": "Harsh",
         "tone_description": "Crows have more than 20 calls. The most common, a harsh caw, has several qualities and lengths that may serve different purposes. Immature begging young American Crows give a higher-pitched, nasal call that can sound like a Fish Crow. You may also hear a variety of calls and alert calls given to rally others to mob predators.",
-        "video": "https://youtu.be/JnDRHDoOsEw?si=joH2lFmRBTacjrmw",
+        "video": "https://www.youtube.com/embed/JnDRHDoOsEw?si=YjtRuzH95HzyGk8J",
         "description": "American Crows are familiar over much of the continent: large, intelligent, all-black birds with hoarse, cawing voices. They are common sights in treetops, fields, and roadsides, and in habitats ranging from open woods and empty beaches to town centers. They usually feed on the ground and eat almost anything—typically earthworms, insects and other small animals, seeds, and fruit; also garbage, carrion, and chicks they rob from nests.",
         "fun_fact": "Crows sometimes make and use tools. Examples include a captive crow using a cup to carry water over to a bowl of dry mash; shaping a piece of wood and then sticking it into a hole in a fence post in search of food; and breaking off pieces of pine cone to drop on tree climbers near a nest.",
         "season": "All year round"
