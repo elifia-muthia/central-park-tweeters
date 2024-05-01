@@ -27,12 +27,12 @@ function get_bird_info(id) {
 function display_bird_info(birdData) {
     $('#bird-name').text(birdData.name);
     $('#bird-scientific-name').text(birdData.scientific_name);
-    $('#bird-habitat').text(birdData.habitat);
+    $('#bird-habitat').text("Habitat: " + birdData.habitat);
     $('#bird-img').html('<img src="' + birdData.image + '" alt="' + birdData.name + '">');
     $('#bird-sound').html('<audio controls><source src="' + birdData.sound + '" type="audio/mpeg">Your browser does not support the audio element.</audio>');
-    $('#bird-tone').text(birdData.tone);
+    $('#bird-tone').text("Tone: " + birdData.tone);
     $('#bird-video').html('<iframe width="560" height="315" src="' + birdData.video + '" frameborder="0" allowfullscreen></iframe>');
-    $('#bird-description').text(birdData.description);
-    $('#bird-fun-fact').text(birdData.fun_fact);
-    $('#bird-season').text(birdData.season);
+    $('#bird-description').text("Description: " + birdData.description);
+    $('#bird-fun-fact').text("Fun fact: " + birdData.fun_fact);
+    $('#bird-season').text("Season: " + birdData.season);
 }
