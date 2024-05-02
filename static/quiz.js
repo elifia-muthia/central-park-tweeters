@@ -1,6 +1,7 @@
 var currentQuestionIndex = 0;
 var answers = [];
 var questions = [];
+var difficulty = "";
 
 $(document).ready(function() {
     setDifficulty('none');
@@ -49,7 +50,7 @@ function startQuiz() {
     }
 
     // Get the difficulty from the button's id by removing '-btn' and print it or use it
-    var difficulty = selectedDifficulty.replace('-btn', '');
+    difficulty = selectedDifficulty.replace('-btn', '');
     console.log("Starting quiz with difficulty:", difficulty);
 
     getQuizQuestions(difficulty, function(quiz_questions) {
@@ -210,10 +211,11 @@ function showQuizResults() {
     quiz = {"questions": questions, 
             "answers": answers, 
             "score": score, 
-            "datetime": time_now}
+            "datetime": time_now,
+            "difficulty": difficulty}
 
     getQuizHistory(quiz, function(quiz_history) {
-        console.log(quiz_history);
+        console.log("Quiz History: " + quiz_history);
         questions = quiz_history
         showQuizHistory(quiz_history);
     });
@@ -223,10 +225,14 @@ function showQuizResults() {
 function showQuizHistory(quiz_history) {
     $.each(quiz_history, function(index, quiz) {
         if (index !== quiz_history.length - 1) {
+            console.log("history: " + quiz)
             var row = $('<tr>').attr('data-id', quiz.id);
             
+            var capitalized_difficulty = quiz.difficulty.charAt(0).toUpperCase() + quiz.difficulty.slice(1);
+
             row.append(
                 $('<td>').text(quiz.datetime),
+                $('<td>').text(capitalized_difficulty),
                 $('<td>').text(quiz.score + " out of " + quiz.questions.length)
             );
             

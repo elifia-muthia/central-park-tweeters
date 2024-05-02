@@ -365,6 +365,8 @@ bird_terminology = [
    {
       "id": "1",
       "type" : "Tone",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Corvus_corone_-near_Canford_Cliffs%2C_Poole%2C_England-8.jpg/800px-Corvus_corone_-near_Canford_Cliffs%2C_Poole%2C_England-8.jpg", 
+      "example": "Crow", 
       "title" : "Harsh",
       "sound" : "/static/media/audio/american_crow.mp3",
       "info" : "Harsh bird calls are typically described as grating, raucous, or jarring sounds that can be quite loud and unpleasant to the ear. These calls often consist of rough, discordant noises that may sound like cawing, screeching, or squawking. They tend to carry over long distances and are typically used by birds to assert territory, scare off predators, or communicate distress. The tone is usually sharp and can be repetitive, making it very noticeable and sometimes even disruptive in a natural environment. Examples of birds known for their harsh calls include crows, ravens, and some species of gulls and jays."
@@ -372,6 +374,8 @@ bird_terminology = [
    {
       "id": "2",
       "type" : "Tone",
+      "image": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/64972021/900", 
+      "example": "Chipping Sparrow",
       "title" : "Trill",
       "sound" : "/static/media/audio/trill.mp3",
       "info" :  "Trills are composed of quick, consecutive notes that seamlessly connect to create a continuous, vibrating sound. These calls are often sustained and can vary greatly in pitch and speed, typically reflecting the emotional or territorial state of the bird. Trills are mostly utilized during mating rituals or when establishing territory boundaries. The rapid sequence of sounds can sometimes blur into a near mechanical noise, especially in species like the Chipping Sparrow."
@@ -379,6 +383,8 @@ bird_terminology = [
    {
       "id": "3",
       "type" : "Tone",
+      "image": "https://www.allaboutbirds.org/guide/assets/photo/64893871-480px.jpg", 
+      "example": "Pine Warbler",
       "title" : "Warble",
       "sound" : "/static/media/audio/pine_warbler.mp3",
       "info" :  "Warbles consist of a melodious sequence of notes that modulate in pitch and length, creating a complex and harmonious sound. This type of birdsong is particularly expressive, used frequently during the breeding season as a display of vocal prowess to attract mates and deter rivals. Warbles can incorporate elements of other calls, blending trills, and whistles into elaborate songs that vary from moment to moment. Birds like the Song Thrush are renowned for their rich, warbling vocalizations."
@@ -387,6 +393,8 @@ bird_terminology = [
       "id": "4",
       "type" : "Tone",
       "title" : "Whistle",
+      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/248246349/medium.jpg",
+      "example": "Northern Cardinal", 
       "sound" : "/static/media/audio/northern_cardinal.mp3",
       "info" :  "Whistles are characterized by their simplicity and clarity, producing single or repeated pure-toned notes. These sounds are often loud and penetrating, designed to carry over long distances and through dense habitats, making them common among forest and grassland birds. Whistles are typically used for basic communication, such as signaling danger or maintaining flock cohesion. Species such as the Black-capped Chickadee emit distinctive, clear whistles that serve as effective identifiers."
    },
@@ -394,6 +402,8 @@ bird_terminology = [
       "id": "5",
       "type" : "Tone",
       "title" : "Nasal",
+      "image": "https://i.natgeofe.com/k/327b01e8-be2e-4694-9ae9-ae7837bd8aea/mallard-male-swimming_2x1.jpg",
+      "example": "Mallard", 
       "sound" : "/static/media/audio/mallard.mp3",
       "info" :  "Nasal calls emit a resonant, often less melodious sound, as if produced through the nose, with a buzzy or reedy quality. These sounds can serve various purposes, including alerting other birds to potential threats or facilitating group movements among flocks. Nasal tones are less musical but very distinctive, making them important for species recognition in dense vegetation where visibility is low. Birds like the Common Grackle are known for their nasal calls."   
       },
@@ -401,6 +411,8 @@ bird_terminology = [
       "id": "6",
       "type" : "Tone",
       "title" : "Mneumonics",
+      "image": "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTzup7sAdI-Xcd3MFmsKHwHrYGiGcKBIsa3hTmmLIApMtqHPURJzw1gUDQWroI0HJML75tRvnIcf2nlNKA", 
+      "example": "Eastern Towhee", 
       "sound" : "/static/media/audio/mneumonic.mp3",
       "info" :  "Mnemonics in birdsong are memorable sequences that resemble short phrases or rhythmic patterns, aiding in the identification of specific species. These calls are often designed to mimic human words or sounds, making them particularly useful for bird watchers. Mnemonic calls can vary significantly between species, reflecting unique adaptations to their environments. The Eastern Towhee, for instance, is famous for its drink-your-tea song that serves as a mnemonic."   
    },
@@ -408,6 +420,8 @@ bird_terminology = [
       "id": "7",
       "type" : "Tone",
       "title" : "Liquid/Flute-like",
+      "image": "https://www.allaboutbirds.org/guide/assets/photo/170865181-480px.jpg", 
+      "example": "Wood Thrush", 
       "sound" : "/static/media/audio/liquid_flute-like.mp3",
       "info" :  "Liquid or flutelike tones are smooth, flowing, and exceptionally melodious, similar to the sound of a flute. These calls are continuous, with a clear, musical quality that is both soothing and alluring. They are often used in calm, serene environments where their melodious nature helps in attracting mates or soothing young. The Wood Thrush, known for its beautiful flute-like songs, utilizes this tone to enchant listeners during the early summer evenings."   
    }
@@ -478,15 +492,15 @@ def get_view_bird():
 
 @app.route('/get_quiz_questions', methods=['POST'])
 def get_quiz_questions():
-    json_data = request.get_json()
+    json_data = request.get_json() 
     level = json_data["level"]
 
     if level == 'easy':
-        result = random.sample(easy_quiz, 2)
+        result = random.sample(easy_quiz, 5)
     else:
-        result = random.sample(hard_quiz, 2)
+        result = random.sample(hard_quiz, 5)
 
-    print(result)
+    print(result) 
 
     return jsonify(data=result)
 
