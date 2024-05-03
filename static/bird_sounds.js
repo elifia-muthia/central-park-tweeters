@@ -46,17 +46,12 @@ function show_results(results) {
         var rowDiv3= $('<div>').addClass('row panel-rec');
         colDiv3.append(rowDiv3)
 
-        // colDiv2.append('<div class="row"> Bird Example: </div>')
 
         rowDiv2.append($('<div class="panel-spacing">Bird Example: </div>')); 
         rowDiv2.append($('<div> <img class="img-sound" src ='+ bird.image +'></img><div class="image-caption">'+bird.example+'</div></div>')); 
-        // rowDiv2.append($('<p>'+bird.example+'</p>')); 
+    
 
-        // colDiv2.append($('<div class="row panel-border">Bird Example: <img class="img-sound" src ='+ bird.image +'>'+bird.example+'</div>'))
-        // rowDiv2.append(rowDiv2)
-        // colDiv2.append($('<div class="row">'+bird.example+'</div>'))
-
-        rowDiv3.append($('<p class="panel-spacing">Listen to the recording: </p>')); 
+        rowDiv3.append($('<div class="panel-spacing">Listen to the recording: </div>')); 
         // Add the audio player if a sound file is available
         if (bird.sound) {
             var audioHtml = '<audio controls class="recording-place"><source src="' + bird.sound + '" type="audio/mpeg">Your browser does not support the audio element.</audio>';

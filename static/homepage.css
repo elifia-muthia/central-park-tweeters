@@ -1,0 +1,31 @@
+body {
+    background-image: url('https://media.cntraveler.com/photos/611fc78d9282cc5de31e9d87/16:9/w_2560,c_limit/Central%20Park,%20Manhattan,%20New%20York_GettyImages-528180834.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.all-text {
+    color: white; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
+    font-family: 'Raleway', sans-serif;
+}
+
+.short-desc {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.welcome-header strong {
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .welcome-header strong {
+        font-size: 20px; 
+    }
+}
