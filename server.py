@@ -492,7 +492,13 @@ def view_bird(id=None):
 def go_to_past_quiz(id=None):
     if  len(navigated_pages) == 0 or (len(navigated_pages) > 0 and navigated_pages[-1] != "/past_quiz/" + id):
         navigated_pages.append('/past_quiz/' + id)
-    return render_template('quiz_history.html', id=id)
+    return render_template('review_quiz.html', id=id)
+
+@app.route('/quiz_history')
+def go_to_quiz_history(id=None):
+    if  len(navigated_pages) == 0 or (len(navigated_pages) > 0 and navigated_pages[-1] != "/quiz_history"):
+        navigated_pages.append('/quiz_history')
+    return render_template('quiz_history.html', history=quiz_history)
 
 # AJAX FUNCTIONS
 @app.route('/get_view_bird', methods=['POST'])

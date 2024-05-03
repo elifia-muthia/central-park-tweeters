@@ -123,7 +123,6 @@ table tbody tr:nth-child(odd) {
 
 #homepage {
     position: relative; 
-    background-image: url('/static/images/homepage-splash.webp');
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-size: cover;
     background-position: center;
@@ -246,7 +245,7 @@ table tbody tr:nth-child(odd) {
   .panel-loc{
     padding: 0 18px;
     font-size: 20px;
-    background-color: #faf0e6;
+    background-color: #f6e5d4;
     width: 100%;
     max-height: 0;
     overflow: hidden;
@@ -344,6 +343,22 @@ table tbody tr:nth-child(odd) {
     border: solid thick black;
   }
 
+
+  .map-container{ 
+    border: thick solid black;
+    
+}
+
+.loc-design{
+  /* height: 500px; */
+  height: fit-content;
+  border: solid thick black;
+  background-color: #e6faf0;
+  margin-top: 7rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 2rem;
+}
 
 
 
