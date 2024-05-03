@@ -1,9 +1,87 @@
-.bird-name { font-size: 50px; font-weight: bold;  font-family: 'Raleway', sans-serif}
+.bird-name { font-size: 45px; font-weight: bold;  font-family: 'Raleway', sans-serif}
 .bird-scientific-name { font-size: 20px; font-style: italic;  font-family: 'Raleway', sans-serif}
 .bird-habitat { font-style: italic;  font-family: 'Raleway', sans-serif}
-.bird-image { border: 2px solid black;  font-family: 'Raleway', sans-serif}
+
+.img-container{ 
+    width: auto;       /* Width of the square */
+    height: 600px;      /* Height of the square */
+    background-color: #e6f0fa; /* Background color of the square */
+    display: flex;      /* Use flexbox to center the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative; /* Needed for positioning the image correctly */
+    border: thick solid black;
+}
+
+.bird-img {
+    /* width: 400px; */
+    height: 500px; 
+    object-fit: cover;
+    margin: 1.25rem 0 1.5rem;
+     border: 5px solid black;  
+     font-family: 'Raleway', sans-serif;
+    }
+
+
 .bird-sound { margin-top: 10px;  font-family: 'Raleway', sans-serif}
 .bird-video { margin-bottom: 20px;  font-family: 'Raleway', sans-serif}
-.bird-description { background-color: #f0f0f0; padding: 10px;  font-family: 'Raleway', sans-serif}
-.bird-fun-fact { font-weight: bold;  font-family: 'Raleway', sans-serif}
+.bird-description {   font-family: 'Raleway', sans-serif}
+.bird-fun-fact {  font-family: 'Raleway', sans-serif}
 .bird-season { text-decoration: underline;  font-family: 'Raleway', sans-serif}
+
+.align-cntr{ 
+    text-align: center;
+}
+.img-align{
+    text-align: center;
+    display: flex;      /* Use flexbox to center the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative; 
+}
+
+.bird-info-section{ 
+    /* padding-left: 100px; */
+    align-items: center;
+    font-size: 30px;
+    margin: 1.5rem 0 1.5rem;
+}
+
+.image-icon{ 
+    height: 40px;
+    /* margin-right: 2px; */
+    padding-top: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+    line-height: 40px;
+    margin: 1rem 0 1rem; 
+  }
+
+
+  .top-design{
+    border: solid thick black;
+    background-color: aliceblue;
+    padding: 10px;
+    margin-top: 2rem;
+  }
+
+  .info-design{
+    border: solid thick black;
+    background-color: aliceblue;
+    padding: 5px;
+  }
+
+  .icon-design{ 
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    position: relative; 
+    
+  }
+
+  .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* This aligns the children to the left */
+}

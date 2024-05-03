@@ -481,9 +481,9 @@ def view_bird(id=None):
     return render_template('view_bird.html', id=id)
 
 @app.route('/past_quiz/<id>')
-def get_past_quiz(id=None):
+def go_to_past_quiz(id=None):
     navigated_pages.append('/past_quiz/' + id)
-    return render_template('past_quiz.html', id=id)
+    return render_template('quiz_history.html', id=id)
 
 # AJAX FUNCTIONS
 @app.route('/get_view_bird', methods=['POST'])
@@ -493,6 +493,16 @@ def get_view_bird():
 
     result = next((bird for bird in species_data if bird["id"] == id), None)
 
+    return jsonify(data=result)
+
+@app.route('/get_past_quiz', methods=['POST'])
+def get_past_quiz():
+    json_data = request.get_json()
+    id = json_data["id"]
+
+    result = next((quiz for quiz in quiz_history if quiz["id"] == id), None)
+
+    print(result)
     return jsonify(data=result)
 
 @app.route('/get_quiz_questions', methods=['POST'])
