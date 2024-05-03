@@ -10,21 +10,100 @@
     console.log(id)
 </script>
 
-<div id="view-bird">
-    <div id="bird-name" class="bird-name"></div>
-    <div id="bird-scientific-name" class="bird-scientific-name"></div>
-    <div id="bird-img" class="bird-img"></div>
-    <div id="bird-info-section" class="bird-info-section">
-        <div id="bird-habitat" class="bird-habitat"></div>
-        <div id="bird-season" class="bird-season"></div>
-        <div id="bird-description" class="bird-description"></div>
-        <div id="bird-fun-fact" class="bird-fun-fact"></div>
+<!-- <div id="birdModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modal-bird-name"></div>
+        <div id="modal-bird-scientific-name"></div>
+        <div id="modal-bird-img"></div>
+        <div id="modal-bird-info">
+            <div id="modal-bird-habitat"></div>
+            <div id="modal-bird-season"></div>
+            <div id="modal-bird-description"></div>
+            <div id="modal-bird-fun-fact"></div>
+        </div>
+        <div id="modal-bird-sound"></div>
+        <div id="modal-bird-tone"></div>
+        <div id="modal-bird-video"></div>
     </div>
-    <div id="bird-sound-section" class="bird-sound-section">
-        <div id="bird-sound" class="bird-sound"></div>
-        <div id="bird-tone" class="bird-tone"></div>
+</div> -->
+
+<body> 
+    <div id="view-bird" class="col-md-12">
+
+        <div class=" row top-design">
+            <div class="col-md-6">
+                <div id="bird-name" class="row bird-name "></div>
+                <div id="bird-scientific-name" class="row bird-scientific-name"></div>
+            </div>
+
+
+            <div class="col-md-6 icon-design">
+                <div class="row"> 
+                    <div id ="bird-icon" class="bird-icon"></div>
+                    <div id = "bird-icon2" class="bird-icon2 pr-5"></div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div id="bird-img" class="row img-container"></div>
+
+
+        <div class="row info-design">
+            <div id="bird-info-section" class=" col-md-6 bird-info-section">
+                <div class="row "><strong>Habitat: </strong> </div>
+                <div id="bird-habitat" class="row bird-habitat pb-4 "></div>
+                <div class="row"> <strong>Season:</strong> </div>
+                <div id="bird-season" class="  row bird-season pb-4"></div>
+            </div>
+            <div id="bird-info-section" class=" col-md-6 bird-info-section">
+                <div class="row"> <strong>Tone:</strong> </div>
+                <div id="bird-tone" class="row bird-tone pb-4"></div>
+                <div class="row"> <strong> Bird Sound: </strong> </div>
+                <div id="bird-sound" class="row bird-sound pb-4"></div>
+            </div>
+        </div>
+
+
+        <div class="row info-design"> 
+            <div class="bird-info-section col-md-12">
+                <div class="row"><strong>Description</strong>: </div>
+                <div id="bird-description" class="row bird-description pb-4"></div>
+                <div class="row"><strong>Fun Fact:</strong> </div>
+                <div id="bird-fun-fact" class="row bird-fun-fact pb-4"></div>
+                <div class="row"><strong>Video:</strong> </div>
+                <div id="bird-video" class="row bird-video"></div>
+    
+            </div>    
+
+        </div>
+
+
+       
+
+      
+       
+        
+       
+        <!-- <div id="bird-sound-section" class="bird-sound-section">
+            <div id="bird-sound" class="bird-sound"></div>
+            <div id="bird-tone" class="bird-tone"></div>
+        </div> -->
+        
     </div>
-    <div id="bird-video" class="bird-video"></div>
-</div>
+
+    <script type="text/javascript">
+        var freshwaterIconUrl = "{{ url_for('static', filename='assets/water.png') }}";
+        var openareaIconUrl = "{{ url_for('static', filename='assets/openarea.png') }}";
+        var woodlandIconUrl = "{{ url_for('static', filename='assets/woodlands.png') }}";
+        var springIconUrl = "{{ url_for('static', filename='assets/flower.png') }}";
+        var fallIconUrl = "{{ url_for('static', filename='assets/maple-leaf.png') }}";
+        var allyearIconUrl = "{{ url_for('static', filename='assets/season.png') }}";
+    </script>
+
+</body>
+
+
 
 {% endblock %}

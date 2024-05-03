@@ -170,13 +170,17 @@ table tbody tr:nth-child(odd) {
 }
 
 .accordion {
-    background-color: #eee;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: bold;
+    /* background-color: #eee; */
+    background-color: #faf0e6;
     /* color: #444; */
     color: #000;
     cursor: pointer;
     padding: 18px;
     width: 100%;
     border: none;
+    border-bottom: thick solid #02462f;
     text-align: left;
     outline: none;
     font-size: 30px;
@@ -188,25 +192,28 @@ table tbody tr:nth-child(odd) {
 
 
   .active, .accordion:hover {
-    background-color: #ccc;
+    background-color: #f6e5d4;
   }
   
   .accordion:after {
     content: '\002B';
-    color: #777;
+    /* color: #f6e5d4; */
+    /* color: #777; */
     font-weight: bold;
     float: right;
     margin-left: 5px;
+    /* background-color: #f6e5d4; */
   }
   
   .active:after {
+    /* background-color: #f6e5d4; */
     content: "\2212";
   }
   
   .panel {
     padding: 0 18px;
-    font-size: 25px;
-    background-color: white;
+    font-size: 20px;
+    background-color: #f6e5d4;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
@@ -215,7 +222,9 @@ table tbody tr:nth-child(odd) {
   }
 
   .panel-spacing{
-    margin: 1rem 0 1rem;
+    margin: 1rem 0 0;
+    font-weight: bold;
+    font-size: 15pt;
   }
 
   .next-button{
@@ -223,35 +232,6 @@ table tbody tr:nth-child(odd) {
     justify-content: center;
   }
 
-  .accordion-loc {
-    background-color: #eee;
-    /* color: #444; */
-    color: #000;
-    cursor: pointer;
-    /* padding: 18px; */
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 20px;
-    transition: 0.4s;
-    margin: 0 0 0; 
-    /* margin: 0rem 0 2rem; */
-  }
-
-  .active, .accordion-loc:hover {
-    background-color: #ccc;
-  }
-  
-  .accordion-loc:after {
-    content: '\002B';
-    color: #777;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-    margin: 1rem 0 1rem; 
-    padding-right: 2px;
-  }
 
   .image-marker{ 
     height: 34px;
@@ -265,8 +245,8 @@ table tbody tr:nth-child(odd) {
 
   .panel-loc{
     padding: 0 18px;
-    font-size: 18px;
-    background-color: white;
+    font-size: 20px;
+    background-color: #faf0e6;
     width: 100%;
     max-height: 0;
     overflow: hidden;
@@ -281,4 +261,89 @@ table tbody tr:nth-child(odd) {
     height: 400px; 
     object-fit: cover;
     margin: 1.25rem 0 1.5rem;
+    border: solid thick black;
   }
+
+
+  .image-container {
+    width: 200px;       /* Width of the square */
+    height: 200px;      /* Height of the square */
+    background-color: #f0f0f0; /* Background color of the square */
+    display: flex;      /* Use flexbox to center the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative; /* Needed for positioning the image correctly */
+}
+
+.image-container img {
+    max-width: 400px;    /* Ensures the image does not exceed the container size */
+    max-height: 400px;   /* Ensures the image does not exceed the container size */
+}
+
+  .panel-border{
+    /* background-color: aqua; */
+    background-color: white;
+    border: solid thick black;
+    display: flex;      /* Use flexbox to center the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative;
+    margin: 1.5rem 0 1.5rem;
+   
+  }
+
+  .panel-rec{
+    background-color: #fafae5;
+    border: solid thick black;
+    display: flex;      /* Use flexbox to center the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative;
+    margin: 1.5rem 0 1.5rem;
+  }
+
+  .recording-place{
+    margin: 1rem 0 1.5rem;
+
+  }
+
+  .panel-desc{
+    font-size: 20px;
+    background-color: #f5fae5;
+    border: solid thick black;
+    display: flex;      /* Use flexbox to center the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative;
+    padding: 10pt;
+    margin: 1.5rem 0 1.5rem;
+  }
+
+  .desc-underline{
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline  #00fa9a;
+    text-decoration-thickness: 5px;
+    margin: 0 0 1rem;
+  }
+
+  .image-caption {
+    text-align: center; /* Center the caption text horizontally */
+    /* padding: 5px;      */
+    width: 100%;        /* Caption spans the full width of the container */
+    margin: 0 0 1.5rem;
+}
+
+
+.img-view{
+    /* width: 300px;   Desired width */
+    width: 400px;
+    height: 400px; 
+    object-fit: cover;
+    margin: 1.25rem 0 1.5rem;
+    border: solid thick black;
+  }
+
+
+
+
