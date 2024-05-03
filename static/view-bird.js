@@ -35,12 +35,16 @@ function display_bird_info(birdData) {
    
     if(birdData.habitat == "Woodlands"){
         $('#bird-habitat').html('<img class="image-icon" src= "' + woodlandIconUrl + '"> Woodlands </img>');
+        $('#bird-icon').html('<img class="image-icon" src= "' + woodlandIconUrl + '"></img>');
+
     }
     else if(birdData.habitat == "freshwater"){
         $('#bird-habitat').html('<img class="image-icon" src= "' + freshwaterIconUrl + '"> Freshwater </img>');
+        $('#bird-icon').html('<img class="image-icon" src= "' + freshwaterIconUrl + '"></img>');
     }
     else if(birdData.habitat == "open-areas"){
         $('#bird-habitat').html('<img class="image-icon" src= "' + openareaIconUrl + '"> Open Areas </img>');
+        $('#bird-icon').html('<img class="image-icon" src= "' + openareaIconUrl + '"></img>');
     }
     else{
         $('#bird-habitat').text(birdData.habitat);
@@ -57,12 +61,15 @@ function display_bird_info(birdData) {
 
     if(birdData.season == "Spring"){
         $('#bird-season').html('<img class="image-icon" src= "' + springIconUrl + '"> Spring </img>');
+        $('#bird-icon2').html('<img class="image-icon" src= "' + springIconUrl + '"></img>');
     }
     else if((birdData.season == "All year round" )||(birdData.season == "All year long" ) ){
         $('#bird-season').html('<img class="image-icon" src= "' + allyearIconUrl + '"> All Year Round </img>');
+        $('#bird-icon2').html('<img class="image-icon" src= "' + allyearIconUrl + '"></img>');
     }
     else if(birdData.season == "Spring and Fall"){
         $('#bird-season').html('<img class="image-icon" src= "' + springIconUrl + '"></img><img class="image-icon" src= "' + fallIconUrl + '">Spring and Fall </img>');
+        $('#bird-icon2').html('<img class="image-icon" src= "' + springIconUrl + '"></img><img class="image-icon" src= "' + fallIconUrl + '"></img>');
     }
     else{
         $('#bird-season').text(birdData.season);
