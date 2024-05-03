@@ -1,7 +1,0 @@
-#freshwater-map, #woodlands-map, #open-areas-map {
-    cursor: pointer; 
-}
-
-#freshwater-map:hover, #woodlands-map:hover, #open-areas-map:hover {
-    background-color: lightblue;
-}
