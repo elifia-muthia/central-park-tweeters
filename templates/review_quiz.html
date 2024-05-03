@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'review_quiz.js') }}"></script>
+<link rel="stylesheet" href="{{url_for('static', filename='review_quiz.css')}}">
+
+<script>
+    let id = {{id|tojson}}
+    console.log(id)
+</script>
+
+
+<div class="quiz-container" id="quiz-section">
+    <div class="title" id="question-num"></div>
+    <div class="text" id="question"></div>
+    <div id="question-media"></div>
+    <div id="your-answer"></div>
+    <div id="correct-answer"></div>
+    <div id="result-icon"></div>
+    <div class="quiz-nav-buttons">
+        <button type="button" id="prev-q-btn">Back</button>
+        <button type="button" id="next-q-btn">Next</button>
+    </div>
+</div>
+
+{% endblock %}
