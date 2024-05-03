@@ -167,6 +167,8 @@ easy_quiz = [
         "media2": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/de/17/a5/photo1jpg.jpg?w=1200&h=-1&s=1",
         "choice3": "North Woods",
         "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
+        "choice4": "Harlem Meer",
+        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice1"
     },
     {
@@ -182,6 +184,8 @@ easy_quiz = [
         "media2": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Jacqueline_Kennedy_Onassis_Reservoir.jpg/1200px-Jacqueline_Kennedy_Onassis_Reservoir.jpg",
         "choice3": "North Woods",
         "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
+        "choice4": "Harlem Meer",
+        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice2"
     },
     {
@@ -197,6 +201,8 @@ easy_quiz = [
         "media2": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "choice3": "Great Lawns",
         "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x767_crop_center-center_none/Sheep-Meadow-May-2018_71_2021-04-02-175219.jpg",
+        "choice4": "Harlem Meer",
+        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice1"
     },
     {
@@ -212,6 +218,8 @@ easy_quiz = [
         "media2": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Jacqueline_Kennedy_Onassis_Reservoir.jpg/1200px-Jacqueline_Kennedy_Onassis_Reservoir.jpg",
         "choice3": "Great Lawns",
         "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x767_crop_center-center_none/Sheep-Meadow-May-2018_71_2021-04-02-175219.jpg",
+        "choice4": "Harlem Meer",
+        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice1"
     },
     {
@@ -227,6 +235,8 @@ easy_quiz = [
         "media2": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
         "choice3": "Harlem Meer",
         "media3": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
+        "choice4": "Harlem Meer",
+        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice3"
     }
 ]
@@ -305,6 +315,8 @@ hard_quiz = [
         "media2": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/de/17/a5/photo1jpg.jpg?w=1200&h=-1&s=1",
         "choice3": "North Woods",
         "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
+        "choice4": "Harlem Meer",
+        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice1"
     },
     {
@@ -319,6 +331,8 @@ hard_quiz = [
         "media2": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Jacqueline_Kennedy_Onassis_Reservoir.jpg/1200px-Jacqueline_Kennedy_Onassis_Reservoir.jpg",
         "choice3": "North Woods",
         "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
+        "choice4": "Harlem Meer",
+        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice2"
     },
     {
@@ -333,6 +347,8 @@ hard_quiz = [
         "media2": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "choice3": "Great Lawns",
         "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x767_crop_center-center_none/Sheep-Meadow-May-2018_71_2021-04-02-175219.jpg",
+        "choice4": "Harlem Meer",
+        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice1"
     },
     {
@@ -347,6 +363,8 @@ hard_quiz = [
         "media2": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Jacqueline_Kennedy_Onassis_Reservoir.jpg/1200px-Jacqueline_Kennedy_Onassis_Reservoir.jpg",
         "choice3": "Great Lawns",
         "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x767_crop_center-center_none/Sheep-Meadow-May-2018_71_2021-04-02-175219.jpg",
+        "choice4": "Harlem Meer",
+        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice1"
     },
     {
@@ -361,6 +379,8 @@ hard_quiz = [
         "media2": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
         "choice3": "Harlem Meer",
         "media3": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
+        "choice4": "Harlem Meer",
+        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice3"
     }
 ]
