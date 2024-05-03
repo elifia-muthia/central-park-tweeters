@@ -230,24 +230,25 @@ function displayQuestion(index) {
         var dropZoneDivs = {
             choice1: $(`
                 <div class="drop-zone" id="choice1">
-                    <img src="${question.media1}" alt="${question.choice1}">
+                    <img class="drop_img" src="${question.media1}" alt="${question.choice1}">
                     <div class="label">${question.choice1}</div>
                 </div>
             `),
             choice2: $(`
                 <div class="drop-zone" id="choice2">
-                    <img src="${question.media2}" alt="${question.choice2}">
+                    <img class="drop_img" src="${question.media2}" alt="${question.choice2}">
                     <div class="label">${question.choice2}</div>
                 </div>
             `),
             choice3: $(`
                 <div class="drop-zone" id="choice3">
-                    <img src="${question.media3}" alt="${question.choice3}">
+                    <img class="drop_img" src="${question.media3}" alt="${question.choice3}">
                     <div class="label">${question.choice3}</div>
                 </div>
             `)
         };
-    
+
+        
         for (let key in dropZoneDivs) {
             $('#answers').append(dropZoneDivs[key]);
         }
@@ -258,7 +259,7 @@ function displayQuestion(index) {
             alt: 'Draggable Bird'
         }).css({
             cursor: 'pointer',
-            width: '50px' 
+            width: '100px' 
         });
     
         if (answers[index]) {

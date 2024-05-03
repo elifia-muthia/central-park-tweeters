@@ -121,7 +121,7 @@ easy_quiz = [
     {
         "id": "3",
         "type": "multiple-choice",
-        "question:": "Which audio is NOT a bird tone term?",
+        "question:": "Which of the following is NOT a bird tone term?",
         "media_type": "img",
         "media": "https://media.cntraveler.com/photos/611fc78d9282cc5de31e9d87/16:9/w_2240,c_limit/Central%20Park,%20Manhattan,%20New%20York_GettyImages-528180834.jpg",
         "choice1": "Quack",
@@ -133,7 +133,7 @@ easy_quiz = [
     {
         "id": "4",
         "type": "multiple-choice",
-        "question:": "Match the bird to the audio?",
+        "question:": "Match the audio to the bird?",
         "media_type": "audio",
         "media": "/static/media/audio/american_crow.mp3",
         "choice1": "Mallard",
@@ -157,7 +157,7 @@ easy_quiz = [
     {
         "id": "6",
         "type": "drag_and_drop",
-        "question": "Drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://nestwatch.org/wp-content/uploads/2012/04/MODO_Debbie-McKenzie-728x494.jpg",
         "bird_sound": "audio",
         "media": "/static/media/audio/mourning_dove.mp3",
@@ -167,14 +167,12 @@ easy_quiz = [
         "media2": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/de/17/a5/photo1jpg.jpg?w=1200&h=-1&s=1",
         "choice3": "North Woods",
         "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
-        "choice4": "Harlem Meer",
-        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice1"
     },
     {
         "id": "7",
         "type": "drag_and_drop",
-        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg/1200px-Anas_platyrhynchos_male_female_quadrat.jpg",
         "bird_sound": "audio",
         "media": "/static/media/audio/mallard.mp3",
@@ -184,14 +182,12 @@ easy_quiz = [
         "media2": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Jacqueline_Kennedy_Onassis_Reservoir.jpg/1200px-Jacqueline_Kennedy_Onassis_Reservoir.jpg",
         "choice3": "North Woods",
         "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
-        "choice4": "Harlem Meer",
-        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice2"
     },
     {
         "id": "8",
         "type": "drag_and_drop",
-        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://www.allaboutbirds.org/guide/assets/photo/64798651-480px.jpg",
         "bird_sound": "audio",
         "media": "/static/media/audio/magnolia_warbler.mp3",
@@ -201,14 +197,12 @@ easy_quiz = [
         "media2": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "choice3": "Great Lawns",
         "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x767_crop_center-center_none/Sheep-Meadow-May-2018_71_2021-04-02-175219.jpg",
-        "choice4": "Harlem Meer",
-        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice1"
     },
     {
         "id": "9",
         "type": "drag_and_drop",
-        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://www.allaboutbirds.org/guide/assets/photo/297087301-480px.jpg",
         "bird_sound": "audio",
         "media": "/static/media/audio/northern_cardinal.mp3",
@@ -218,14 +212,12 @@ easy_quiz = [
         "media2": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Jacqueline_Kennedy_Onassis_Reservoir.jpg/1200px-Jacqueline_Kennedy_Onassis_Reservoir.jpg",
         "choice3": "Great Lawns",
         "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x767_crop_center-center_none/Sheep-Meadow-May-2018_71_2021-04-02-175219.jpg",
-        "choice4": "Harlem Meer",
-        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice1"
     },
     {
         "id": "10",
         "type": "drag_and_drop",
-        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://indianaaudubon.org/wp-content/uploads/2016/04/RedWingedBlackbird2-1200x1005.jpg",
         "bird_sound": "audio",
         "media": "/static/media/audio/red_winged_blackbird.mp3",
@@ -235,8 +227,6 @@ easy_quiz = [
         "media2": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
         "choice3": "Harlem Meer",
         "media3": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
-        "choice4": "Harlem Meer",
-        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice3"
     }
 ]
@@ -305,7 +295,7 @@ hard_quiz = [
     {
         "id": "6",
         "type": "drag_and_drop",
-        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",
         "bird_sound": "audio",
         "media": "/static/media/audio/mourning_dove.mp3",
@@ -315,14 +305,12 @@ hard_quiz = [
         "media2": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/de/17/a5/photo1jpg.jpg?w=1200&h=-1&s=1",
         "choice3": "North Woods",
         "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
-        "choice4": "Harlem Meer",
-        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice1"
     },
     {
         "id": "7",
         "type": "drag_and_drop",
-        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",        "bird_sound": "audio",
         "media": "/static/media/audio/mallard.mp3",
         "choice1": "Shakespeare Garden",
@@ -331,14 +319,12 @@ hard_quiz = [
         "media2": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Jacqueline_Kennedy_Onassis_Reservoir.jpg/1200px-Jacqueline_Kennedy_Onassis_Reservoir.jpg",
         "choice3": "North Woods",
         "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
-        "choice4": "Harlem Meer",
-        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice2"
     },
     {
         "id": "8",
         "type": "drag_and_drop",
-        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",        "bird_sound": "audio",
         "media": "/static/media/audio/magnolia_warbler.mp3",
         "choice1": "Ramble",
@@ -347,14 +333,12 @@ hard_quiz = [
         "media2": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "choice3": "Great Lawns",
         "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x767_crop_center-center_none/Sheep-Meadow-May-2018_71_2021-04-02-175219.jpg",
-        "choice4": "Harlem Meer",
-        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice1"
     },
     {
         "id": "9",
         "type": "drag_and_drop",
-        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",        "bird_sound": "audio",
         "media": "/static/media/audio/northern_cardinal.mp3",
         "choice1": "North Woods",
@@ -363,14 +347,12 @@ hard_quiz = [
         "media2": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Jacqueline_Kennedy_Onassis_Reservoir.jpg/1200px-Jacqueline_Kennedy_Onassis_Reservoir.jpg",
         "choice3": "Great Lawns",
         "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x767_crop_center-center_none/Sheep-Meadow-May-2018_71_2021-04-02-175219.jpg",
-        "choice4": "Harlem Meer",
-        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice1"
     },
     {
         "id": "10",
         "type": "drag_and_drop",
-        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",        "bird_sound": "audio",
         "media": "/static/media/audio/red_winged_blackbird.mp3",
         "choice1": "Shakespeare Garden",
@@ -379,8 +361,6 @@ hard_quiz = [
         "media2": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
         "choice3": "Harlem Meer",
         "media3": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
-        "choice4": "Harlem Meer",
-        "media4": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice3"
     }
 ]
