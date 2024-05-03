@@ -38,22 +38,28 @@ function show_results(results) {
 
         var colDiv2= $('<div>').addClass('col-md-6');
         rowDiv.append(colDiv2)
-        var rowDiv2= $('<div>').addClass('row');
+        var rowDiv2= $('<div>').addClass('row panel-border');
         colDiv2.append(rowDiv2)
 
         var colDiv3= $('<div>').addClass('col-md-6');
         rowDiv.append(colDiv3)
-        var rowDiv3= $('<div>').addClass('row');
+        var rowDiv3= $('<div>').addClass('row panel-rec');
         colDiv3.append(rowDiv3)
 
-        rowDiv2.append($('<img class="img-sound" src ='+ bird.image +'>'))
+        // colDiv2.append('<div class="row"> Bird Example: </div>')
+
+        rowDiv2.append($('<div class="panel-spacing">Bird Example: </div>')); 
+        rowDiv2.append($('<div> <img class="img-sound" src ='+ bird.image +'></img><div class="image-caption">'+bird.example+'</div></div>')); 
+        // rowDiv2.append($('<p>'+bird.example+'</p>')); 
+
+        // colDiv2.append($('<div class="row panel-border">Bird Example: <img class="img-sound" src ='+ bird.image +'>'+bird.example+'</div>'))
         // rowDiv2.append(rowDiv2)
-        colDiv2.append($('<div class="row">'+bird.example+'</div>'))
+        // colDiv2.append($('<div class="row">'+bird.example+'</div>'))
 
         rowDiv3.append($('<p class="panel-spacing">Listen to the recording: </p>')); 
         // Add the audio player if a sound file is available
         if (bird.sound) {
-            var audioHtml = '<audio controls class="panel-spacing"><source src="' + bird.sound + '" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+            var audioHtml = '<audio controls class="recording-place"><source src="' + bird.sound + '" type="audio/mpeg">Your browser does not support the audio element.</audio>';
             // panelDiv.append($(audioHtml));
             rowDiv3.append($(audioHtml));
 
@@ -61,7 +67,8 @@ function show_results(results) {
 
         if (bird.info) {
             // panelDiv.append($('<p>').text(bird.info));
-            rowDiv3.append($('<p>').text(bird.info));
+            colDiv3.append($('<div class="row panel-desc"> <div class = "desc-underline">Description</div> <div>'+bird.info+'</div></div>'))
+            // rowDiv3.append($('<p>').text(bird.info));
 
         }
 
