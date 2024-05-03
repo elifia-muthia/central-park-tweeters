@@ -121,8 +121,8 @@ easy_quiz = [
     {
         "id": "3",
         "type": "multiple-choice",
-        "question:": "Which of the following is NOT a bird tone term?",
-        "media_type": "img",
+        "question": "Which of the following is NOT a bird tone term?",
+        "media_type": "",
         "media": "",
         "choice1": "Quack",
         "choice2": "Liquid",
@@ -133,7 +133,7 @@ easy_quiz = [
     {
         "id": "4",
         "type": "multiple-choice",
-        "question:": "Match the audio to the bird?",
+        "question": "Match the audio to the bird?",
         "media_type": "audio",
         "media": "/static/media/audio/american_crow.mp3",
         "choice1": "Mallard",
