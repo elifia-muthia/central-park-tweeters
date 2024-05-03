@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    $('#')
+
     get_bird_info(id)
 });
 
@@ -26,9 +28,6 @@ function get_bird_info(id) {
 
 function display_bird_info(birdData) {
 
-    // var freshwaterIconUrl = "{{ url_for('static', filename='assets/water.png') }}";
-    // var openareaIconUrl = "{{ url_for('static', filename='assets/openarea.png') }}";
-    // var woodlandIconUrl = "{{ url_for('static', filename='assets/woodlands.png') }}";
 
     $('#bird-name').text(birdData.name);
     $('#bird-scientific-name').text(birdData.scientific_name);

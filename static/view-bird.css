@@ -111,3 +111,23 @@
     align-items: center;
     justify-content: flex-start;
 }
+
+.nav-buttons{
+  display: flex;
+  justify-content: space-between; 
+  padding: 10px;
+  font-family: 'Raleway', sans-serif;
+  margin-top: 10px;
+}
+
+#back-btn{
+  align-self: flex-start;
+  padding: 5px 30px;
+}
+
+#next-btn{
+  align-self: flex-end;
+  background-color: #023020;
+  color: white;
+  padding: 5px 30px;
+}
