@@ -77,31 +77,73 @@ function initMap() {
     var turtlePondMarker = L.marker(turtlePond, {icon: waterIcon}).addTo(map);
     turtlePondMarker.bindPopup('<b>Turtle Pond</b> <br> <a href = "/birds/freshwater">Freshwater</a>');
 
+    $('#link-turtle-pond').click(function() {
+      turtlePondMarker.openPopup();
+      map.setView(turtlePond, 16); // Optional: centers the map on the marker and zooms in
+   });
+
     var harlemMeerMarker = L.marker(harlemMeer, {icon: waterIcon}).addTo(map);
     harlemMeerMarker.bindPopup('<b>Harlem Meer</b> <br> <a href = "/birds/freshwater">Freshwater</a>');
 
+    $('#link-harlem-meer').click(function() {
+      harlemMeerMarker.openPopup();
+      map.setView(harlemMeer, 16); // Optional: centers the map on the marker and zooms in
+    });
+
     var reservoirMarker = L.marker(reservoir, {icon: waterIcon}).addTo(map);
     reservoirMarker.bindPopup('<b>Reservoir</b> <br> <a href = "/birds/freshwater">Freshwater</a>');
+    $('#link-reservoir').click(function() {
+      reservoirMarker.openPopup();
+      map.setView(reservoir, 16); // Optional: centers the map on the marker and zooms in
+    });
 
     var lakeMarker = L.marker(lake, {icon: waterIcon}).addTo(map);
     lakeMarker.bindPopup('<b>The Lake</b> <br> <a href = "/birds/freshwater">Freshwater</a>');
+    $('#link-lake').click(function() {
+      lakeMarker.openPopup();
+      map.setView(lake, 16); // Optional: centers the map on the marker and zooms in
+    });
 
     var lochMarker = L.marker(loch, {icon: waterIcon}).addTo(map);
-    lochMarker.bindPopup('<b>The Loch r</b> <br> <a href = "/birds/freshwater">Freshwater</a>');
+    lochMarker.bindPopup('<b>The Loch </b> <br> <a href = "/birds/freshwater">Freshwater</a>');
+    $('#link-loch').click(function() {
+      lochMarker.openPopup();
+      map.setView(loch, 16); // Optional: centers the map on the marker and zooms in
+    });
+
+
 
     var gillMarker = L.marker(gill, {icon: waterIcon}).addTo(map);
     gillMarker.bindPopup('<b>The Gill</b> <br> <a href = "/birds/freshwater">Freshwater</a>');
+    $('#link-gill').click(function() {
+      gillMarker.openPopup();
+      map.setView(gill, 16); // Optional: centers the map on the marker and zooms in
+    });
+
 
 
     // Woodland 
     var rambleMarker = L.marker(ramble, {icon: woodlandIcon}).addTo(map);
     rambleMarker.bindPopup('<b>Ramble</b> <br> <a href = "/birds/Woodlands">Woodlands</a>');
+    $('#link-ramble').click(function() {
+      rambleMarker.openPopup();
+      map.setView(ramble, 16); // Optional: centers the map on the marker and zooms in
+    });
+
 
     var northWoodsMarker = L.marker(northWoods, {icon: woodlandIcon}).addTo(map);
     northWoodsMarker.bindPopup('<b>North Woods</b> <br> <a href = "/birds/Woodlands">Woodlands</a>');
+    $('#link-north-woods').click(function() {
+      northWoodsMarker.openPopup();
+      map.setView(northWoods, 16); // Optional: centers the map on the marker and zooms in
+    });
 
     var halletNatureMarker = L.marker(halletNature, {icon: woodlandIcon}).addTo(map);
     halletNatureMarker.bindPopup('<b>Hallet Nature Sanctuary</b> <br> <a href = "/birds/Woodlands">Woodlands</a>');
+    $('#link-hallet-nature').click(function() {
+      halletNatureMarker.openPopup();
+      map.setView(halletNature, 16); // Optional: centers the map on the marker and zooms in
+    });
 
     // Opean Areas
     var wildflowerMeadowMarker = L.marker(wildflowerMeadow, {icon: openIcon}).addTo(map);
