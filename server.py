@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 species_data = [
     {
-        "id": "1",
+        "id": "1", 
         "name": "Mallard",
         "habitat": "freshwater",
         "scientific_name": "Anas platyrhynchos",
@@ -161,7 +161,7 @@ easy_quiz = [
         "drag_bird": "https://nestwatch.org/wp-content/uploads/2012/04/MODO_Debbie-McKenzie-728x494.jpg",
         "bird_sound": "audio",
         "media": "/static/media/audio/mourning_dove.mp3",
-        "choice1": "Shakespere Garden",
+        "choice1": "Shakespeare Garden",
         "media1": "https://www.centralpark.com/downloads/3841/download/shakespeare-gardens.jpe?cb=7a9536f8578043bcee7d644b03068290&w=1200",
         "choice2": "Turtle Pond",
         "media2": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/de/17/a5/photo1jpg.jpg?w=1200&h=-1&s=1",
@@ -176,7 +176,7 @@ easy_quiz = [
         "drag_bird": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg/1200px-Anas_platyrhynchos_male_female_quadrat.jpg",
         "bird_sound": "audio",
         "media": "/static/media/audio/mallard.mp3",
-        "choice1": "Shakespere Garden",
+        "choice1": "Shakespeare Garden",
         "media1": "https://www.centralpark.com/downloads/3841/download/shakespeare-gardens.jpe?cb=7a9536f8578043bcee7d644b03068290&w=1200",
         "choice2": "Reservoir",
         "media2": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Jacqueline_Kennedy_Onassis_Reservoir.jpg/1200px-Jacqueline_Kennedy_Onassis_Reservoir.jpg",
@@ -221,7 +221,7 @@ easy_quiz = [
         "drag_bird": "https://indianaaudubon.org/wp-content/uploads/2016/04/RedWingedBlackbird2-1200x1005.jpg",
         "bird_sound": "audio",
         "media": "/static/media/audio/red_winged_blackbird.mp3",
-        "choice1": "Shakespere Garden",
+        "choice1": "Shakespeare Garden",
         "media1": "https://www.centralpark.com/downloads/3841/download/shakespeare-gardens.jpe?cb=7a9536f8578043bcee7d644b03068290&w=1200",
         "choice2": "North Woods",
         "media2": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
@@ -234,6 +234,7 @@ easy_quiz = [
 hard_quiz = [
     {
         "id": "1",
+        "type": "multiple-choice",
         "question": "Which of the follow birds can be found in the turtle pond?",
         "media_type": "img",
         "media": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/locations/_2475x1151_crop_center-center_none/turtle-pond.JPG",
@@ -245,6 +246,7 @@ hard_quiz = [
     },
     {
         "id": "2",
+        "type": "multiple-choice",
         "question": "This unidentified sound best matches which bird call term?",
         "media_type": "audio",
         "media": "/static/media/audio/pine_warbler.mp3",
@@ -256,7 +258,8 @@ hard_quiz = [
     },
     {
         "id": "3",
-        "question": "Which of the follow birds can be found in freshwater?",
+        "type": "multiple-choice",
+        "question": "Which of the following birds can be found in freshwater?",
         "media_type": "img",
         "media": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/locations/_2475x1151_crop_center-center_none/turtle-pond.JPG",
         "choice1": "American Crow",
@@ -267,6 +270,7 @@ hard_quiz = [
     },
     {
         "id": "4",
+        "type": "multiple-choice",
         "question": "Which sound term best matches the following audio?",
         "media_type": "audio",
         "media": "/static/media/audio/mallard.mp3",
@@ -278,6 +282,7 @@ hard_quiz = [
     },
     {
         "id": "5",
+        "type": "multiple-choice",
         "question": "Which sound term best matches the following audio?",
         "media_type": "audio",
         "media": "/static/media/audio/northern_cardinal.mp3",
@@ -290,11 +295,11 @@ hard_quiz = [
     {
         "id": "6",
         "type": "drag_and_drop",
-        "question": "Drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the location on the map",
         "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",
         "bird_sound": "audio",
         "media": "/static/media/audio/mourning_dove.mp3",
-        "choice1": "Shakespere Garden",
+        "choice1": "Shakespeare Garden",
         "media1": "https://www.centralpark.com/downloads/3841/download/shakespeare-gardens.jpe?cb=7a9536f8578043bcee7d644b03068290&w=1200",
         "choice2": "Turtle Pond",
         "media2": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/de/17/a5/photo1jpg.jpg?w=1200&h=-1&s=1",
@@ -308,7 +313,7 @@ hard_quiz = [
         "question": "Listen to the audio, and drag the bird onto the location on the map",
         "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",        "bird_sound": "audio",
         "media": "/static/media/audio/mallard.mp3",
-        "choice1": "Shakespere Garden",
+        "choice1": "Shakespeare Garden",
         "media1": "https://www.centralpark.com/downloads/3841/download/shakespeare-gardens.jpe?cb=7a9536f8578043bcee7d644b03068290&w=1200",
         "choice2": "Reservoir",
         "media2": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Jacqueline_Kennedy_Onassis_Reservoir.jpg/1200px-Jacqueline_Kennedy_Onassis_Reservoir.jpg",
@@ -350,7 +355,7 @@ hard_quiz = [
         "question": "Listen to the audio, and drag the bird onto the location on the map",
         "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",        "bird_sound": "audio",
         "media": "/static/media/audio/red_winged_blackbird.mp3",
-        "choice1": "Shakespere Garden",
+        "choice1": "Shakespeare Garden",
         "media1": "https://www.centralpark.com/downloads/3841/download/shakespeare-gardens.jpe?cb=7a9536f8578043bcee7d644b03068290&w=1200",
         "choice2": "North Woods",
         "media2": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
