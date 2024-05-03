@@ -9,13 +9,12 @@
     color: white;
 }
 
-.diff-button {
-    cursor: pointer;
+#question-num {
+    margin-top: 10px;
 }
 
 .quiz-container{
     position: relative; 
-    background-image: url('/static/images/homepage-splash.webp');
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-size: cover;
     background-position: center;
@@ -33,6 +32,7 @@
 .quiz-text{
     font-size: larger;
     margin-right: 15px;
+    padding-top: 5px;
 }
 
 #difficulty-level{
@@ -64,9 +64,17 @@
     display: none;
 }
 
+#question {
+    font-size: 40px;
+}
+
 #question-img{
     max-width:100%;
     height:auto;
+}
+
+#question-media{
+    height: 400px;
 }
 
 #quiz-results{
@@ -80,4 +88,53 @@
 table tbody tr:hover {
     background-color: lightblue;
     cursor: pointer;
+}
+
+
+.modal {
+    position: fixed;   /* Keeps it out of the normal document flow */
+    top: 0;
+    left: 0;
+    width: 100%;       /* Full width */
+    height: 100%;      /* Full height */
+    background-color: rgba(0,0,0,0.4); /* Dim the background */
+    display: none;     /* Hide by default */
+    z-index: 1000;     /* Ensures it is on top of other content */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+#difficulty-level .btn-group, #difficulty-level .diff-button {
+    margin: 0;
+    vertical-align: center;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
 }

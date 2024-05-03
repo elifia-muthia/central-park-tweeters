@@ -15,7 +15,26 @@ $(document).ready(function() {
     });
 
     $('#quiz-start').click(function() {
-        startQuiz();
+        // Check for the button that has the 'selected-difficulty' class
+        var selectedDifficulty = $('#difficulty-level .selected-difficulty').attr('id');
+
+        // Ensure a difficulty is selected
+        if (!selectedDifficulty) {
+            $('#difficulty-warning').show()
+            return; // Exit the function if no selection is made
+        }
+
+        const viewsToCheck = Array.from({ length: 6 }, (_, i) => `/view/${i + 1}`);
+
+        // Check if all views are in the pages array
+        const allViewsPresent = viewsToCheck.every(view => navigated.includes(view));
+
+        if (allViewsPresent == false) {
+            $('#startModal').css('display', 'block');
+        }
+        else {
+            startQuiz();
+        }
     })
 
     $('#redo-quiz').click(function() {
@@ -25,6 +44,29 @@ $(document).ready(function() {
     $('#go-home').click(function() {
         window.location.href = '/';
     })
+
+    $('.close').click(function() {
+        $('#startModal').css('display', 'none');
+    });
+
+    // Continue the quiz
+    $('#continue-btn').click(function() {
+        $('#startModal').hide();
+        startQuiz();
+    });
+
+    // Decide to study more
+    $('#study-more-btn').click(function() {
+        $('#startModal').hide();
+        window.location.href = '/birds'
+    });
+
+    // Click anywhere outside of the modal to close it
+    $(window).click(function(event) {
+        if ($(event.target).is('#startModal')) {
+            $('#startModal').hide();
+        }
+    });
 });
 
 function setDifficulty(difficulty) {
@@ -40,15 +82,7 @@ function setDifficulty(difficulty) {
 }
 
 function startQuiz() {
-    // Check for the button that has the 'selected-difficulty' class
     var selectedDifficulty = $('#difficulty-level .selected-difficulty').attr('id');
-
-    // Ensure a difficulty is selected
-    if (!selectedDifficulty) {
-        $('#difficulty-warning').show()
-        return; // Exit the function if no selection is made
-    }
-
     // Get the difficulty from the button's id by removing '-btn' and print it or use it
     difficulty = selectedDifficulty.replace('-btn', '');
     console.log("Starting quiz with difficulty:", difficulty);
@@ -94,11 +128,9 @@ function doQuiz() {
         var selectedAnswer = $('input[name="answer"]:checked').val();
 
         if (!selectedAnswer) {
-            // If no answer is selected, show the warning message
             $('#answer-warning').show();
-            return; // Do not proceed to the next question or submit the quiz
+            return; 
         } else {
-            // If an answer is selected, hide the warning message (if it was shown previously)
             $('#answer-warning').hide();
         }
 
@@ -150,31 +182,39 @@ function displayQuestion(index) {
     $('#question').text(question['question']);
 
     // Display the media if available
-    if (question.media_type === "img" && question.media) {
-        $('#question-media').html('<img src="' + question.media + '" alt="Question media" id="question-img">');
-    } 
-    else if (question.media_type === "audio" && question.media) {
-        $('#question-media').html('<audio controls><source src="' + question.media + '" type="audio/mpeg">Your browser does not support the audio element.</audio>');
-    }
-    else {
-        $('#question-media').empty(); // Clear previous media if none is present
-    }
+    if (question.type === "multiple-choice") {
+        if (question.media_type === "img" && question.media) {
+            $('#question-media').html('<img src="' + question.media + '" alt="Question media" id="question-img">');
+        } 
+        else if (question.media_type === "audio" && question.media) {
+            $('#question-media').html('<audio controls><source src="' + question.media + '" type="audio/mpeg">Your browser does not support the audio element.</audio>');
+        }
+        else {
+            $('#question-media').empty(); 
+        }
 
-    $('#answers').empty();
+        $('#answers').empty();
 
-    // Loop through choices and create radio buttons for each
-    for (var i = 1; i <= 4; i++) {
-        var choiceKey = 'choice' + i;
-        if (question[choiceKey]) {
-            var answerElem = $('<div class="answer"><label><input type="radio" name="answer" value="' + choiceKey + '" />' + question[choiceKey] + '</label></div>');
-            $('#answers').append(answerElem);
+        // Loop through choices and create radio buttons for each
+        for (var i = 1; i <= 4; i++) {
+            var choiceKey = 'choice' + i;
+            if (question[choiceKey]) {
+                var answerElem = $('<div class="answer"><label><input type="radio" name="answer" value="' + choiceKey + '" />' + question[choiceKey] + '</label></div>');
+                $('#answers').append(answerElem);
+            }
+        }
+
+        // Check previously selected answer if returning to question
+        if (answers[index]) {
+            $('input[name="answer"][value="' + answers[index] + '"]').prop('checked', true);
         }
     }
-
-    // Check previously selected answer if returning to question
-    if (answers[index]) {
-        $('input[name="answer"][value="' + answers[index] + '"]').prop('checked', true);
+    else if (question.type === "drag_and_drop") {
+        initQuizMap(question);
     }
+    
+
+    
 
     
 }
@@ -183,11 +223,9 @@ function showQuizResults() {
     var selectedAnswer = $('input[name="answer"]:checked').val();
 
     if (!selectedAnswer) {
-        // If no answer is selected, show the warning message
         $('#answer-warning').show();
-        return; // Do not proceed to the next question or submit the quiz
+        return;
     } else {
-        // If an answer is selected, hide the warning message (if it was shown previously)
         $('#answer-warning').hide();
     }
 
@@ -274,4 +312,44 @@ function gradeQuiz() {
         }
     }
     return score;
+}
+
+function initQuizMap(question) {
+    if (window.quizMap) {
+        window.quizMap.remove();  // Remove the existing map to clean up
+    }
+
+    // Initialize a new map in the 'question-media' div
+    window.quizMap = L.map('question-media', {
+        center: centralPark,
+        zoom: 14
+    });
+
+    // Add a tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+    }).addTo(window.quizMap);
+
+    if (window.quizMarkers) {
+        window.quizMarkers.forEach(marker => marker.remove());
+    }
+    window.quizMarkers = [];
+
+    const choices = [question.choice1, question.choice2, question.choice3, question.choice4];
+    choices.forEach(choice => {
+        if (locations[choice]) {
+            console.log(choice + " " + locations[choice].coordinates)
+            const loc = locations[choice];
+            const icon = areaIcons[loc.type]; // Select icon based on the location type
+
+            // Create the marker and add it to the map
+            const marker = L.marker(loc.coordinates, {icon: icon}).addTo(window.quizMap);
+            marker.bindPopup(`<b>${choice}</b>`);  // Customize popup as needed
+
+            // Store the marker for potential future removal
+            window.quizMarkers.push(marker);
+        }
+    });
+
+    console.log("Quiz Markers: " + window.quizMarkers)
 }
