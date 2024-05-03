@@ -3,13 +3,13 @@
 .bird-habitat { font-style: italic;  font-family: 'Raleway', sans-serif}
 
 .img-container{ 
-    width: auto;       /* Width of the square */
-    height: 600px;      /* Height of the square */
-    background-color: #e6f0fa; /* Background color of the square */
-    display: flex;      /* Use flexbox to center the image */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    position: relative; /* Needed for positioning the image correctly */
+    width: auto;     
+    height: 600px;    
+    background-color: #e6f0fa; 
+    display: flex;     
+    justify-content: center; 
+    align-items: center; 
+    position: relative; 
     border: thick solid black;
 }
 
@@ -90,9 +90,8 @@
     }
 
     .info-icon img {
-        /* width: 40px; Adjust size as necessary */
-        height: 40px; /* Adjust size as necessary */
-        margin-right: 5px; /* Space between icons if multiple */
+        height: 40px;
+        margin-right: 5px; 
     }
 
 
@@ -110,5 +109,5 @@
   .flex-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* This aligns the children to the left */
+    justify-content: flex-start;
 }
