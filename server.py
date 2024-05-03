@@ -162,9 +162,11 @@ easy_quiz = [
         "bird_sound": "audio",
         "media": "/static/media/audio/mourning_dove.mp3",
         "choice1": "Shakespeare Garden",
+        "media1": "https://www.centralpark.com/downloads/3841/download/shakespeare-gardens.jpe?cb=7a9536f8578043bcee7d644b03068290&w=1200",
         "choice2": "Turtle Pond",
-        "choice3": "Reservoir",
-        "choice4": "North Woods",
+        "media2": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/de/17/a5/photo1jpg.jpg?w=1200&h=-1&s=1",
+        "choice3": "North Woods",
+        "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
         "answer": "choice1"
     },
     {
@@ -175,10 +177,12 @@ easy_quiz = [
         "bird_sound": "audio",
         "media": "/static/media/audio/mallard.mp3",
         "choice1": "Shakespeare Garden",
-        "choice2": "Conservatory Garden",
-        "choice3": "Reservoir",
-        "choice4": "North Woods",
-        "answer": "choice3"
+        "media1": "https://www.centralpark.com/downloads/3841/download/shakespeare-gardens.jpe?cb=7a9536f8578043bcee7d644b03068290&w=1200",
+        "choice2": "Reservoir",
+        "media2": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Jacqueline_Kennedy_Onassis_Reservoir.jpg/1200px-Jacqueline_Kennedy_Onassis_Reservoir.jpg",
+        "choice3": "North Woods",
+        "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
+        "answer": "choice2"
     },
     {
         "id": "8",
@@ -188,9 +192,11 @@ easy_quiz = [
         "bird_sound": "audio",
         "media": "/static/media/audio/magnolia_warbler.mp3",
         "choice1": "Ramble",
-        "choice2": "Conservatory Garden",
-        "choice3": "Harlem Meer",
-        "choice4": "Great Lawns",
+        "media1": "https://i.ytimg.com/vi/LpE2RpfRVys/maxresdefault.jpg",
+        "choice2": "Harlem Meer",
+        "media2": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
+        "choice3": "Great Lawns",
+        "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x767_crop_center-center_none/Sheep-Meadow-May-2018_71_2021-04-02-175219.jpg",
         "answer": "choice1"
     },
     {
@@ -200,11 +206,13 @@ easy_quiz = [
         "drag_bird": "https://www.allaboutbirds.org/guide/assets/photo/297087301-480px.jpg",
         "bird_sound": "audio",
         "media": "/static/media/audio/northern_cardinal.mp3",
-        "choice1": "Shakespeare Garden",
-        "choice2": "North Woods",
-        "choice3": "Reservoir",
-        "choice4": "Wildflower Meadow",
-        "answer": "choice2"
+        "choice1": "North Woods",
+        "media1": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
+        "choice2": "Reservoir",
+        "media2": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Jacqueline_Kennedy_Onassis_Reservoir.jpg/1200px-Jacqueline_Kennedy_Onassis_Reservoir.jpg",
+        "choice3": "Great Lawns",
+        "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x767_crop_center-center_none/Sheep-Meadow-May-2018_71_2021-04-02-175219.jpg",
+        "answer": "choice1"
     },
     {
         "id": "10",
@@ -214,9 +222,11 @@ easy_quiz = [
         "bird_sound": "audio",
         "media": "/static/media/audio/red_winged_blackbird.mp3",
         "choice1": "Shakespeare Garden",
+        "media1": "https://www.centralpark.com/downloads/3841/download/shakespeare-gardens.jpe?cb=7a9536f8578043bcee7d644b03068290&w=1200",
         "choice2": "North Woods",
+        "media2": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
         "choice3": "Harlem Meer",
-        "choice4": "Wildflower Meadow",
+        "media3": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice3"
     }
 ]
@@ -224,6 +234,7 @@ easy_quiz = [
 hard_quiz = [
     {
         "id": "1",
+        "type": "multiple-choice",
         "question": "Which of the follow birds can be found in the turtle pond?",
         "media_type": "img",
         "media": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/locations/_2475x1151_crop_center-center_none/turtle-pond.JPG",
@@ -235,6 +246,7 @@ hard_quiz = [
     },
     {
         "id": "2",
+        "type": "multiple-choice",
         "question": "This unidentified sound best matches which bird call term?",
         "media_type": "audio",
         "media": "/static/media/audio/pine_warbler.mp3",
@@ -246,7 +258,8 @@ hard_quiz = [
     },
     {
         "id": "3",
-        "question": "Which of the follow birds can be found in freshwater?",
+        "type": "multiple-choice",
+        "question": "Which of the following birds can be found in freshwater?",
         "media_type": "img",
         "media": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/locations/_2475x1151_crop_center-center_none/turtle-pond.JPG",
         "choice1": "American Crow",
@@ -257,6 +270,7 @@ hard_quiz = [
     },
     {
         "id": "4",
+        "type": "multiple-choice",
         "question": "Which sound term best matches the following audio?",
         "media_type": "audio",
         "media": "/static/media/audio/mallard.mp3",
@@ -268,6 +282,7 @@ hard_quiz = [
     },
     {
         "id": "5",
+        "type": "multiple-choice",
         "question": "Which sound term best matches the following audio?",
         "media_type": "audio",
         "media": "/static/media/audio/northern_cardinal.mp3",
@@ -280,66 +295,72 @@ hard_quiz = [
     {
         "id": "6",
         "type": "drag_and_drop",
-        "question": "Drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the location on the map",
         "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",
         "bird_sound": "audio",
         "media": "/static/media/audio/mourning_dove.mp3",
         "choice1": "Shakespeare Garden",
+        "media1": "https://www.centralpark.com/downloads/3841/download/shakespeare-gardens.jpe?cb=7a9536f8578043bcee7d644b03068290&w=1200",
         "choice2": "Turtle Pond",
-        "choice3": "Reservoir",
-        "choice4": "North Woods",
+        "media2": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/de/17/a5/photo1jpg.jpg?w=1200&h=-1&s=1",
+        "choice3": "North Woods",
+        "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
         "answer": "choice1"
     },
     {
         "id": "7",
         "type": "drag_and_drop",
         "question": "Listen to the audio, and drag the bird onto the location on the map",
-        "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",
-        "bird_sound": "audio",
+        "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",        "bird_sound": "audio",
         "media": "/static/media/audio/mallard.mp3",
         "choice1": "Shakespeare Garden",
-        "choice2": "Conservatory Garden",
-        "choice3": "Reservoir",
-        "choice4": "North Woods",
-        "answer": "choice3"
+        "media1": "https://www.centralpark.com/downloads/3841/download/shakespeare-gardens.jpe?cb=7a9536f8578043bcee7d644b03068290&w=1200",
+        "choice2": "Reservoir",
+        "media2": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Jacqueline_Kennedy_Onassis_Reservoir.jpg/1200px-Jacqueline_Kennedy_Onassis_Reservoir.jpg",
+        "choice3": "North Woods",
+        "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
+        "answer": "choice2"
     },
     {
         "id": "8",
         "type": "drag_and_drop",
         "question": "Listen to the audio, and drag the bird onto the location on the map",
-        "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",
-        "bird_sound": "audio",
+        "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",        "bird_sound": "audio",
         "media": "/static/media/audio/magnolia_warbler.mp3",
         "choice1": "Ramble",
-        "choice2": "Conservatory Garden",
-        "choice3": "Harlem Meer",
-        "choice4": "Great Lawns",
+        "media1": "https://i.ytimg.com/vi/LpE2RpfRVys/maxresdefault.jpg",
+        "choice2": "Harlem Meer",
+        "media2": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
+        "choice3": "Great Lawns",
+        "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x767_crop_center-center_none/Sheep-Meadow-May-2018_71_2021-04-02-175219.jpg",
         "answer": "choice1"
     },
     {
         "id": "9",
         "type": "drag_and_drop",
         "question": "Listen to the audio, and drag the bird onto the location on the map",
-        "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",
-        "bird_sound": "audio",
+        "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",        "bird_sound": "audio",
         "media": "/static/media/audio/northern_cardinal.mp3",
-        "choice1": "Shakespeare Garden",
-        "choice2": "North Woods",
-        "choice3": "Reservoir",
-        "choice4": "Wildflower Meadow",
-        "answer": "choice2"
+        "choice1": "North Woods",
+        "media1": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
+        "choice2": "Reservoir",
+        "media2": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Jacqueline_Kennedy_Onassis_Reservoir.jpg/1200px-Jacqueline_Kennedy_Onassis_Reservoir.jpg",
+        "choice3": "Great Lawns",
+        "media3": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x767_crop_center-center_none/Sheep-Meadow-May-2018_71_2021-04-02-175219.jpg",
+        "answer": "choice1"
     },
     {
         "id": "10",
         "type": "drag_and_drop",
         "question": "Listen to the audio, and drag the bird onto the location on the map",
-        "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",
-        "bird_sound": "audio",
+        "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",        "bird_sound": "audio",
         "media": "/static/media/audio/red_winged_blackbird.mp3",
         "choice1": "Shakespeare Garden",
+        "media1": "https://www.centralpark.com/downloads/3841/download/shakespeare-gardens.jpe?cb=7a9536f8578043bcee7d644b03068290&w=1200",
         "choice2": "North Woods",
+        "media2": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/_1650x1238_crop_center-center_none/North-Woods-0278-1.jpg",
         "choice3": "Harlem Meer",
-        "choice4": "Wildflower Meadow",
+        "media3": "https://www.centralpark.com/downloads/10627/download/Harlem-Meer.jpg?cb=9cf66c41ef3d395efaa7b5c6e6758536",
         "answer": "choice3"
     }
 ]

@@ -1,4 +1,3 @@
-
 #set-difficulty-text{
     align-self: center;
     margin-right: 10px;
@@ -10,7 +9,13 @@
 }
 
 #question-num {
-    margin-top: 10px;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mcq {
+    font-size: 20px;
 }
 
 .quiz-container{
@@ -37,6 +42,7 @@
 
 #difficulty-level{
     margin-top: 30px;
+    font-size: 20px;
 }
 
 #quiz-start{
@@ -50,6 +56,7 @@
     border: none;            
     border-radius: 8px;
     cursor: pointer; 
+    font-size: 30px;
 }
 
 #quiz-section{
@@ -60,12 +67,34 @@
     display: none;
 }
 
-#prev-q-button{
+.quiz-nav-buttons{
+    display: flex;
+    justify-content: space-between; 
+    padding: 10px;
+}
+
+#prev-q-btn{
     display: none;
+    align-self: flex-start;
+}
+
+#next-q-btn{
+    align-self: flex-end;
+    background-color: #023020;
+    color: white;
+}
+
+#submit-quiz-btn{
+    align-self: flex-end;
+    background-color: #023020;
+    color: white;
 }
 
 #question {
     font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+
 }
 
 #question-img{
@@ -74,7 +103,10 @@
 }
 
 #question-media{
-    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 #quiz-results{
@@ -137,4 +169,29 @@ button {
     padding-bottom: 5px;
     padding-right: 10px;
     padding-left: 10px;
+}
+
+.drop-zone {
+    position: relative; /* This makes it a positioning context for absolutely positioned children */
+    width: 200px;
+    height: 150px;
+    border: 2px dashed #ccc;
+    display: inline-block;
+    margin: 10px;
+    overflow: hidden; /* Ensures nothing spills outside the border */
+}
+
+.drop-zone img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensures it covers the area */
+}
+
+#dragBird {
+    position: absolute; /* Absolutely positioned relative to its nearest positioned ancestor */
+    top: 50%;  /* Center the bird vertically */
+    left: 50%; /* Center the bird horizontally */
+    /* transform: translate(-50%, -50%); Offset the bird by half its width and height to truly center it */
+    cursor: pointer;
+    width: 50px; /* Adjust size as necessary */
 }
