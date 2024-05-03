@@ -81,10 +81,10 @@ function displayQuestion(index) {
     // Display the question text
     $('#question').text(question.question);
 
-    if (question.media_type === "img" && question.media) {
+    if (question.media_type === "img") {
         $('#question-media').html('<img src="' + question.media + '" alt="Question media" id="question-img">');
     } 
-    else if (question.media_type === "audio" && question.media) {
+    else if (question.media_type === "audio") {
         $('#question-media').html('<audio controls><source src="' + question.media + '" type="audio/mpeg">Your browser does not support the audio element.</audio>');
     }
     else {
