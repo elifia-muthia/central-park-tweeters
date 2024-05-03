@@ -123,7 +123,7 @@ easy_quiz = [
         "type": "multiple-choice",
         "question:": "Which of the following is NOT a bird tone term?",
         "media_type": "img",
-        "media": "https://media.cntraveler.com/photos/611fc78d9282cc5de31e9d87/16:9/w_2240,c_limit/Central%20Park,%20Manhattan,%20New%20York_GettyImages-528180834.jpg",
+        "media": "",
         "choice1": "Quack",
         "choice2": "Liquid",
         "choice3": "Trill",
