@@ -202,9 +202,11 @@ table tbody tr:nth-child(odd) {
     font-weight: bold;
     float: right;
     margin-left: 5px;
+    /* background-color: #f6e5d4; */
   }
   
   .active:after {
+    /* background-color: #f6e5d4; */
     content: "\2212";
   }
   
@@ -230,36 +232,6 @@ table tbody tr:nth-child(odd) {
     justify-content: center;
   }
 
-  .accordion-loc {
-    background-color: #faf0e6;
-    /* color: #444; */
-    color: #000;
-    cursor: pointer;
-    /* padding: 18px; */
-    width: 100%;
-    border: none;
-    border-bottom: thick solid #02462f;
-    text-align: left;
-    outline: none;
-    font-size: 20px;
-    transition: 0.4s;
-    margin: 0 0 0; 
-    /* margin: 0rem 0 2rem; */
-  }
-
-  .active, .accordion-loc:hover {
-    background-color: #ccc;
-  }
-  
-  .accordion-loc:after {
-    content: '\002B';
-    /* color: #777; */
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-    margin: 1rem 0 1rem; 
-    padding-right: 2px;
-  }
 
   .image-marker{ 
     height: 34px;
@@ -273,8 +245,8 @@ table tbody tr:nth-child(odd) {
 
   .panel-loc{
     padding: 0 18px;
-    font-size: 18px;
-    background-color: white;
+    font-size: 20px;
+    background-color: #faf0e6;
     width: 100%;
     max-height: 0;
     overflow: hidden;
@@ -362,4 +334,16 @@ table tbody tr:nth-child(odd) {
     margin: 0 0 1.5rem;
 }
 
-  
+
+.img-view{
+    /* width: 300px;   Desired width */
+    width: 400px;
+    height: 400px; 
+    object-fit: cover;
+    margin: 1.25rem 0 1.5rem;
+    border: solid thick black;
+  }
+
+
+
+
