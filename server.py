@@ -441,48 +441,57 @@ current_quiz_id = len(quiz_history)
 # ROUTES
 @app.route('/')
 def load_homepage():
-    navigated_pages.append('/')
+    if  len(navigated_pages) == 0 or (len(navigated_pages) > 0 and navigated_pages[-1] != "/"):
+        navigated_pages.append('/')
     return render_template('homepage.html')
 
 @app.route('/sound')
 def load_sound():
-    navigated_pages.append('/sound')
+    if  len(navigated_pages) == 0 or (len(navigated_pages) > 0 and navigated_pages[-1] != "/sound"):
+        navigated_pages.append('/sound')
     return render_template('bird_sounds.html', results=bird_terminology)
 
 @app.route('/birds')
 @app.route('/birds/<location>')
 def load_birds(location=None):
     if location is None:
-        navigated_pages.append('/birds')
+        if len(navigated_pages) == 0 or (len(navigated_pages) > 0 and navigated_pages[-1] != "/birds"):
+            navigated_pages.append('/birds')
         return render_template('list_birds.html', results=species_data, location=location, studied=navigated_pages)
     
-    navigated_pages.append('/birds/' + location)
+    if  len(navigated_pages) == 0 or (len(navigated_pages) > 0 and navigated_pages[-1] != '/birds/' + location):
+        navigated_pages.append('/birds/' + location)
     results = [bird for bird in species_data if bird["habitat"] == location]
     return render_template('list_birds.html', results=results, location=location, studied=navigated_pages)
 
 @app.route('/map')
 def load_map():
-    navigated_pages.append('/map')
+    if  len(navigated_pages) == 0 or (len(navigated_pages) > 0 and navigated_pages[-1] != "/map"):
+        navigated_pages.append('/map')
     return render_template('map_birds.html')
 
 @app.route('/centralpark')
 def load_centralpark(): 
-    navigated_pages.append('/centralpark')
+    if  len(navigated_pages) == 0 or (len(navigated_pages) > 0 and navigated_pages[-1] != "/centralpark"):
+        navigated_pages.append('/centralpark')
     return render_template('centralpark_map.html')
 
 @app.route('/quiz')
 def load_quiz():
-    navigated_pages.append('/quiz')
+    if  len(navigated_pages) == 0 or (len(navigated_pages) > 0 and navigated_pages[-1] != "/quiz"):
+        navigated_pages.append('/quiz')
     return render_template('quiz.html', navigated=navigated_pages)
 
 @app.route('/view/<id>')
 def view_bird(id=None):
-    navigated_pages.append('/view/' + id)
+    if  len(navigated_pages) == 0 or (len(navigated_pages) > 0 and navigated_pages[-1] != "/view/" + id):
+        navigated_pages.append('/view/' + id)
     return render_template('view_bird.html', id=id, navigated=navigated_pages)
 
 @app.route('/past_quiz/<id>')
 def go_to_past_quiz(id=None):
-    navigated_pages.append('/past_quiz/' + id)
+    if  len(navigated_pages) == 0 or (len(navigated_pages) > 0 and navigated_pages[-1] != "/past_quiz/" + id):
+        navigated_pages.append('/past_quiz/' + id)
     return render_template('quiz_history.html', id=id)
 
 # AJAX FUNCTIONS

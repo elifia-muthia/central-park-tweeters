@@ -1,8 +1,72 @@
 $(document).ready(function() {
-    $('#')
+    $('#back-btn').click(function() {
+        if (navigated.length >= 2) {
+            window.location.href = navigated[navigated.length - 2];
+        }
+    });
+
+    $('#next-btn').click(function() {
+        get_next_page()
+    });
 
     get_bird_info(id)
 });
+
+function get_next_page() {
+    const targetPages = [
+        "/birds",
+        "/birds/freshwater",
+        "/birds/open-areas",
+        "/birds/Woodlands"
+    ];
+
+    let lastVisited = null;
+    let lastVisitedIndex = -1;
+
+    targetPages.forEach(page => {
+        const lastIndex = navigated.lastIndexOf(page);
+        if (lastIndex > lastVisitedIndex) {
+            lastVisited = page;
+            lastVisitedIndex = lastIndex;
+        }
+    });
+
+    id = +id;
+
+    if (lastVisited == "/birds") {
+        if (id < 6) {
+            window.location.href = "/view/" + (id+1)
+        }
+        else {
+            window.location.href = lastVisited
+        }
+    }
+    else if (lastVisited == "/birds/freshwater") {
+        if (id == 1) {
+            window.location.href = "/view/" + (id+1)
+        }
+        else {
+            window.location.href = lastVisited
+        }
+    }
+    else if (lastVisited == "/birds/open-areas") {
+        if (id == 5) {
+            window.location.href = "/view/" + (id+1)
+        }
+        else {
+            window.location.href = lastVisited
+        }
+    }
+    else if (lastVisited == "/birds/Woodlands") {
+        if (id == 3) {
+            window.location.href = "/view/" + (id+1)
+        }
+        else {
+            window.location.href = lastVisited
+        }
+    }
+
+}
 
 function get_bird_info(id) {
     bird = {"id": id}
@@ -54,7 +118,6 @@ function display_bird_info(birdData) {
     $('#bird-video').html('<iframe width="560" height="315" src="' + birdData.video + '" frameborder="0" allowfullscreen></iframe>');
     $('#bird-description').text(birdData.description);
     $('#bird-fun-fact').text(birdData.fun_fact);
-    // $('#bird-season').text(birdData.season);
 
     console.log(birdData.season)
 
