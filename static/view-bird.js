@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#')
+   
 
     get_bird_info(id)
 });
