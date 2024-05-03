@@ -6,22 +6,27 @@
 <link rel="stylesheet" href="{{url_for('static', filename='quiz_history.css')}}">
 
 <script>
-    let id = {{id|tojson}}
-    console.log(id)
+    let history = {{history|tojson}}
+    console.log(history)
 </script>
 
 
-<div class="quiz-container" id="quiz-section">
-    <div class="title" id="question-num"></div>
-    <div class="text" id="question"></div>
-    <div id="question-media"></div>
-    <div id="your-answer"></div>
-    <div id="correct-answer"></div>
-    <div id="result-icon"></div>
-    <div class="quiz-nav-buttons">
-        <button type="button" id="prev-q-btn">Back</button>
-        <button type="button" id="next-q-btn">Next</button>
+<body>
+    <div class="table-container">
+        <div id="past-quiz-title">Past Quizzes</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date/Time</th>
+                    <th>Difficulty Level</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
-</div>
+
+</body>
 
 {% endblock %}
