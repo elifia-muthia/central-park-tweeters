@@ -69,7 +69,12 @@ function displayQuestion(index) {
     console.log(answer)
 
     if (index === questions.length - 1) {
-        $('#next-q-btn').hide();
+        $('#next-q-btn').text('See Past Quizzes');
+
+        $('#next-q-btn').click(function() {
+            window.location.href = "/quiz_history"
+        });
+
         $('#submit-quiz-btn').show();
     } else {
         $('#next-q-btn').show();

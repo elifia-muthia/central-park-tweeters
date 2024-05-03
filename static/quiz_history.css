@@ -1,0 +1,9 @@
+table tbody tr:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+#past-quiz-title {
+    font-size: 60px;
+    font-weight: bold;
+}
