@@ -178,8 +178,8 @@ button {
 
 .drop-zone {
     position: relative; /* This makes it a positioning context for absolutely positioned children */
-    width: 200px;
-    height: 150px;
+    width: 300px;
+    height: 200px;
     border: 2px dashed #ccc;
     display: inline-block;
     margin: 10px;
@@ -188,8 +188,10 @@ button {
 
 .drop-zone img {
     width: 100%;
-    height: auto;
-    display: block; /* Ensures it covers the area */
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* display: block; Ensures it covers the area */
 }
 
 #dragBird {

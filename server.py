@@ -28,7 +28,7 @@ species_data = [
         "scientific_name": "Agelaius phoeniceus",
         "image": "https://indianaaudubon.org/wp-content/uploads/2016/04/RedWingedBlackbird2.jpg",
         "sound": "/static/media/audio/red_winged_blackbird.mp3",
-        "tone": "Chrip",
+        "tone": "Trill",
         "tone_description": "The typical call of a Red-winged Blackbird is a distinctive, matter-of-fact check that’s fairly easy to recognize. Males and females make these calls all year round, in flight and while feeding, when confronting rivals and to raise an alarm. They also give a more intense alarm call, a fast, scolding chak chak chak.",
         "video": "https://www.youtube.com/embed/q3QicOAiBXk?si=xrzbbmC0OFjP9-c-",
         "description": "Glossy-black males have scarlet-and-yellow shoulder patches they can puff up or hide depending on how confident they feel. Females are a subdued, streaky brown, almost like a large, dark sparrow. Their early and tumbling song are happy indications of the return of spring.",
@@ -56,7 +56,7 @@ species_data = [
         "scientific_name": "Setophaga magnolia",
         "image": "https://dariuszzdziebk.wpenginepowered.com/wp-content/uploads/2022/05/BOTW-Homepage-Thumbnail_Magnolia-Warbler-1024x663.jpg",
         "sound": "/static/media/audio/magnolia_warbler.mp3",
-        "tone": "Nasal/Buzz",
+        "tone": "Nasal",
         "tone_description": "Males and females call with a nasal zic or zeep. During nocturnal migration they give a buzzy zeet.",
         "video": "https://www.youtube.com/embed/2Vth2XSAAxM?si=-RV_vy3ah5ui3Mmo",
         "description": "Many male warblers are black and yellow, but Magnolia Warblers take it up a notch, sporting a bold black necklace complete with long tassels, a black mask, and a standout white wing patch. The female lacks the male's bold accoutrements, instead wearing an elegant white eyering on her gray head, 2 thin white wingbars, and yellow underparts with moderate streaking. ",
@@ -70,7 +70,7 @@ species_data = [
         "scientific_name": "Zenaida macroura",
         "image": "https://cdn.shopify.com/s/files/1/0156/3796/files/mourning-dove-3591135_1920.jpg?v=1580151321",
         "sound": "/static/media/audio/mourning_dove.mp3",
-        "tone": "Coo",
+        "tone": "Warble",
         "tone_description": "You can often hear paired males give the three-parted “nest call” while nest-building: a coo-OO-oo, highest in the middle. Females sometimes call ohr ohr while sitting on the nest.",
         "video": "https://www.youtube.com/embed/7oNljd7R1f8?si=XNdl-iQb_zUgN6_T",
         "description": "A graceful, slender-tailed, small-headed dove that’s common across the continent. Mourning Doves perch on telephone wires and forage for seeds on the ground; their flight is fast and bullet straight. Their soft, drawn-out calls sound like laments. When taking off, their wings make a sharp whistling or whinnying. Mourning Doves are the most frequently hunted species in North America.",
@@ -121,9 +121,9 @@ easy_quiz = [
     {
         "id": "3",
         "type": "multiple-choice",
-        "question": "Which audio is NOT a bird tone term?",
+        "question:": "Which of the following is NOT a bird tone term?",
         "media_type": "img",
-        "media": "https://media.cntraveler.com/photos/611fc78d9282cc5de31e9d87/16:9/w_2240,c_limit/Central%20Park,%20Manhattan,%20New%20York_GettyImages-528180834.jpg",
+        "media": "",
         "choice1": "Quack",
         "choice2": "Liquid",
         "choice3": "Trill",
@@ -133,7 +133,7 @@ easy_quiz = [
     {
         "id": "4",
         "type": "multiple-choice",
-        "question": "Match the bird to the audio?",
+        "question:": "Match the audio to the bird?",
         "media_type": "audio",
         "media": "/static/media/audio/american_crow.mp3",
         "choice1": "Mallard",
@@ -157,7 +157,7 @@ easy_quiz = [
     {
         "id": "6",
         "type": "drag_and_drop",
-        "question": "Drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://nestwatch.org/wp-content/uploads/2012/04/MODO_Debbie-McKenzie-728x494.jpg",
         "bird_sound": "audio",
         "media": "/static/media/audio/mourning_dove.mp3",
@@ -172,7 +172,7 @@ easy_quiz = [
     {
         "id": "7",
         "type": "drag_and_drop",
-        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg/1200px-Anas_platyrhynchos_male_female_quadrat.jpg",
         "bird_sound": "audio",
         "media": "/static/media/audio/mallard.mp3",
@@ -187,7 +187,7 @@ easy_quiz = [
     {
         "id": "8",
         "type": "drag_and_drop",
-        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://www.allaboutbirds.org/guide/assets/photo/64798651-480px.jpg",
         "bird_sound": "audio",
         "media": "/static/media/audio/magnolia_warbler.mp3",
@@ -202,7 +202,7 @@ easy_quiz = [
     {
         "id": "9",
         "type": "drag_and_drop",
-        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://www.allaboutbirds.org/guide/assets/photo/297087301-480px.jpg",
         "bird_sound": "audio",
         "media": "/static/media/audio/northern_cardinal.mp3",
@@ -217,7 +217,7 @@ easy_quiz = [
     {
         "id": "10",
         "type": "drag_and_drop",
-        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://indianaaudubon.org/wp-content/uploads/2016/04/RedWingedBlackbird2-1200x1005.jpg",
         "bird_sound": "audio",
         "media": "/static/media/audio/red_winged_blackbird.mp3",
@@ -295,7 +295,7 @@ hard_quiz = [
     {
         "id": "6",
         "type": "drag_and_drop",
-        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",
         "bird_sound": "audio",
         "media": "/static/media/audio/mourning_dove.mp3",
@@ -310,7 +310,7 @@ hard_quiz = [
     {
         "id": "7",
         "type": "drag_and_drop",
-        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",        "bird_sound": "audio",
         "media": "/static/media/audio/mallard.mp3",
         "choice1": "Shakespeare Garden",
@@ -324,7 +324,7 @@ hard_quiz = [
     {
         "id": "8",
         "type": "drag_and_drop",
-        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",        "bird_sound": "audio",
         "media": "/static/media/audio/magnolia_warbler.mp3",
         "choice1": "Ramble",
@@ -338,7 +338,7 @@ hard_quiz = [
     {
         "id": "9",
         "type": "drag_and_drop",
-        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",        "bird_sound": "audio",
         "media": "/static/media/audio/northern_cardinal.mp3",
         "choice1": "North Woods",
@@ -352,7 +352,7 @@ hard_quiz = [
     {
         "id": "10",
         "type": "drag_and_drop",
-        "question": "Listen to the audio, and drag the bird onto the location on the map",
+        "question": "Listen to the audio, and drag the bird onto the correct location.",
         "drag_bird": "https://www.pngitem.com/pimgs/m/527-5273123_bird-question-hd-png-download.png",        "bird_sound": "audio",
         "media": "/static/media/audio/red_winged_blackbird.mp3",
         "choice1": "Shakespeare Garden",

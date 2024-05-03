@@ -4,6 +4,7 @@ var questions = [];
 var difficulty = "";
 var mode = "";
 var dropped = "";
+var currentQuestionType = "";
 
 $(document).ready(function() {
     setDifficulty('none');
@@ -192,6 +193,7 @@ function displayQuestion(index) {
 
     // Display the media if available
     if (question.type === "multiple-choice") {
+        currentQuestionType = question.type;
         if (question.media_type === "img" && question.media) {
             $('#question-media').html('<img src="' + question.media + '" alt="Question media" id="question-img">');
         } 
@@ -219,6 +221,7 @@ function displayQuestion(index) {
         }
     }
     else if (question.type === "drag_and_drop") {
+        currentQuestionType = question.type;
         // initQuizMap(question);
         $('#question-media').html('<audio controls><source src="' + question.media + '" type="audio/mpeg">Your browser does not support the audio element.</audio>');
 
@@ -227,24 +230,25 @@ function displayQuestion(index) {
         var dropZoneDivs = {
             choice1: $(`
                 <div class="drop-zone" id="choice1">
-                    <img src="${question.media1}" alt="${question.choice1}">
+                    <img class="drop_img" src="${question.media1}" alt="${question.choice1}">
                     <div class="label">${question.choice1}</div>
                 </div>
             `),
             choice2: $(`
                 <div class="drop-zone" id="choice2">
-                    <img src="${question.media2}" alt="${question.choice2}">
+                    <img class="drop_img" src="${question.media2}" alt="${question.choice2}">
                     <div class="label">${question.choice2}</div>
                 </div>
             `),
             choice3: $(`
                 <div class="drop-zone" id="choice3">
-                    <img src="${question.media3}" alt="${question.choice3}">
+                    <img class="drop_img" src="${question.media3}" alt="${question.choice3}">
                     <div class="label">${question.choice3}</div>
                 </div>
             `)
         };
-    
+
+        
         for (let key in dropZoneDivs) {
             $('#answers').append(dropZoneDivs[key]);
         }
@@ -255,7 +259,7 @@ function displayQuestion(index) {
             alt: 'Draggable Bird'
         }).css({
             cursor: 'pointer',
-            width: '50px' 
+            width: '100px' 
         });
     
         if (answers[index]) {
@@ -291,12 +295,17 @@ function initializeDragAndDrop() {
 }
 
 function showQuizResults() {
-    if (mode == "multiple-choice") {
-        var selectedAnswer = $('input[name="answer"]:checked').val();
+    var selectedAnswer = "";
+    if(currentQuestionType === "multiple-choice"){
+        selectedAnswer = $('input[name="answer"]:checked').val();
+        console.log("SelectedAnswer (showQuizResult): " + selectedAnswer)
     }
-    else {
-        var selectedAnswer = dropped;
+    else{
+        selectedAnswer = dropped;
+        console.log("SelectedAnswer (showQuizResult): " + selectedAnswer)
+        //selectedAnswer = $('#' + answers[index]).find('img:last-child');
     }
+    console.log(selectedAnswer);
 
     if (!selectedAnswer) {
         $('#answer-warning').show();
