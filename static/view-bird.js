@@ -1,5 +1,13 @@
 $(document).ready(function() {
-    $('#')
+    $('#back-btn').click(function() {
+        if (navigated.length >= 2) {
+            window.location.href = navigated[navigated.length - 2];
+        }
+    });
+
+    $('#next-btn').click(function() {
+        get_next_page()
+    });
 
     get_bird_info(id)
 });
