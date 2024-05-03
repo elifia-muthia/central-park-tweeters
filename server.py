@@ -97,7 +97,7 @@ easy_quiz = [
     {
         "id": "1",
         "type": "multiple-choice",
-        "question": "Which of the follow birds can be found in freshwater?",
+        "question": "Which of the following birds can be found in freshwater?",
         "media_type": "img",
         "media": "https://s3.amazonaws.com/assets.centralparknyc.org/media/images/locations/_2475x1151_crop_center-center_none/turtle-pond.JPG",
         "choice1": "American Crow",
