@@ -128,28 +128,36 @@ function doQuiz() {
 
     // Set up the click handler for the 'Next' button
     $('#next-q-btn').click(function() {
+        var selectedAnswer;
         if (mode == "multiple-choice") {
-            var selectedAnswer = $('input[name="answer"]:checked').val();
+            selectedAnswer = $('input[name="answer"]:checked').val();
+        } else if (mode == "drag_and_drop") {
+            selectedAnswer = dropped; 
+            if (!selectedAnswer) { 
+                $('#answer-warning').text('Please place the bird in a valid area before proceeding.'); 
+                $('#answer-warning').show();
+                return;
+            }
         }
-        else {
-            var selectedAnswer = dropped;
-        }
-
+    
         if (!selectedAnswer) {
             $('#answer-warning').show();
-            return; 
+            return;
         } else {
             $('#answer-warning').hide();
         }
-
+    
         if (currentQuestionIndex < questions.length - 1) {
-            // Save current answer before moving on
-            answers[currentQuestionIndex] = selectedAnswer; // Store the answer
+            answers[currentQuestionIndex] = selectedAnswer; 
             currentQuestionIndex++;
             displayQuestion(currentQuestionIndex);
-            $('#prev-q-btn').show(); // Show back button after the first question
-        } 
+            $('#prev-q-btn').show(); 
+        } else {
+            $('#submit-quiz-btn').show(); 
+            $('#next-q-btn').hide();
+        }
     });
+    
 
     $('#prev-q-btn').hide();
 
@@ -193,6 +201,7 @@ function displayQuestion(index) {
 
     // Display the media if available
     if (question.type === "multiple-choice") {
+        $('#drag-and-drop-question-area').hide();
         currentQuestionType = question.type;
         if (question.media_type === "img" && question.media) {
             $('#question-media').html('<img src="' + question.media + '" alt="Question media" id="question-img">');
@@ -221,6 +230,7 @@ function displayQuestion(index) {
         }
     }
     else if (question.type === "drag_and_drop") {
+        $('#drag-and-drop-question-area').show();
         currentQuestionType = question.type;
         // initQuizMap(question);
         $('#question-media').html('<audio controls><source src="' + question.media + '" type="audio/mpeg">Your browser does not support the audio element.</audio>');
