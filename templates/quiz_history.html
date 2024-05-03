@@ -3,20 +3,24 @@
 {% block content %}
 
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz_history.js') }}"></script>
-<link rel="stylesheet" href="{{url_for('static', filename='quiz.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='quiz_history.css')}}">
+
+<script>
+    let id = {{id|tojson}}
+    console.log(id)
+</script>
 
 
-<div id="quiz">
-    <div id="quiz-section">
-        <div class="title" id="question-num"></div>
-        <div class="text" id="question"></div>
-        <div id="question-media"></div>
-        <div class="multiple-choice" id="answers"></div>
-        <div class="quiz-nav-buttons">
-            <button type="button" id="prev-q-btn">Back</button>
-            <button type="button" id="next-q-btn">Next</button>
-            <button type="button" id="submit-quiz-btn">Submit Quiz</button>
-        </div>
+<div class="quiz-container" id="quiz-section">
+    <div class="title" id="question-num"></div>
+    <div class="text" id="question"></div>
+    <div id="question-media"></div>
+    <div id="your-answer"></div>
+    <div id="correct-answer"></div>
+    <div id="result-icon"></div>
+    <div class="quiz-nav-buttons">
+        <button type="button" id="prev-q-btn">Back</button>
+        <button type="button" id="next-q-btn">Next</button>
     </div>
 </div>
 

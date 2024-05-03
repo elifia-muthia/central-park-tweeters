@@ -291,7 +291,12 @@ function initializeDragAndDrop() {
 }
 
 function showQuizResults() {
-    var selectedAnswer = $('input[name="answer"]:checked').val();
+    if (mode == "multiple-choice") {
+        var selectedAnswer = $('input[name="answer"]:checked').val();
+    }
+    else {
+        var selectedAnswer = dropped;
+    }
 
     if (!selectedAnswer) {
         $('#answer-warning').show();
@@ -318,7 +323,7 @@ function showQuizResults() {
     let time_now = now.toLocaleString('en-US', combinedOptions);
 
     quiz = {"questions": questions, 
-            "answers": answers, 
+            "answers": answers,  
             "score": score, 
             "datetime": time_now,
             "difficulty": difficulty}
@@ -351,6 +356,11 @@ function showQuizHistory(quiz_history) {
             
             $('table tbody').append(row);
         }
+    })
+
+    $('#review-quiz').click(function() {
+        var id = quiz_history[quiz_history.length-1]
+        window.location.href = '/past_quiz/' + id
     })
 }
 

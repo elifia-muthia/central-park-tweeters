@@ -14,6 +14,11 @@
     font-weight: bold;
 }
 
+#result-congrats{
+    justify-content: center;
+    text-align: center;
+}
+
 .mcq {
     font-size: 20px;
 }
@@ -194,4 +199,10 @@ button {
     /* transform: translate(-50%, -50%); Offset the bird by half its width and height to truly center it */
     cursor: pointer;
     width: 50px; /* Adjust size as necessary */
+}
+
+#past-quizzes-heading{
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 30px;
 }
