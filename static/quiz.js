@@ -368,7 +368,7 @@ function showQuizHistory(quiz_history) {
     })
 
     $('#review-quiz').click(function() {
-        var id = quiz_history[quiz_history.length-1]
+        var id = quiz_history[quiz_history.length-1].id
         window.location.href = '/past_quiz/' + id
     })
 }
@@ -403,43 +403,3 @@ function gradeQuiz() {
     }
     return score;
 }
-
-// function initQuizMap(question) {
-//     if (window.quizMap) {
-//         window.quizMap.remove();  // Remove the existing map to clean up
-//     }
-
-//     // Initialize a new map in the 'question-media' div
-//     window.quizMap = L.map('question-media', {
-//         center: centralPark,
-//         zoom: 14
-//     });
-
-//     // Add a tile layer
-//     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//         attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
-//     }).addTo(window.quizMap);
-
-//     if (window.quizMarkers) {
-//         window.quizMarkers.forEach(marker => marker.remove());
-//     }
-//     window.quizMarkers = [];
-
-//     const choices = [question.choice1, question.choice2, question.choice3, question.choice4];
-//     choices.forEach(choice => {
-//         if (locations[choice]) {
-//             console.log(choice + " " + locations[choice].coordinates)
-//             const loc = locations[choice];
-//             const icon = areaIcons[loc.type]; // Select icon based on the location type
-
-//             // Create the marker and add it to the map
-//             const marker = L.marker(loc.coordinates, {icon: icon}).addTo(window.quizMap);
-//             marker.bindPopup(`<b>${choice}</b>`);  // Customize popup as needed
-
-//             // Store the marker for potential future removal
-//             window.quizMarkers.push(marker);
-//         }
-//     });
-
-//     console.log("Quiz Markers: " + window.quizMarkers)
-// }

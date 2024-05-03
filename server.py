@@ -478,7 +478,7 @@ def load_quiz():
 @app.route('/view/<id>')
 def view_bird(id=None):
     navigated_pages.append('/view/' + id)
-    return render_template('view_bird.html', id=id)
+    return render_template('view_bird.html', id=id, navigated=navigated_pages)
 
 @app.route('/past_quiz/<id>')
 def go_to_past_quiz(id=None):

@@ -183,7 +183,7 @@ button {
     border: 2px dashed #ccc;
     display: inline-block;
     margin: 10px;
-    overflow: hidden; /* Ensures nothing spills outside the border */
+    overflow: hidden;
 }
 
 .drop-zone img {
@@ -191,14 +191,12 @@ button {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    /* display: block; Ensures it covers the area */
 }
 
 #dragBird {
     position: absolute; /* Absolutely positioned relative to its nearest positioned ancestor */
     top: 50%;  /* Center the bird vertically */
     left: 50%; /* Center the bird horizontally */
-    /* transform: translate(-50%, -50%); Offset the bird by half its width and height to truly center it */
     cursor: pointer;
     width: 50px; /* Adjust size as necessary */
 }
@@ -207,4 +205,10 @@ button {
     font-weight: bold;
     font-size: 40px;
     margin-top: 30px;
+}
+
+.score{
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
 }
