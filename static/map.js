@@ -47,23 +47,23 @@ function initMap() {
     var centralPark = [40.7829, -73.9654];
 
     // Freshwater
-    var turtlePond = [40.7751, -73.9689];
-    var harlemMeer = [40.7967, -73.9519];
-    var reservoir = [40.7854, -73.9639]
-    var lake = [40.7740, -73.9693]
-    var loch = [40.7950,  -73.9580]
-    var gill = [40.7745, -73.9716]
+    var turtlePond = [40.7795, -73.9680];
+    var harlemMeer = [40.7965, -73.9516];
+    var reservoir = [40.7857, -73.9639]
+    var lake = [40.7768, -73.9727]
+    var loch = [40.79473,  -73.9594]
+    var gill = [40.7775, -73.97092]
 
     // Woodland 
-    var ramble = [40.7754, -73.9727]
-    var northWoods = [40.7950, -73.9580]
-    var halletNature = [40.7672, -73.9730]
+    var ramble = [40.7779, -73.9697]
+    var northWoods = [40.7978, -73.9561]
+    var halletNature = [40.76718, -73.97498]
 
     // Open Areas 
-    var wildflowerMeadow = [40.7967, -73.9519]
+    var wildflowerMeadow = [40.79434, -73.95706]
     var conservatoryGarden = [40.7932, -73.9523]
-    var shakespearGarden = [40.7794, -73.9673]
-    var greatLawn = [40.7790, -73.9665]
+    var shakespearGarden = [40.7798, -73.9699]
+    var greatLawn = [40.78199, -73.9665]
 
 
     var map = L.map('map').setView(centralPark, 14);
@@ -148,15 +148,32 @@ function initMap() {
     // Opean Areas
     var wildflowerMeadowMarker = L.marker(wildflowerMeadow, {icon: openIcon}).addTo(map);
     wildflowerMeadowMarker.bindPopup('<b>Wildflower Meadow</b> <br> <a href = "/birds/open-areas">Open Areas</a>');
+    $('#link-wildflower').click(function() {
+      wildflowerMeadowMarker.openPopup();
+      map.setView(wildflowerMeadow, 16); // Optional: centers the map on the marker and zooms in
+    });
+
 
     var conservatoryGardenMarker = L.marker(conservatoryGarden, {icon: openIcon}).addTo(map);
     conservatoryGardenMarker.bindPopup('<b>Conservatory Garden</b> <br> <a href = "/birds/open-areas">Open Areas</a>');
+    $('#link-conservatory').click(function() {
+      conservatoryGardenMarker.openPopup();
+      map.setView(conservatoryGarden, 16); // Optional: centers the map on the marker and zooms in
+    });
 
     var shakespearGardenMarker = L.marker(shakespearGarden, {icon: openIcon}).addTo(map);
     shakespearGardenMarker.bindPopup('<b>Shakespeare Garden</b> <br> <a href = "/birds/open-areas">Open Areas</a>');
+    $('#link-shakespeare').click(function() {
+      shakespearGardenMarker.openPopup();
+      map.setView(shakespearGarden, 16); // Optional: centers the map on the marker and zooms in
+    });
 
     var greatLawnMarker = L.marker(greatLawn, {icon: openIcon}).addTo(map);
     greatLawnMarker.bindPopup('<b>Great Lawn</b> <br> <a href = "/birds/open-areas">Open Areas</a>');
+    $('#link-great-lawns').click(function() {
+      greatLawnMarker.openPopup();
+      map.setView(greatLawn, 16); // Optional: centers the map on the marker and zooms in
+    });
 
 
   
