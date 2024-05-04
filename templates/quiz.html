@@ -30,11 +30,13 @@
 
         <div id="startModal" class="modal">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close text-left">&times;</span>
                 <h2>Are sure you want to start the quiz?</h2>
                 <p>You haven't studied all the content yet.</p>
-                <button id="continue-btn">Yes, Start Quiz</button>
-                <button id="study-more-btn">Review More</button>
+                <div class="btns-popup">
+                    <button class="text-left" id="study-more-btn">Review More</button>
+                    <button class="text-right accent-color" id="continue-btn">Yes, Start Quiz</button>
+                </div>
             </div>
         </div>
         
@@ -61,26 +63,15 @@
         <div class="title" id="result-congrats">Quiz Result</div>
         <div class="text score"><strong>Your score: </strong></div>
         <div class="score" id="quiz-score"></div>
-        <div class="quiz-nav-buttons">
+        <div class="single-btn">
             <button type="button" id="review-quiz">Review Quiz</button>
+        </div>
+        <div class="single-btn">
+            <button type="button" id="past-quiz">See Past Quizzes</button>
+        </div>
+        <div class="quiz-nav-buttons">
             <button type="button" id="redo-quiz">Quiz Me Again!</button>
             <button type="button" id="go-home">Continue Learning</button>
-        </div>
-
-        <div id="past-quizzes-heading">Past Quizzes</div>
-        <div class="table-container">
-            <div id="past-quizzes"></div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Date/Time</th>
-                        <th>Difficulty Level</th>
-                        <th>Score</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
         </div>
     </div>
 
