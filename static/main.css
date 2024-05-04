@@ -371,10 +371,10 @@ table tbody tr:nth-child(odd) {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 5px;
   display: block;
-  margin-top: 5px;
-  background: black; 
+  margin-top: 1px;
+  background: #00fa9a; 
   transition: width 0.3s ease 0s, left 0.3s ease 0.3s; 
   left: 50%;
 }
