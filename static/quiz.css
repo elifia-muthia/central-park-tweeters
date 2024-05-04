@@ -64,12 +64,17 @@
     font-size: 30px;
 }
 
+#continue-btn {
+    color: white;
+}
+
 #quiz-section{
     display: none;
 }
 
 #difficulty-warning{
     display: none;
+    font-size: 20px;
 }
 
 .quiz-nav-buttons{
@@ -82,6 +87,7 @@
     display: none;
     align-self: flex-start;
 }
+
 
 #next-q-btn{
     align-self: flex-end;
@@ -116,17 +122,17 @@
 
 #quiz-results{
     display: none;
+    justify-content: center;
 }
 
 #answer-warning{
     display: none;
 }
 
-table tbody tr:hover {
-    background-color: lightblue;
-    cursor: pointer;
+.single-btn{
+    display: flex;
+    justify-content: center;
 }
-
 
 .modal {
     position: fixed;   /* Keeps it out of the normal document flow */
@@ -144,7 +150,15 @@ table tbody tr:hover {
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 35%; /* Could be more or less, depending on screen size */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.btns-popup {
+    display: flex;
+    justify-content: center;
 }
 
 .close {
@@ -211,4 +225,13 @@ button {
     display: flex;
     justify-content: center;
     font-size: 35px;
+}
+
+#quiz-score{
+    margin-bottom: 30px;
+}
+
+#review-quiz{
+    background-color: #023020;
+    color: white;
 }

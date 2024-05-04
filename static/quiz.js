@@ -347,43 +347,12 @@ function showQuizResults() {
             "datetime": time_now,
             "difficulty": difficulty}
 
-    getQuizHistory(quiz, function(quiz_history) {
-        console.log("Quiz History: " + quiz_history);
-        questions = quiz_history
-        showQuizHistory(quiz_history);
-    });
+    submitQuiz(quiz)
 
 }
 
-function showQuizHistory(quiz_history) {
-    $.each(quiz_history, function(index, quiz) {
-        if (index !== quiz_history.length - 1) {
-            console.log("history: " + quiz)
-            var row = $('<tr>').attr('data-id', quiz.id);
-            
-            var capitalized_difficulty = quiz.difficulty.charAt(0).toUpperCase() + quiz.difficulty.slice(1);
 
-            row.append(
-                $('<td>').text(quiz.datetime),
-                $('<td>').text(capitalized_difficulty),
-                $('<td>').text(quiz.score + " out of " + quiz.questions.length)
-            );
-            
-            row.click(function() {
-                window.location.href = '/past_quiz/' + $(this).data('id');
-            });
-            
-            $('table tbody').append(row);
-        }
-    })
-
-    $('#review-quiz').click(function() {
-        var id = quiz_history[quiz_history.length-1].id
-        window.location.href = '/past_quiz/' + id
-    })
-}
-
-function getQuizHistory(quiz, handleQuizHistory) {
+function submitQuiz(quiz) {
     request_data = {'quiz': quiz}
 
     $.ajax({
@@ -393,7 +362,7 @@ function getQuizHistory(quiz, handleQuizHistory) {
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(request_data),
         success: function(result) {
-            handleQuizHistory(result.data);
+            console.log("Submitted quiz")
         },
         error: function(request, status, error) {
             console.log("Error");
