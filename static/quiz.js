@@ -169,6 +169,9 @@ function doQuiz() {
     $('#prev-q-btn').click(function() {
         if (currentQuestionIndex > 0) {
             var selectedAnswer = $('input[name="answer"]:checked').val();
+            if(mode === "drag_and_drop"){
+                selectedAnswer = dropped;
+            }
             answers[currentQuestionIndex] = selectedAnswer;
             currentQuestionIndex--;
             displayQuestion(currentQuestionIndex);
@@ -297,20 +300,20 @@ function displayQuestion(index) {
 function initializeDragAndDrop() {
     setTimeout(() => {
         $('#dragBird').draggable({
-            revert: 'invalid', // Revert to original position if not dropped in a valid drop zone
-            cursor: 'move', // Cursor changes to 'move' when dragging
-            containment: 'document' // Draggable item can be moved anywhere within the document
+            revert: 'invalid', 
+            cursor: 'move', 
+            containment: 'document' 
         });
 
         $('.drop-zone').droppable({
-            accept: '#dragBird', // Only accept elements with the ID 'dragBird'
-            hoverClass: 'highlighted', // Apply 'highlighted' class on hover
+            accept: '#dragBird', 
+            hoverClass: 'highlighted', 
             drop: function(event, ui) {
-                dropped = this.id; // Capture the ID of the drop zone where the bird is dropped
+                dropped = this.id; 
                 console.log(`Dropped in ${this.id}`);
             }
         });
-    }, 100); // Delay to ensure elements are ready
+    }, 100); 
 }
 
 
