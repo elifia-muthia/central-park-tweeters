@@ -19,22 +19,27 @@
     padding: 10px;
 }
 
-#question-media{
+#question-media {
     width: 100%;
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-    flex-direction: column;
-    align-items: center;
-}
-
-#media-image{
-    display: block; 
-    width: 100%;
-    max-width: 600px; 
+    flex-direction: column; /* This aligns children vertically */
+    justify-content: center; /* Centers the children vertically in the container */
+    align-items: center; /* Centers the children horizontally */
     margin-bottom: 10px;
-
 }
+
+#question-img{
+    max-width:100%;
+    height:auto;
+}
+
+#media-image {
+    display: block;
+    width: 250px; /* Takes the full width of its parent up to max-width */
+    margin: 0 auto; /* Centers the image horizontally */
+    margin-bottom: 10px; /* Space below the image */
+}
+
 
 #result-icon{
     margin-top: 10px;
