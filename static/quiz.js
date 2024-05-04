@@ -201,6 +201,9 @@ function displayQuestion(index) {
 
     // Display the media if available
     if (question.type === "multiple-choice") {
+        $('#answers').show();
+        $('#dd-answers').hide();
+
         $('#drag-and-drop-question-area').hide();
         currentQuestionType = question.type;
         if (question.media_type === "img" && question.media) {
@@ -230,12 +233,16 @@ function displayQuestion(index) {
         }
     }
     else if (question.type === "drag_and_drop") {
+        $('#answers').hide();
+        $('#dd-answers').show();
+
         $('#drag-and-drop-question-area').show();
         currentQuestionType = question.type;
         // initQuizMap(question);
         $('#question-media').html('<audio controls><source src="' + question.media + '" type="audio/mpeg">Your browser does not support the audio element.</audio>');
 
-        $('#answers').empty();
+        $('#dd-answers').empty();
+        
 
         var dropZoneDivs = {
             choice1: $(`
@@ -260,7 +267,7 @@ function displayQuestion(index) {
 
         
         for (let key in dropZoneDivs) {
-            $('#answers').append(dropZoneDivs[key]);
+            $('#dd-answers').append(dropZoneDivs[key]);
         }
     
         var birdImg = $('<img>', {
@@ -275,7 +282,7 @@ function displayQuestion(index) {
         if (answers[index]) {
             $(`#${answers[index]}`).append(birdImg);
         } else {
-            $('#answers').append(birdImg);
+            $('#dd-answers').append(birdImg);
         }
         
         initializeDragAndDrop();
@@ -286,23 +293,22 @@ function displayQuestion(index) {
 function initializeDragAndDrop() {
     setTimeout(() => {
         $('#dragBird').draggable({
-            revert: 'invalid', 
-            cursor: 'move', 
-            containment: 'document' 
+            revert: 'invalid', // Revert to original position if not dropped in a valid drop zone
+            cursor: 'move', // Cursor changes to 'move' when dragging
+            containment: 'document' // Draggable item can be moved anywhere within the document
         });
 
         $('.drop-zone').droppable({
-            accept: '#dragBird',
-            hoverClass: 'hovered',
+            accept: '#dragBird', // Only accept elements with the ID 'dragBird'
+            hoverClass: 'highlighted', // Apply 'highlighted' class on hover
             drop: function(event, ui) {
-                dropped = this.id; // ensure 'dropped' is declared
+                dropped = this.id; // Capture the ID of the drop zone where the bird is dropped
                 console.log(`Dropped in ${this.id}`);
-                // Store the result to handle revisiting this question
-                // answers[index] = this.id;
             }
         });
     }, 100); // Delay to ensure elements are ready
 }
+
 
 function showQuizResults() {
     var selectedAnswer = "";

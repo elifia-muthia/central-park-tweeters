@@ -361,4 +361,34 @@ table tbody tr:nth-child(odd) {
 }
 
 
+.cursor-bullet {
+  position: relative;
+  cursor: pointer;
+  /* display: inline-block; */
+}
+
+.cursor-bullet::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  background: black; 
+  transition: width 0.3s ease 0s, left 0.3s ease 0.3s; 
+  left: 50%;
+}
+
+.cursor-bullet:hover::after {
+  width: 100%; 
+  left: 0; 
+  transition: width 0.3s ease 0.3s, left 0.3s ease 0s; 
+}
+
+ul {
+  /* list-style: disc inside; Ensures bullets are shown */
+  padding-left: 20px; /* Provides some padding to align the bullets */
+  list-style-type: disc inside;
+}
+
 

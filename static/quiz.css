@@ -77,6 +77,9 @@
     font-size: 20px;
 }
 
+.quiz-prep{
+    text-align: center;
+}
 .quiz-nav-buttons{
     display: flex;
     justify-content: space-between; 
@@ -190,6 +193,37 @@ button {
     padding-left: 10px;
 }
 
+#dd-answers {
+    display: flex;             /* Enables Flexbox */
+    justify-content: space-evenly; /* Distributes space evenly between children */
+    align-items: center;       /* Vertically center the items */
+    flex-wrap: wrap;           /* Allows items to wrap onto the next line */
+    padding: 20px;             /* Padding around the container */
+}
+
+.drop-zone {
+    flex: 1 1 150px;           /* Allows each drop zone to grow and shrink but base at 150px */
+    margin: 10px;              /* Space between drop zones */
+    height: 200px;             /* Fixed height for all drop zones */
+    border: 2px dashed #ccc;   /* Styling for the drop zone boundary */
+    position: relative;        /* To position children absolutely within it */
+    display: flex;             /* Ensures contents inside drop-zone are also flexed */
+    overflow: hidden;
+    /* justify-content: center;   Center contents horizontally */
+    /* align-items: center;       Center contents vertically */
+}
+
+.highlighted {
+    background-color: rgba(255, 235, 59, 0.8); /* More opaque background */
+    border: 3px dashed #FFEB3B; /* Thicker border */
+    box-shadow: 0 0 10px #FFEB3B; /* Optional: Adding a glow effect */
+}
+
+.highlighted img {
+    opacity: 0.6; /* Further reduce the opacity */
+}
+
+
 .drop-zone {
     position: relative; /* This makes it a positioning context for absolutely positioned children */
     width: 300px;
@@ -199,6 +233,7 @@ button {
     margin: 10px;
     overflow: hidden;
 }
+
 
 .drop-zone img {
     width: 100%;
