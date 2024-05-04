@@ -545,7 +545,7 @@ def submit_quiz():
 
     quiz_history.append(quiz)
 
-    return jsonify(data=quiz_history)
+    return jsonify(data=quiz)
 
 @app.route('/get_back', methods=['POST'])
 def get_back():

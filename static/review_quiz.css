@@ -80,3 +80,11 @@
         width: 95%; /* Slightly smaller to allow for some margin */
     }
 }
+
+#submit-quiz-btn{
+    align-self: flex-end;
+    background-color: #023020;
+    color: white;
+    padding: 10px 30px;
+    font-size: 20px;
+}

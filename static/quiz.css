@@ -9,9 +9,10 @@
 }
 
 #question-num {
-    justify-content: center;
-    text-align: center;
-    font-weight: bold;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-style: italic;
 }
 
 #result-congrats{
@@ -78,7 +79,10 @@
 }
 
 .quiz-prep{
+    margin-top: 30px;
     text-align: center;
+    font-size: 25px;
+    margin-bottom: 50px;
 }
 .quiz-nav-buttons{
     display: flex;
@@ -89,6 +93,7 @@
 #prev-q-btn{
     display: none;
     align-self: flex-start;
+    padding: 10px 30px;
 }
 
 
@@ -96,16 +101,18 @@
     align-self: flex-end;
     background-color: #023020;
     color: white;
+    padding: 10px 30px;
 }
 
 #submit-quiz-btn{
     align-self: flex-end;
     background-color: #023020;
     color: white;
+    padding: 10px 30px;
 }
 
 #question {
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
     margin-bottom: 10px;
 
@@ -270,3 +277,4 @@ button {
     background-color: #023020;
     color: white;
 }
+

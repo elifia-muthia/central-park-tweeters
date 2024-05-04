@@ -9,6 +9,7 @@ $(document).ready(function() {
         answers = past_quiz.answers
         render_quiz();
     });
+
 });
 
 function getQuizQuestions(id, handleData) {
@@ -36,6 +37,12 @@ function getQuizQuestions(id, handleData) {
 function render_quiz() {
     displayQuestion(currentQuestionIndex);
 
+    $('#submit-quiz-btn').hide();
+
+    $('#submit-quiz-btn').click(function() {
+        window.location.href = "/quiz_history"
+    })
+
     // Set up the click handler for the 'Next' button
     $('#next-q-btn').click(function() {
         if (currentQuestionIndex < questions.length - 1) {
@@ -58,6 +65,9 @@ function render_quiz() {
             }
             $('#next-q-btn').show();
         }
+        $('#submit-quiz-btn').hide();
+        $("#next-q-btn").text("Next")
+
     });
 }
 
@@ -69,12 +79,7 @@ function displayQuestion(index) {
     console.log(answer)
 
     if (index === questions.length - 1) {
-        $('#next-q-btn').text('See Past Quizzes');
-
-        $('#next-q-btn').click(function() {
-            window.location.href = "/quiz_history"
-        });
-
+        $('#next-q-btn').hide();
         $('#submit-quiz-btn').show();
     } else {
         $('#next-q-btn').show();
@@ -86,11 +91,15 @@ function displayQuestion(index) {
     // Display the question text
     $('#question').text(question.question);
 
-    if (question.media_type === "img") {
-        $('#question-media').html('<img src="' + question.media + '" alt="Question media" id="question-img">');
-    } 
-    else if (question.media_type === "audio") {
-        $('#question-media').html('<audio controls><source src="' + question.media + '" type="audio/mpeg">Your browser does not support the audio element.</audio>');
+    $("#question-media").empty();
+
+    if (question.type === "multiple-choice") {
+        if (question.media_type === "img") {
+            $('#question-media').html('<img src="' + question.media + '" alt="Question media" id="question-img">');
+        } 
+        else if (question.media_type === "audio") {
+            $('#question-media').html('<audio controls><source src="' + question.media + '" type="audio/mpeg">Your browser does not support the audio element.</audio>');
+        }
     }
     else {
         var contentHtml = `

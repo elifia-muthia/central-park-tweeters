@@ -70,6 +70,10 @@ $(document).ready(function() {
             $('#startModal').hide();
         }
     });
+
+    $("#past-quiz").click(function() {
+        window.location.href = "/quiz_history"
+    })
 });
 
 function setDifficulty(difficulty) {
@@ -369,6 +373,10 @@ function submitQuiz(quiz) {
         data: JSON.stringify(request_data),
         success: function(result) {
             console.log("Submitted quiz")
+            $("#review-quiz").click(function() {
+                id = result['data'].id
+                window.location.href = "/past_quiz/" + id
+            })
         },
         error: function(request, status, error) {
             console.log("Error");
