@@ -3,7 +3,6 @@ var answers = [];
 var questions = [];
 var difficulty = "";
 var mode = "";
-var dropped = "";
 var currentQuestionType = "";
 
 $(document).ready(function() {
@@ -135,22 +134,27 @@ function doQuiz() {
         var selectedAnswer;
         if (mode == "multiple-choice") {
             selectedAnswer = $('input[name="answer"]:checked').val();
-        } else if (mode == "drag_and_drop") {
-            selectedAnswer = dropped; 
-            if (!selectedAnswer) { 
+            if (!selectedAnswer) {
+                $('#answer-warning').show();
+                return;
+            } else {
+                $('#answer-warning').hide();
+            }
+        
+        } 
+        else if (mode == "drag_and_drop") {
+            if (!answers[currentQuestionIndex]) { 
                 $('#answer-warning').text('Please place the bird in a valid area before proceeding.'); 
                 $('#answer-warning').show();
                 return;
             }
+            else {
+                $('#answer-warning').hide();
+                selectedAnswer = answers[currentQuestionIndex]
+            }
         }
     
-        if (!selectedAnswer) {
-            $('#answer-warning').show();
-            return;
-        } else {
-            $('#answer-warning').hide();
-        }
-    
+        
         if (currentQuestionIndex < questions.length - 1) {
             answers[currentQuestionIndex] = selectedAnswer; 
             currentQuestionIndex++;
@@ -167,12 +171,20 @@ function doQuiz() {
 
     // Set up the click handler for the 'Back' button
     $('#prev-q-btn').click(function() {
+        $('#answer-warning').hide();
         if (currentQuestionIndex > 0) {
-            var selectedAnswer = $('input[name="answer"]:checked').val();
-            if(mode === "drag_and_drop"){
-                selectedAnswer = dropped;
+            if (mode != "drag_and_drop") {
+                var selectedAnswer = $('input[name="answer"]:checked').val();
+                // if(mode === "drag_and_drop"){
+                //     selectedAnswer = dropped;
+                // }
+                answers[currentQuestionIndex] = selectedAnswer;
             }
-            answers[currentQuestionIndex] = selectedAnswer;
+            // else {
+            //     if (dropped != "") {
+            //         answers[currentQuestionIndex] = dropped
+            //     }
+            // }
             currentQuestionIndex--;
             displayQuestion(currentQuestionIndex);
             if (currentQuestionIndex === 0) {
@@ -180,6 +192,7 @@ function doQuiz() {
             }
             $('#submit-quiz-btn').hide();
             $('#next-q-btn').show();
+            // dropped = ""
         }
     });
 
@@ -245,7 +258,6 @@ function displayQuestion(index) {
 
         $('#drag-and-drop-question-area').show();
         currentQuestionType = question.type;
-        // initQuizMap(question);
         $('#question-media').html('<audio controls><source src="' + question.media + '" type="audio/mpeg">Your browser does not support the audio element.</audio>');
 
         $('#dd-answers').empty();
@@ -281,18 +293,24 @@ function displayQuestion(index) {
             id: 'dragBird',
             src: question.drag_bird,
             alt: 'Draggable Bird'
-        }).css({
-            cursor: 'pointer',
-            width: '100px' 
-        });
+        })
+        // }).css({
+        //     cursor: 'pointer',
+        //     width: '100px' 
+        // });
     
-        if (answers[index]) {
-            $(`#${answers[index]}`).append(birdImg);
+        initializeDragAndDrop();
+
+        console.log("Answers: " + answers)
+
+        if (answers[currentQuestionIndex]) {
+            console.log(answers[currentQuestionIndex])
+            $(`#${answers[currentQuestionIndex]}`).append(birdImg);
         } else {
             $('#dd-answers').append(birdImg);
         }
         
-        initializeDragAndDrop();
+        
     }
     
 }
@@ -300,17 +318,24 @@ function displayQuestion(index) {
 function initializeDragAndDrop() {
     setTimeout(() => {
         $('#dragBird').draggable({
-            revert: 'invalid', 
-            cursor: 'move', 
-            containment: 'document' 
+            revert: "invalid", // Optionally revert if not dropped in a droppable area
+            containment: "document", // Allows dragging within the bounds of the document
+            scroll: false, // Prevents auto-scrolling of the window when dragging near edges
+            cursor: "move", // Cursor changes to indicate movement
+            stack: ".draggable" // Optional, brings the element to the front when dragging
         });
 
         $('.drop-zone').droppable({
             accept: '#dragBird', 
             hoverClass: 'highlighted', 
             drop: function(event, ui) {
-                dropped = this.id; 
                 console.log(`Dropped in ${this.id}`);
+                if (this.id) {
+                    console.log(this.id + " " + currentQuestionIndex)
+                    answers[currentQuestionIndex] = this.id; 
+                    console.log(this.id + " " + answers[currentQuestionIndex])
+                }
+               
             }
         });
     }, 100); 
@@ -324,9 +349,12 @@ function showQuizResults() {
         console.log("SelectedAnswer (showQuizResult): " + selectedAnswer)
     }
     else{
-        selectedAnswer = dropped;
-        console.log("SelectedAnswer (showQuizResult): " + selectedAnswer)
+        // if (dropped != "") {
+        //     selectedAnswer = dropped;
+        //     console.log("SelectedAnswer (showQuizResult): " + selectedAnswer)
+        // }
         //selectedAnswer = $('#' + answers[index]).find('img:last-child');
+        selectedAnswer = answers[currentQuestionIndex]
     }
     console.log(selectedAnswer);
 
